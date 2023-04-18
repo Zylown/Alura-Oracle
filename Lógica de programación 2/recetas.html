@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<h1>Recetas de Armando</h1>
+
+<script>
+
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+    while( contador <= cantidad) {
+
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        var encontrado = false; //Boleano en falso porque verifica si el ingrediente está, como no está lo pongo en falso
+        for(var pos = 0;pos < ingredientes.length;pos++){
+            if(ingrediente == ingredientes[pos]){
+                //document.write("Usted a ingresado un ingrediente igual.");
+                encontrado = true; //Cuando el ingrediente si está lo cambio a true el booleano
+                alert("Usted a ingresado un ingrediente igual.");
+                break;
+            }
+        }
+          if(encontrado == false){//solo podemos aumentar la variable del contador cuando el ingrediente no existe
+                ingredientes.push(ingrediente);
+                contador++;
+            }//ya que, si existe, debemos repetir la pregunta de nuevo ingrediente para el usuario.
+    }
+
+    console.log(ingredientes);
+
+</script>

@@ -1,0 +1,44 @@
+<meta charset="UTF-8" />
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "darkgreen"; //(pos X,pos Y,ancho,altura)
+	pincel.fillRect(0, 0, 350, 300); //(X,Y,W,H)
+
+	pincel.fillStyle = "black"; //Ojo izquierdo
+	pincel.fillRect(50, 62, 90, 90);
+
+	pincel.fillStyle = "black"; //Ojo derecho
+	pincel.fillRect(210, 62, 90, 90);
+
+	pincel.fillStyle = "black"; //Nariz
+	pincel.fillRect(140, 150, 70, 100);
+
+	pincel.fillStyle = "black"; //Bigote izquierdo
+	pincel.fillRect(100, 190, 40, 110);
+
+	pincel.fillStyle = "black"; //Bigote derecho
+	pincel.fillRect(210, 190, 40, 110);
+
+	/*
+	//Alura Solution
+	    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    //cabeza
+    pincel.fillStyle = 'darkgreen';
+    pincel.fillRect(200, 50, 350 ,300);
+    //ojos
+    pincel.fillStyle = 'black';
+    pincel.fillRect(250, 110, 90, 90);
+    pincel.fillRect(410, 110, 90, 90);
+    //nariz
+    pincel.fillRect(340, 200, 70, 100);
+     //boca
+    pincel.fillRect(300, 240, 40, 110);
+    pincel.fillRect(410, 240, 40, 110);
+	*/
+</script>
