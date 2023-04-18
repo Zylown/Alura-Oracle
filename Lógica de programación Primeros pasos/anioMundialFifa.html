@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<H1>Saber que años de hacen los Mundiales</H1>
+
+<script>
+    function saltarlinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarlinea();
+    }
+
+    var anioMundial = 1930;
+    var limite = parseInt(prompt("Ingrese un año límite: "));
+    //alert("Hubo mundial de la FIFA en el año "+anioMundial);
+
+    while(anioMundial <= limite){
+        imprimir("Hubo mundial de la FIFA en el año " + anioMundial);
+        anioMundial += 4;
+    }
+    //alert("FIN");
+
+</script>

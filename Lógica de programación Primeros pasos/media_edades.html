@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<H1>Saber que años de hacen los Mundiales</H1>
+
+<script>
+    function saltarlinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarlinea();
+    }
+
+
+   var n = parseInt(prompt("Ingrese el número de familiares: "));
+   var cont = 1
+    var mediaEdad = 0;
+    while(cont <= n){
+        
+        edad = parseInt(prompt("Ingrese la edad del familiar: "));
+        mediaEdad = mediaEdad + edad;
+        
+        cont++;
+        
+    }
+    var total = mediaEdad / n;
+    imprimir(total);
+/*
+    var edadPadre  = 45
+    var edadMadre  = 38
+    var edadHijo  = 25
+    var edadHija  = 15
+
+    var totalEdad = edadPadre+edadMadre+edadHija+edadHijo
+    var mediaEdad = totalEdad/4;
+
+    imprimir("La media de las edades es: "+mediaEdad)*/
+
+</script>

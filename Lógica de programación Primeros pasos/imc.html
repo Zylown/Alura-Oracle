@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<H1>Calcular IMC</H1>
+
+<script>
+     function saltarlinea() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+
+            document.write(frase);
+            saltarlinea();
+        }
+
+       /* function calcularIMC(peso,altura,nombre){
+
+            imc = peso/ (altura * altura);
+            imprimir("El IMC calculado de "+nombre+" es: " + imc);
+        }*/
+    function calcularIMC(peso,altura) {
+
+        imc = peso / (altura * altura);
+        return imc;
+    }
+
+nombre          = prompt("Ingrese su nombre: ");
+pesoInformado   = prompt(nombre +" Ingrese su peso: ");
+alturaInformado = prompt(nombre + " Ingrese su altura: ");
+
+  imc = calcularIMC(pesoInformado, alturaInformado);
+imprimir("El IMC calculado de "+nombre+" es de: "+ imc);
+
+    if(imc <18.5){
+        imprimir("Su IMC es Insuficiente ponderal.");
+    }
+    if(imc >=18.5 && imc <=24.9){
+        imprimir("Su IMC es Intervalo Normal.");
+    }
+    if(imc >=25){
+        imprimir("Su IMC es Sobrepeso.");
+    }
+    if(imc >=25 && imc<=29.9){
+        imprimir("Su IMC es Preobesidad.");
+    }
+
+
+
+
+
+
+
+/*pesoFelipe = 80
+alturaFelipe = 1.69
+pesoSevas = 60
+alturaSevas = 1.79
+var imcSevas = calcularIMC(60,1.79);
+var imcFelipe = calcularIMC(80, 1.79);*/
+//calcularIMC(pesoSevas,alturaSevas,"Sevastian",pesoFelipe,alturaFelipe,"Felipe");
+
+    //imprimir("El promedio del IMC calculado de Sevastian y Felipe es: " + ((imcSevas + imcFelipe) / 2));
+//imprimir("El IMC de Sevastian es: "+imc)
+
+
+/*
+imcFelipe = pesoFelipe / (alturaFelipe * alturaFelipe);
+
+imprimir("El IMC de Felipe es: " + imcFelipe)*/
+</script>

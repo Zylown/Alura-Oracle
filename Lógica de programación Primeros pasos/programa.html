@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+    /* alert("La edad de Sevastian es ...");
+    alert("?"); */
+    function saltarlinea(){
+        
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        
+        document.write(frase);
+        saltarlinea();
+    }
+
+    imprimir("Hola amiguitos");
+
+
+    /*document.write("La edad de Sevastian es ...<br>");
+    document.write("<br>");
+    document.write("? <br>");
+    document.write(10+10);
+    document.write("<br>");*/
+
+   /* document.write("El promedio de la suma es: <br>");
+    document.write((15+20+11)/3);
+    document.write("<br>");
+    saltarlinea();
+    var anio = 2023;
+    document.write("Juan tiene: " + (anio-2002)+ " años.");*/
+    
+
+    var edadPedro = 15;
+    var edadAngie = 20;
+    var edadPamela = 11;
+    var promedio= ((edadPedro + edadAngie + edadPamela) / 3);
+    saltarlinea();
+    imprimir("El promedio es: " + Math.round(promedio));
+
+</script>
