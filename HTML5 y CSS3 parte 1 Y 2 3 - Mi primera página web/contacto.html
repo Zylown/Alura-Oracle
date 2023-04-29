@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Contacto- Barberia Alura</title>
+  </head>
+  <body>
+    <header>
+      <div class="caja">
+        <h1><img src="imagenes/logo.png" /></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <form class="formulario">
+        <label for="nombreapellido">Nombres y Apellidos</label>
+        <input id="nombreapellido" type="text" />
+
+        <label for="correoelectronico">Correo Electrónico</label>
+        <input id="correoelectronico" type="text" />
+
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" type="text" />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" cols="70" rows="10"></textarea>
+        <div>
+          <p>¿Cómo le gustaria que lo contactemos?</p>
+
+          <label for="radio-email">Email</label>
+          <input name="contacto" id="radio-email" type="radio" value="email" />
+
+          <label for="radio-telefono">Teléfono</label>
+          <input
+            name="contacto"
+            id="radio-telefono"
+            type="radio"
+            value="Teléfono"
+          />
+
+          <label for="radio-whatsapp">Whatsapp</label>
+          <input
+            name="contacto"
+            id="radio-whatsapp"
+            type="radio"
+            value="Whatsapp"
+          />
+        </div>
+        <label
+          ><input type="checkbox" />¿Le gustaría recibir novedades de la
+          Barbería - Alura?</label
+        >
+        <input type="submit" value="Enviar Formulario" />
+      </form>
+    </main>
+    <footer>
+      <img src="imagenes/logo-blanco.png" />
+      <p class="copyright">©Copyright Derechos Reservados - 2023</p>
+    </footer>
+  </body>
+</html>

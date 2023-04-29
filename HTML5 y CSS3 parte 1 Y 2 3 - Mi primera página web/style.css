@@ -1,45 +1,118 @@
-p{
+header{
+    background: lightgrey;
+    padding: 20px 0;
+}
+nav li{
+    display: inline-block;
+    margin: 0 0 0 15px;
+}
+/*Para cambiar la posición del punto inicial donde se encuentra el elemento. Con la position: absolute,
+yo puedo posicionar mi elemento en cualquier lugar de la página.*/
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+/*nos permiten definir el desplazamiento de la posición de un elemento respecto a un origen de coordenadas y el origen de coordenadas que se toma. Para elementos con posición relative estas propiedes definen cuánto se desplaza el elemento respecto a lo que sería su posición normal.*/
+.caja{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
     text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-color: black;
+    border-radius: 20px;
 }
 
-.principal{
-    padding: 20px;
-    background: #CCCCCC;
+.productos li:hover{
+    border-color: yellow;
 }
 
-em strong{
-    color: red;
+.productos li:active{
+    border-color: green ;
 }
 
-#mision{
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
     font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-#banner{
-    width: 100%;
+footer{
+    padding: 40px !important;
+    text-align: center;
+    background: url(imagenes/bg.jpg);
 }
 
-.items{
-    font-style: italic;
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
 }
 
-
-.diferenciales{
-    background: white;
-    padding: 30px;
+main{
+    width: 940px;
+    margin: 0 auto;
 }
-.imgdiferenciales{
+
+form{
+    margin: 40px 0;
+}
+
+form label{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+form input{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
     width: 50%;
 }
-ul{/*block viene definidas en listas por default y con display inline-block viene por defecto en las imagenes */
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
-}
-.titulo-centralizado{
-    text-align: center;
-}
-.titulo-principal{
-    padding-left: 30px;
+
+textarea{
+    
 }
