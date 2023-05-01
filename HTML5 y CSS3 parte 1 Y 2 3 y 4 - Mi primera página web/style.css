@@ -138,3 +138,17 @@ form label, form legend{
 table{
     color: black;
 }
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: lightgray;
+    color: white;
+    font-weight: bold;
+}
+td,th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
