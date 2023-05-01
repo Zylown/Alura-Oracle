@@ -116,3 +116,25 @@ form label, form legend{
 .checkbox{
     margin: 20px 0;
 }
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;/*15px arriba y abajo; 0 para los laterales */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: .5s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: rgb(186, 116, 29);
+    transform: scale(1.20);
+}
+
+table{
+    color: black;
+}
