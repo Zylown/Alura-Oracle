@@ -152,3 +152,30 @@ td,th{
     border: 1px solid black;
     padding: 8px 15px;
 }
+
+/* CSS PARA INDEX.HMTL*/
+.banner{
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;/*1em = 15px*/
+    margin: 0 0 1em;
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.imgdiferenciales{
+    width: 60%;
+}
