@@ -2,6 +2,7 @@ header{
     background: lightgrey;
     padding: 20px 0;
 }
+/*Margin es el margen que hay desde un elemento hasta los que tenga al lado. Padding es el espacio que hay en un contenedor entre el contenido y los bordes del contenedor.*/
 nav li{
     display: inline-block;
     margin: 0 0 0 15px;
@@ -162,6 +163,7 @@ td,th{
     text-align: center;
     font-size: 2em;/*1em = 15px*/
     margin: 0 0 1em;
+    clear: left;/* esta imagen solo aplica en los bloques*/
 }
 
 .principal p{
@@ -174,6 +176,11 @@ td,th{
 
 .principal em{
     font-style: italic;
+}
+.utensilios {
+    width: 120px;
+    float: left;/*Tanto el float: left como el float: right sirven para que el elemento se destaque en la pantalla, la superficie del elemento continúa siendo utilizada y los otros elementos de texto o elementos en línea se posicionan alrededor de él.*/
+    margin: 0 20px 20px 0;/*superior - derecha - inferior - izquierda*/
 }
 
 .imgdiferenciales{
