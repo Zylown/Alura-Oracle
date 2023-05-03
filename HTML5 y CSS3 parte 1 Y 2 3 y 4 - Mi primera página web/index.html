@@ -1,73 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Barbería Alura</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reset.css" />
-  </head>
-  <body>
-    <header>
-      <div class="caja">
-        <h1><img src="imagenes/logo.png" /></h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <img class="banner" src="banner/banner.jpg" />
 
-    <main>
-      <section class="principal">
-        <h2 class="titulo-principal">Sobre la Barbería Alura</h2>
-        <img
-          class="utensilios"
-          alt="Utensilios de un barbero"
-          src="imagenes/utensilios.jpg"
-        />
-        <p>
-          Ubicada en el corazón de la ciudad, la
-          <strong>Barbería Alura</strong> trae para el mercado lo que hay de
-          mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya
-          es destaque en la ciudad y conquista nuevos clientes diariamente.
-        </p>
-        <p id="mision">
-          <em
-            >Nuestra misión es:
-            <strong
-              >"Proporcionar autoestima y calidad de vida a nuestros
-              clientes"</strong
-            >.</em
-          >
-        </p>
-        <p>
-          Ofrecemos profesionales experimentados que están constantemente
-          observando los cambios y movimiento en el mundo de la moda, para así
-          ofrecer a nuestros clientes las últimas tendencias. El atendimiento
-          posee un padrón de excelencia y agilidad, garantizando calidad y
-          satisfacción de nuestros clientes.
-        </p>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <title>Barbería Alura</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+</head>
 
-      <section class="diferenciales">
-        <h3 class="titulo-principal">Diferenciales</h3>
+<body>
+  <header>
+    <div class="caja">
+      <h1><img src="imagenes/logo.png" /></h1>
+      <nav>
         <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <img class="banner" src="banner/banner.jpg" />
+
+  <main>
+    <section class="principal">
+      <h2 class="titulo-principal">Sobre la Barbería Alura</h2>
+      <img class="utensilios" alt="Utensilios de un barbero" src="imagenes/utensilios.jpg" />
+      <p>
+        Ubicada en el corazón de la ciudad, la
+        <strong>Barbería Alura</strong> trae para el mercado lo que hay de
+        mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya
+        es destaque en la ciudad y conquista nuevos clientes diariamente.
+      </p>
+      <p id="mision">
+        <em>Nuestra misión es:
+          <strong>"Proporcionar autoestima y calidad de vida a nuestros
+            clientes"</strong>.</em>
+      </p>
+      <p>
+        Ofrecemos profesionales experimentados que están constantemente
+        observando los cambios y movimiento en el mundo de la moda, para así
+        ofrecer a nuestros clientes las últimas tendencias. El atendimiento
+        posee un padrón de excelencia y agilidad, garantizando calidad y
+        satisfacción de nuestros clientes.
+      </p>
+    </section>
+    <section class="mapa">
+      <h3 class="titulo-principal">Nuestra ubicación</h3>
+      <p>Nuestro establecimiento está ubicado en el corazón de la ciudad</p>
+      <div class="mapa-contenido">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259699.764528899!2d-3.925333597940408!3d41.6120981512347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b1b051f3ac75%3A0xa330a2126ee1d5c3!2sMart%C3%ADn%20Berasategui!5e0!3m2!1ses!2spe!4v1683062817029!5m2!1ses!2spe"
+        width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="diferenciales">
+      <h3 class="titulo-principal">Diferenciales</h3>
+      <div class="contenido-diferenciales">
+        <ul class="lista-diferenciales">
           <li class="items">Atención personalizada a los clientes</li>
           <li class="items">Espacio diferenciado</li>
           <li class="items">Localización</li>
           <li class="items">Profesionales Calificados</li>
-        </ul>
-        <img class="imgdiferenciales" src="diferenciales/diferenciales.jpg" />
-      </section>
-    </main>
+          <li class="items">Puntualidad</li>
+          <li class="items">Limpieza</li>
+        </ul><img class="imagen-diferenciales" alt="Corte de cabello" src="diferenciales/diferenciales.jpg" />
+      </div>
+    </section>
+    <div class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VinxiuCu7I4" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </main>
 
-    <footer>
-      <img src="imagenes/logo-blanco.png" />
-      <p class="copyright">©Copyright Derechos Reservados - 2023</p>
-    </footer>
-  </body>
+  <footer>
+    <img src="imagenes/logo-blanco.png" />
+    <p class="copyright">©Copyright Derechos Reservados - 2023</p>
+  </footer>
+</body>
+
 </html>

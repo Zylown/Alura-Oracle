@@ -1,12 +1,18 @@
-header{
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
     background: lightgrey;
     padding: 20px 0;
 }
+
 /*Margin es el margen que hay desde un elemento hasta los que tenga al lado. Padding es el espacio que hay en un contenedor entre el contenido y los bordes del contenedor.*/
-nav li{
+nav li {
     display: inline-block;
     margin: 0 0 0 15px;
 }
+
 /*Para cambiar la posición del punto inicial donde se encuentra el elemento. Con la position: absolute,
 yo puedo posicionar mi elemento en cualquier lugar de la página.*/
 nav a {
@@ -17,30 +23,31 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     color: orange;
     text-decoration: underline;
 }
 
-nav{
+nav {
     position: absolute;
     top: 110px;
     right: 0;
 }
+
 /*nos permiten definir el desplazamiento de la posición de un elemento respecto a un origen de coordenadas y el origen de coordenadas que se toma. Para elementos con posición relative estas propiedes definen cuánto se desplaza el elemento respecto a lo que sería su posición normal.*/
-.caja{
+.caja {
     position: relative;
     width: 940px;
     margin: 0 auto;
 }
 
-.productos{
+.productos {
     width: 940px;
     margin: 0 auto;
     padding: 50px;
 }
 
-.productos li{
+.productos li {
     display: inline-block;
     text-align: center;
     width: 30%;
@@ -53,74 +60,71 @@ nav{
     border-radius: 20px;
 }
 
-.productos li:hover{
+.productos li:hover {
     border-color: yellow;
 }
 
-.productos li:active{
-    border-color: green ;
+.productos li:active {
+    border-color: green;
 }
 
-.productos li:hover h2{
+.productos li:hover h2 {
     font-size: 33px;
 }
 
-.productos h2{
+.productos h2 {
     font-size: 30px;
     font-weight: bold;
 }
 
-.producto-descripcion{
+.producto-descripcion {
     font-size: 18px;
 }
 
-.producto-precio{
+.producto-precio {
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
 }
 
-footer{
+footer {
     padding: 40px !important;
     text-align: center;
     background: url(imagenes/bg.jpg);
 }
 
-.copyright{
+.copyright {
     color: white;
     font-size: 13px;
     margin: 20px;
 }
 
-main{
-    width: 940px;
-    margin: 0 auto;
-}
-
-form{
+form {
     margin: 40px 0;
 }
 
-form label, form legend{
+form label,
+form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
 }
 
-.input-padron{
+.input-padron {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
 }
 
-.checkbox{
+.checkbox {
     margin: 20px 0;
 }
 
-.enviar{
+.enviar {
     width: 40%;
-    padding: 15px 0;/*15px arriba y abajo; 0 para los laterales */
+    padding: 15px 0;
+    /*15px arriba y abajo; 0 para los laterales */
     font-size: 18px;
     font-weight: bold;
     color: white;
@@ -131,58 +135,126 @@ form label, form legend{
     cursor: pointer;
 }
 
-.enviar:hover{
+.enviar:hover {
     background: rgb(186, 116, 29);
     transform: scale(1.20);
 }
 
-table{
+table {
     color: black;
 }
 
-table{
+table {
     margin: 40px 40px;
 }
 
-thead{
+thead {
     background: lightgray;
     color: white;
     font-weight: bold;
 }
-td,th{
+
+td,
+th {
     border: 1px solid black;
     padding: 8px 15px;
 }
 
 /* CSS PARA INDEX.HMTL*/
-.banner{
+.banner {
     width: 100%;
 }
 
-.titulo-principal{
+.principal {
+    padding: 3em 0;
+    background: #FEFEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
     text-align: center;
-    font-size: 2em;/*1em = 15px*/
+    font-size: 2em;
+    /*1em = 15px*/
     margin: 0 0 1em;
-    clear: left;/* esta imagen solo aplica en los bloques*/
+    clear: left;
+    /* esta imagen solo aplica en los bloques*/
 }
 
-.principal p{
+.principal p {
     margin: 0 0 1em;
 }
 
-.principal strong{
+.principal strong {
     font-weight: bold;
 }
 
-.principal em{
+.principal em {
     font-style: italic;
 }
+
 .utensilios {
     width: 120px;
-    float: left;/*Tanto el float: left como el float: right sirven para que el elemento se destaque en la pantalla, la superficie del elemento continúa siendo utilizada y los otros elementos de texto o elementos en línea se posicionan alrededor de él.*/
-    margin: 0 20px 20px 0;/*superior - derecha - inferior - izquierda*/
+    float: left;
+    /*Tanto el float: left como el float: right sirven para que el elemento se destaque en la pantalla, la superficie del elemento continúa siendo utilizada y los otros elementos de texto o elementos en línea se posicionan alrededor de él.*/
+    margin: 0 20px 20px 0;
+    /*superior - derecha - inferior - izquierda*/
 }
 
-.imgdiferenciales{
+.mapa {
+    padding: 3em 0;
+    /*background: linear-gradient(90deg, orange, blue, red, black, white, green);
+    background: radial-gradient(orange, blue, red, black, white, green);*/
+    background: linear-gradient(#FEFEFEFE, #888888);
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    /*Solo usamos em cuando hay una relación estructural entre el hijo y el padre y queremos que uno afecte al otro. Donde no tenga sentido, sigue usando px*/
+    text-align: center;
+    /*margin-bottom: 20px;*/
+}
+
+.mapa-contenido {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.imagen-diferenciales {
     width: 60%;
+}
+
+.lista-diferenciales {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items {
+    line-height: 1.5;
+    /*Es el espacio entre líneas*/
+}
+
+.items:first-child {
+    /*first-child = significa que al 1er elemento*/
+    /*last-child = significa que al último elemento*/
+    /*nth-child(aca va el numero) = significa que a qué elemento queremos afectar; si pones 2n se pintan todos los numeros pares*/
+    font-weight: bold;
+
+}
+
+.video {
+    width: 560px;
+    /*Hay que poner todo el ancho del video como viene en el iframe*/
+    margin: 1em auto;
 }
