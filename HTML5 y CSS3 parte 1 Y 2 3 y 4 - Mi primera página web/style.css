@@ -165,6 +165,27 @@ th {
     width: 100%;
 }
 
+/*
+main>p {
+    /*Selecciona solo los hijos que son del main, solo los hijos directos no los subsecuentes
+    background: red;
+}*/
+/*
+img+p {
+    /*selecciona un párrafo despues de img
+    background: green;
+}*/
+/*
+img~p {
+    /* aplica a todos los párrafos que vienen después de la img
+    background: yellow;
+}*/
+/*
+.principal p:not(#mision) {
+    /*este selecciona todos los parrafos de principal menos el que tiene como id #mision
+    background: orange;
+}*/
+
 .principal {
     padding: 3em 0;
     background: #FEFEFEFE;
@@ -173,6 +194,8 @@ th {
 }
 
 .titulo-principal {
+    /*color: rgba(0, 0, 0, 0.3);
+    color: rgba(#,#,#,opacidad(0.3))*/
     text-align: center;
     font-size: 2em;
     /*1em = 15px*/
@@ -180,6 +203,23 @@ th {
     clear: left;
     /* esta imagen solo aplica en los bloques*/
 }
+
+.titulo-principal::first-letter {
+    font-weight: bold;
+}
+
+/*
+.titulo-principal::before {
+    content: "[";
+}
+
+.titulo-principal::after {
+    content: "]";
+}
+
+p::first-line {
+    font-style: italic;
+}*/
 
 .principal p {
     margin: 0 0 1em;
@@ -232,6 +272,14 @@ th {
 
 .imagen-diferenciales {
     width: 60%;
+    transition: 0.3s;
+    /*0.3 = 30%*/
+    box-shadow: 10px 10px 30px 15px black;
+    /*box-shadow: eje Xpx eje Ypx cuanto de difuminado la expansión de cuanto quiere difuminarse color*/
+}
+
+.imagen-diferenciales:hover {
+    opacity: 0.3;
 }
 
 .lista-diferenciales {
@@ -243,6 +291,10 @@ th {
 .items {
     line-height: 1.5;
     /*Es el espacio entre líneas*/
+}
+
+.items::before {
+    content: "🟔";
 }
 
 .items:first-child {
@@ -257,4 +309,27 @@ th {
     width: 560px;
     /*Hay que poner todo el ancho del video como viene en el iframe*/
     margin: 1em auto;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .caja,
+    .principal,
+    .mapa-contenido,
+    .contenido-diferenciales,
+    .video {
+        width: auto;
+    }
+
+    .lista-diferenciales,
+    .imagen-diferenciales {
+        width: 100%;
+    }
 }
