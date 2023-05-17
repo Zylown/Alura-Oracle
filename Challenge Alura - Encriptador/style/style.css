@@ -1,5 +1,5 @@
 html {
-    background: #E5E5E5;
+    background: #F3F5FC;
 }
 
 /*.logo-layout {
@@ -21,4 +21,21 @@ html {
 img {
     width: 120px;
     height: 48px;
+}
+
+.input-texto {
+    margin-left: 15%;
+    margin-top: 4%;
+    border: none;
+    font-size: 30px;
+    color: rgb(10, 56, 113);
+    background: #F3F5FC;
+}
+
+.input-texto::placeholder {
+    color: rgb(10, 56, 113);
+}
+
+.input-texto:focus {
+    outline: none;
 }
