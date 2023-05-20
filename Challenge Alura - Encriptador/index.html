@@ -13,7 +13,7 @@
        <img class="img-logo" src="img/Logo.png">
     </header>
     <div class="cuerpo">
-        <textarea class="input-texto" placeholder="Ingrese el texto aqui"></textarea>
+        <textarea id="idArea" class="input-texto" name="textArea" placeholder="Ingrese el texto aqui"></textarea>
         <div class="texto-derecho">
             <div class="layout-muneco">
                     <img class="muneco" src="img/Muñeco.png">
@@ -22,10 +22,12 @@
             <p class="p-secundario">Ingresa el texto que desees encriptar o desencriptar.</p>
         </div>
     </div>
+
     <div class="botones">
         <p class="p-botones"><svg class="icon-alert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>Solo letras minúsculas y sin acentos </p>
-        <input class="button-encriptar" type="button" value="Encriptar">
-        <input class="button-desencriptar" type="button" value="Desencriptar">
+        <input class="button-encriptar" onclick="encriptar()" name="btn_encriptar" type="button" value="Encriptar">
+        <input class="button-desencriptar"  name="btn_desencriptar" type="button" value="Desencriptar">
     </div>
 </body>
 </html>
+<script src="main.js"></script>
