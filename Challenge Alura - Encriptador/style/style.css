@@ -49,16 +49,22 @@ html {
 }
 
 .texto-derecho {
+    font-family: sans-serif;
     position: absolute;
     margin-top: 20px;
     display: block;
     width: 22%;
-    height: 95%;
+    height: 84.35%;
     left: 76%;
     top: 0;
     background: white;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+    font-Size: 30px;
+    padding-Top: 5%;
+    color: #495057;
 }
 
 .layout-muneco {
@@ -138,6 +144,30 @@ html {
 }
 
 .button-desencriptar:hover {
+    color: white;
+    background: rgb(75, 0, 128);
+    transition: 0.3s;
+    transform: scale(1.10);
+}
+
+#idCopiar {
+    display: none;
+    /* Por defecto, el botón está oculto */
+}
+
+.button-copiar {
+    width: 70%;
+    margin-left: 10px;
+    font-size: 18px;
+    height: 60px;
+    border-color: #0A3871;
+    border-radius: 20px;
+    border-style: solid;
+    background: #D8DFE8;
+    color: #0A3871;
+}
+
+.button-copiar:hover {
     color: white;
     background: rgb(75, 0, 128);
     transition: 0.3s;

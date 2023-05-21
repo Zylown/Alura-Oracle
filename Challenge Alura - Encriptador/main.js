@@ -20,7 +20,10 @@ function encriptar() {
             fraseEncriptada += letra;
         }
     }
-    alert(fraseEncriptada);
+    //alert(fraseEncriptada);
+    //borrartxt();
+    document.getElementById("idCopiar").style.display = "block";
+    document.getElementById("txtDerecho").innerHTML = fraseEncriptada;
 }
 
 function desencriptar() {
@@ -28,8 +31,22 @@ function desencriptar() {
     var frase = textareaValor.value;
     var fraseDesencriptada = '';
     fraseDesencriptada = frase.replaceAll('ai', 'a').replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ober', 'o').replaceAll('ufat', 'u');
-    alert(fraseDesencriptada);
+    //alert(fraseDesencriptada);
+    document.getElementById("txtDerecho").innerHTML = fraseDesencriptada;
 }
 
+var contenidoPredeterminado = document.getElementById("txtDerecho").innerHTML;//contenido original
+
+function verificarTextArea() {
+    var textareaValor = document.getElementById("idArea").value;// textarea
+    var txtDerecho = document.getElementById("txtDerecho");// DIV
+    if (textareaValor === "" || textareaValor === " ") {//si en el textarea esta vacio o un espacio
+        txtDerecho.innerHTML = contenidoPredeterminado;//vuelve al contenido original
+    }
+}
+
+/*function borrartxt() {//limpiar campo
+    document.querySelector(".input-texto").value = '';
+}*/
 
 
