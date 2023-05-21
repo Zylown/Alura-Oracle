@@ -119,6 +119,12 @@ html {
     color: white;
 }
 
+.button-encriptar:hover {
+    background: rgb(75, 0, 128);
+    transition: 0.3s;
+    transform: scale(1.10);
+}
+
 .button-desencriptar {
     width: 28%;
     margin-left: 10px;
@@ -129,4 +135,11 @@ html {
     border-style: solid;
     background: #D8DFE8;
     color: #0A3871;
+}
+
+.button-desencriptar:hover {
+    color: white;
+    background: rgb(75, 0, 128);
+    transition: 0.3s;
+    transform: scale(1.10);
 }
