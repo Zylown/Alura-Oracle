@@ -22,9 +22,21 @@ function encriptar() {
     }
     //alert(fraseEncriptada);
     //borrartxt();
-    document.getElementById("idCopiar").style.display = "block";
-    document.getElementById("txtDerecho").innerHTML = fraseEncriptada;
+    document.getElementById("mostrarRespuesta").innerHTML = fraseEncriptada;
+    mostrarBotonCopiar();
 }
+
+function mostrarBotonCopiar() {
+
+    //var botonCopiar = document.getElementById("idCopiar");
+    var botonCopiar = document.getElementById("idCopiar").removeAttribute("hidden");
+    //var x = botonCopiar.getElementById("idCopiar");
+    console.log(botonCopiar);
+    //console.log(x);
+    //botonCopiar.removeAttribute("hidden");
+    //document.getElementById("div1").removeAttribute("align");
+}
+
 
 function desencriptar() {
     var textareaValor = document.getElementById("idArea");

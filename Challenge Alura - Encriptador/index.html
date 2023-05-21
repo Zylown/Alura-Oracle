@@ -15,12 +15,15 @@
     <div class="cuerpo">
         <textarea id="idArea" class="input-texto" oninput="verificarTextArea()" name="textArea" placeholder="Ingrese el texto aqui" autofocus></textarea>
         <div id="txtDerecho" class="texto-derecho">
+            <div id="mostrarRespuesta">
             <div class="layout-muneco">
                     <img class="muneco" src="img/Muñeco.png">
             </div>
             <p class="p-principal">Ningún mensaje fue encontrado</p>
-            <p class="p-secundario">Ingresa el texto que desees encriptar o desencriptar.</p>
-            <input class="button-copiar" id="idCopiar" onclick="" name="btn_copiar" type="button" value="Copiar">
+            <p id="idP" class="p-secundario">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <input class="button-copiar" id="idCopiar" name="btn_copiar" type="button" value="Copiar" hidden>
+            
         </div>
     </div>
 

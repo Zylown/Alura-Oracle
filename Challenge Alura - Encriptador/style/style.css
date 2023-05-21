@@ -68,7 +68,7 @@ html {
 }
 
 .layout-muneco {
-    margin: 160px 32px 0px 32px;
+    margin: 100px 32px 0px 32px;
 }
 
 .muneco {
@@ -150,12 +150,8 @@ html {
     transform: scale(1.10);
 }
 
-#idCopiar {
-    display: none;
-    /* Por defecto, el botón está oculto */
-}
-
 .button-copiar {
+    /*visibility: hidden;*/
     width: 70%;
     margin-left: 10px;
     font-size: 18px;
@@ -172,4 +168,8 @@ html {
     background: rgb(75, 0, 128);
     transition: 0.3s;
     transform: scale(1.10);
+}
+
+#mostrarRespuesta {
+    height: 85%;
 }
