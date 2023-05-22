@@ -31,7 +31,6 @@ function mostrarBotonCopiar() {
     //var botonCopiar = document.getElementById("idCopiar");
     var botonCopiar = document.getElementById("idCopiar").removeAttribute("hidden");
     //var x = botonCopiar.getElementById("idCopiar");
-    console.log(botonCopiar);
     //console.log(x);
     //botonCopiar.removeAttribute("hidden");
     //document.getElementById("div1").removeAttribute("align");
@@ -44,7 +43,8 @@ function desencriptar() {
     var fraseDesencriptada = '';
     fraseDesencriptada = frase.replaceAll('ai', 'a').replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ober', 'o').replaceAll('ufat', 'u');
     //alert(fraseDesencriptada);
-    document.getElementById("txtDerecho").innerHTML = fraseDesencriptada;
+    document.getElementById("mostrarRespuesta").innerHTML = fraseDesencriptada;
+    mostrarBotonCopiar();
 }
 
 var contenidoPredeterminado = document.getElementById("txtDerecho").innerHTML;//contenido original
@@ -61,4 +61,11 @@ function verificarTextArea() {
     document.querySelector(".input-texto").value = '';
 }*/
 
+function copiarTexto() {
 
+    var texto = document.getElementById("mostrarRespuesta");
+    var btn = document.getElementById("idCopiar");
+
+    navigator.clipboard.writeText(texto.textContent);
+    //btn.value = "Copiado";
+}
