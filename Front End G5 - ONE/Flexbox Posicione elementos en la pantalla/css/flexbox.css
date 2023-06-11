@@ -1,0 +1,33 @@
+.headerPrincipal .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*Esto funciona con display: flex*/
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+    /*Para mantener nuestros items entre espacios, este caso de lado izquierdo y derecho*/
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-right: 5%;
+    /*Ponemos el width para que justify-content sepa cuanto de ancho tiene*/
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
