@@ -41,3 +41,14 @@
     flex-wrap: wrap;
     /*Cuando llegue a 250px que quiebre a la siguiente columna(gracias a flex-direction), Cada 250px*/
 }
+
+.contenidoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    /*Para que quiebre al width del 20% y rellene las siguientes columnas*/
+}
+
+.contenidoPrincipal-cursos-link {
+    display: flex;
+    width: 23%;
+}
