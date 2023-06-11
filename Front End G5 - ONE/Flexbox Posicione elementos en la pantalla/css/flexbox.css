@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*Esto funciona con display: flex*/
+    /*Esto funciona con display: flex(justify-content: space-between hace que el espacio que queda en nuestro elemento padre se distribuya entre los hijos)*/
+    /*Poner todo el espacio a la izquierda, lanzando el contenido a la derecha con justify-content: flex-end. Poner todo el espacio a la derecha, lanzando el contenido a la izquierda con justify-content: flex-start (que es el modelo). Poner todo el espacio a la izquierda y a la derecha, lanzando el contenido al centro con justify-content: center. Poner todo el espacio entre los elementos como vimos antes con justify-content: space-between. Y una posibilidad muy interesante es también poner espacio alrededor de los elementos. Para ello podemos utilizar justify-content: space-around.*/
 }
 
 .headerPrincipal-nav {
@@ -22,6 +23,7 @@
     width: 70%;
     margin-right: 5%;
     /*Ponemos el width para que justify-content sepa cuanto de ancho tiene*/
+
 }
 
 .rodapePrincipal-contatoForm {
@@ -30,4 +32,12 @@
 
 .rodapePrincipal-contatoForm-fieldset {
     display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    flex-wrap: wrap;
+    /*Cuando llegue a 250px que quiebre a la siguiente columna(gracias a flex-direction), Cada 250px*/
 }
