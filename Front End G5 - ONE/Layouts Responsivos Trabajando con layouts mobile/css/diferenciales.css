@@ -42,3 +42,12 @@
     background-image: url(../img/icono-quimica.png);
     background-repeat: no-repeat;
 }
+
+@media screen and (min-width: 1024px) {
+    .diferenciales {
+        background-color: var(--cinza-claro);
+    }
+    .diferenciales__lista {
+        justify-content: space-around;
+    }
+}
