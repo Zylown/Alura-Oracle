@@ -53,6 +53,15 @@
     width: 100vw;
 }
 
+@media screen and (min-width: 768px) {
+    .institucional__contacto{
+        display: inline-block;
+    }
+    .institucional__video{
+        width: 100%;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .institucional__contenido {
         width: 100%;

@@ -33,6 +33,12 @@
     width: 100%;
 }
 
+@media screen and (max-width:768px){
+    .llamada__texto{
+        max-width: 600px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .llamada {
         background-image: url(../img/bg-intro.jpg);
