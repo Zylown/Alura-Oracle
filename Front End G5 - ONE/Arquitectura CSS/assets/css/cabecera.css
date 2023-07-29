@@ -1,0 +1,8 @@
+.cabecera{
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
