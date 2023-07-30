@@ -20,6 +20,27 @@
     <link href="./assets/css/sobre/sobre.css" rel="stylesheet" />
     <link href="./assets/css/sobre/sobre-titulo.css" rel="stylesheet" />
     <link href="./assets/css/sobre/sobre-descripcion.css" rel="stylesheet" />
+    <link href="./assets/css/recetas.css" rel="stylesheet" />
+    <link href="./assets/css/receta/receta-boton.css" rel="stylesheet" />
+    <link href="./assets/css/receta/receta-contenido.css" rel="stylesheet" />
+    <link href="./assets/css/receta/receta-descripcion.css" rel="stylesheet" />
+    <link href="./assets/css/receta/receta-imagen.css" rel="stylesheet" />
+    <link href="./assets/css/receta/receta-titulo.css" rel="stylesheet" />
+    <link href="./assets/css/receta/receta.css" rel="stylesheet" />
+    <link href="./assets/css/quienes/quienes.css" rel="stylesheet" />
+    <link href="./assets/css/quienes/quienes-descripcion.css" rel="stylesheet" />
+    <link href="./assets/css/quienes/quienes-titulo.css" rel="stylesheet" />
+    <link href="./assets/css/personas.css" rel="stylesheet" />
+    <link href="./assets/css/persona/persona-funcion.css" rel="stylesheet" />
+    <link href="./assets/css/persona/persona-imagen.css" rel="stylesheet" />
+    <link href="./assets/css/persona/persona-nombre.css" rel="stylesheet" />
+    <link href="./assets/css/persona/persona.css" rel="stylesheet" />
+    <link href="./assets/css/rodapie.css" rel="stylesheet" />
+    <link href="./assets/css/rodapie/roadpie-descripcion.css" rel="stylesheet" />
+    <link href="./assets/css/rodapie/rodapie-item.css" rel="stylesheet" />
+    <link href="./assets/css/rodapie/rodapie-lista.css" rel="stylesheet" />
+    <link href="./assets/css/rodapie/rodapie-titulo.css" rel="stylesheet" />
+    <link href="./assets/css/logo.css" rel="stylesheet" />
   </head>
   <body>
     <header class="cabecera">
@@ -34,7 +55,8 @@
       </nav>
     </header>
     <section class="banner">
-      <img src="assets/img/banner.png" alt="banner" class="banner__imagen">
+      <div class="banner__imagen">
+      </div>
       <h2 class="banner__titulo">Reaproveche mejor los alimentos</h2>
     </section>
     <section class="sobre">
@@ -42,5 +64,85 @@
       <p class="sobre__descripcion">Nuestras recetas te ayudan a aprovechar
         mejor los alimentos, economizar, ganar tiempo y practicidad</p>
     </section>
+    <section class="recetas">
+      <div class="receta">
+        <img class="receta__imagen" alt="bol de aguacate" src="./assets/img/recetas/ensalada-de-frutas.jpg" />
+        <div class="receta__contenido">
+          <h4 class="receta__titulo">bol de aguacate</h4>
+          <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+          <button class="receta__boton">Ver receta</button>
+        </div>
+      </div>
+      <div class="receta">
+        <img class="receta__imagen" alt="Ensalada de kiwi" src="./assets/img/recetas/ensalada-de-kiwi.jpg" />
+        <div class="receta__contenido">
+          <h4 class="receta__titulo">Ensalada de kiwi</h4>
+          <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+          <button class="receta__boton">Ver receta</button>
+        </div>
+      </div>
+      <div class="receta">
+        <img class="receta__imagen" alt="Mix de vegetales" src="./assets/img/recetas/mix-de-vegetales.jpg" />
+        <div class="receta__contenido">
+          <h4 class="receta__titulo">Mix de vegetales</h4>
+          <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+          <button class="receta__boton">Ver receta</button>
+        </div>
+      </div>
+      <div class="receta">
+        <img class="receta__imagen" alt="Pimentones en Juliana" src="./assets/img/recetas/pimentones-juliana.jpg" />
+        <div class="receta__contenido">
+          <h4 class="receta__titulo">Pimentones en Juliana</h4>
+          <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+          <button class="receta__boton">Ver receta</button>
+        </div>
+      </div>
+      <div class="receta">
+        <img class="receta__imagen" alt="Plato oriental" src="./assets/img/recetas/plato-oriental.jpg" />
+        <div class="receta__contenido">
+          <h4 class="receta__titulo">Plato oriental</h4>
+          <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+          <button class="receta__boton">Ver receta</button>
+        </div>
+      </div>
+      <div class="receta">
+        <img class="receta__imagen" alt="Remolachas asadas" src="./assets/img/recetas/beterrabas-asadas.jpg" />
+        <div class="receta__contenido">
+          <h4 class="receta__titulo">Remolachas assadas</h4>
+          <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+          <button class="receta__boton">Ver receta</button>
+        </div>
+      </div>
+    </section>
+    <section class="quienes">
+      <h3 class="quienes__titulo">Quienes somos</h3>
+      <p class="quienes__descripcion">Conozca a la comunidad detrás de la iniciativa</p>
+      <div class="personas">
+          <div class="persona">
+              <div class="persona__imagen persona__imagen--roberta"></div>
+              <span class="persona__nombre">Roberta</span>
+              <span class="persona__funcion">Contenido</span>
+          </div>
+          <div class="persona">
+              <div class="persona__imagen persona__imagen--marcela"></div>
+              <span class="persona__nombre">Marcela</span>
+              <span class="persona__funcion">Chef de cocina</span>
+          </div>
+          <div class="persona">
+              <div class="persona__imagen persona__imagen--andreia"></div>
+              <span class="persona__nombre">Andréia</span>
+              <span class="persona__funcion">Pequeña Productora</span>
+          </div>
+      </div>
+  </section>
+  <footer class="rodapie">
+    <h3 class="rodapie__titulo">fruta & fruto 2022</h2>
+    <p class="rodapie__descripcion">Contacto</p>
+    <ul class="rodapie__lista">
+        <li class="rodapie__item"><a class="rodapie__icon" href="#"><img alt="WhatsApp" src="./assets/img/WhatsApp.png"></a></li>
+        <li class="rodapie__item"><a class="rodapie__icon" href="#" ><img alt="Email" src="./assets/img/email.png"></a></li>
+        <li class="rodapie__item"><a class="rodapie__icon" href="#"><img alt="Instagram" src="./assets/img/Instagram.png"></a></li>
+    </ul>
+</footer>
   </body>
 </html>
