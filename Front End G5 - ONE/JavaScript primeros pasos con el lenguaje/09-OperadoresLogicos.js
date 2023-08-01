@@ -1,17 +1,17 @@
 //Operadores de comparacion
 const ciudadDestino = "Bogotá";
-const ciudadDisponibles = new Array("Bogotá","Lima","Santiago","Montevideo");
+const ciudadDisponibles = new Array("Bogotá", "Lima", "Santiago", "Montevideo");
 
 //Respuesta Docente
 //Este método devuelve el índice del primer elemento del array que coincide con el valor proporcionado,
 //o -1 si el valor no se encuentra en el array.
 //El arreglo empieza desde 0, si ciudadDestino está en el arreglo devolvera entre(0,1,2,3), pero si no está devuelve -1 y no entra en el if
-console.log(`Verificando pasajes para ${ciudadDestino}`);
+/*console.log(`Verificando pasajes para ${ciudadDestino}`);
 if (ciudadDisponibles.indexOf(ciudadDestino) >=0){//puede ser > -1 también funcionaria
     console.log("Pasaje disponible para venta");
 }else{
     console.log("Pasaje no disponible para venta");
-}
+}*/
 
 //Palabra reservada if, evalua una condicion
 /*if (ciudadDisponibles.find(elemento => elemento === ciudadDestino)){
@@ -32,6 +32,29 @@ if (ciudadDisponibles.includes(ciudadDestino)){
 
 const valorPasaje = "1000";
 // si if (valorPasaje === 1000), el === compara si el numero es igual pero como valorPasaje es String saldria error
-if (valorPasaje == 1000){//Acá no es estricto y hace un casteo y compara igual el número
+if (valorPasaje == 1000) {//Acá no es estricto y hace un casteo y compara igual el número
     console.log("El pasaje vale 1000");
+}
+
+//AND && , OR || , NOT !
+//&& = se debe cumplir las 2 condiciones, || = debe cumplir al menos 1 de las 2 condiciones, NOT ! = no se cumple la condicion
+let edadPasajero = 17;
+let estaAcompanado = true;
+console.log(`Verificando pasajes para ${ciudadDestino}`);
+if ((ciudadDisponibles.indexOf(ciudadDestino) > -1) && //puede ser > -1 también funcionaria
+    (edadPasajero >= 18 || estaAcompanado)) {
+    console.log("Pasaje disponible para venta");
+} else {
+    console.log("Ciudad no disponible para viajar o no cumple las reglas");
+}
+
+edadPasajero = 17;
+estaAcompanado = false;
+//Aplicando logica negativa
+console.log(`Verificando pasajes para ${ciudadDestino}`);
+if (!((ciudadDisponibles.indexOf(ciudadDestino) > -1) && //puede ser > -1 también funcionaria
+    (edadPasajero >= 18 || estaAcompanado))) {
+    console.log("Ciudad no disponible para viajar o no cumple las reglas");//como no cumple entra en este bloque
+} else {
+    console.log("Pasaje disponible para venta");
 }
