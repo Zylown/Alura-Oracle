@@ -7,12 +7,10 @@
     <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/base/base.css" />
     <link rel="stylesheet" href="../assets/css/componentes/header.css" />
     <link rel="stylesheet" href="../assets/css/componentes/card.css" />
@@ -25,8 +23,7 @@
       <img
         src="../assets/img/doguitoadm.svg"
         alt="Logo Doguito"
-        class="header__logo"
-      />
+        class="header__logo" />
       <nav>
         <ul class="header__list-nav">
           <li class="header__link"><a href="#">Dashboard</a></li>
@@ -50,8 +47,7 @@
               type="text"
               placeholder="Nombre"
               required
-              data-nombre
-            />
+              data-nombre />
             <label class="input-label" for="nombre">Nombre</label>
             <span class="input-menssage-error">Este campo es requerido</span>
           </div>
@@ -63,8 +59,7 @@
               type="text"
               placeholder="email"
               required
-              data-email
-            />
+              data-email />
             <label class="input-label" for="email">Email</label>
             <span class="input-menssage-error">Este campo es requerido</span>
           </div>
@@ -72,5 +67,9 @@
         </form>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../controllers/registro_controller.js"></script>
   </body>
 </html>
