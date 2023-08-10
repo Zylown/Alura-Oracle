@@ -8,7 +8,7 @@ form.addEventListener("submit", (event) => {
   const email = document.querySelector("[data-email]").value;
   clienteService
     .crearCliente(nombre, email)
-    .then((response) => {
+    .then(() => {
       window.location.href = "/screens/registro_completado.html";
     })
     .catch((error) => {
