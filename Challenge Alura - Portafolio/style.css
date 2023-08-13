@@ -1,3 +1,7 @@
+* {
+  font-family: "Handjet", cursive;
+}
+
 .navegador {
   display: flex;
   align-items: center;
@@ -18,7 +22,9 @@
 }
 
 main {
-  background: linear-gradient(to right, #f3965b, #f3545b);
+  /*background: linear-gradient(to right, #f3965b, #f3545b);*/
+
+  background: linear-gradient(to right, #895bf3, #1f2937);
 }
 
 .contenido__izquierdo {
@@ -65,7 +71,7 @@ main {
   /*background: #7bf1bf;*/
   text-align: start;
   margin-left: 20px;
-  font-family: "Handjet", cursive;
+  color: white;
 }
 
 .contenedor__sobremi .parrafo__sobremi {
@@ -92,27 +98,35 @@ main {
   font-size: 18px;
   text-decoration: none;
   margin-right: 50px;
+  display: flex; /* Utilizamos flexbox para centrar elementos en la misma línea */
+  align-items: center;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.contenedor__sobremi .title__network .title__network__item a:hover {
+  text-shadow: 1px 1px 2px #1f2937;
+  transform: translateY(-6px);
 }
 
 /*SKILLS*/
 
 .contenedor__parrafo__skills {
+  border-top: 5px solid black;
   display: flex;
   flex-direction: column;
-  background-color: #f3965b;
+  background: linear-gradient(to left, #240963, #1f2937);
 }
 
 .parrafo__secundario {
   text-align: center;
-  color: black;
-  font-family: "Handjet", cursive;
-  font-size: 30px;
+  color: white;
+  font-size: 40px;
 }
 
 .contenido__secundario {
   font-size: 30px;
   color: white;
-  font-family: "Handjet", cursive;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -128,7 +142,7 @@ main {
   height: 60px;
 }
 
-.hobbies__name{
+.hobbies__name {
   margin: 0px 0 30px 0;
 }
 
@@ -139,17 +153,68 @@ main {
 
 /*HOBBIES*/
 
-.hobbies__title {
-  text-align: center;
-  color: black;
-  font-family: "Handjet", cursive;
-  font-size: 30px;
-}
-
 .hobbies__line {
   height: auto;
   display: flex;
   flex-direction: column;
+}
+
+/*FORMACION ACADEMICA*/
+
+.academic {
+  /*background: #F5F5F5;*/
+  border-bottom: 5px solid black;
+}
+
+.academic__title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.academic__courses {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.academic__courses__box {
+  align-self: center;
+  border: 3px solid white;
+  border-radius: 8px;
+  background: white;
+}
+
+.academic__courses__list {
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+}
+
+.academic__courses__item__img img {
+  width: 500px;
+  height: 250px;
+}
+
+/*EXPERIENCIA*/
+
+.experience__section__title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.experiencie__box{
+  display: flex;
+  justify-content: space-around;
+}
+
+.experience__img{
+  width: 500px;
+  height: auto;
+}
+
+.experience__info{
+  align-self: center;
 }
 
 @media screen and (max-width: 1230px) {
