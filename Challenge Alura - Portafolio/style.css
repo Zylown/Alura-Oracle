@@ -203,18 +203,72 @@ main {
   text-align: center;
 }
 
-.experiencie__box{
+.experiencie__box {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.experience__img{
+.experience__img {
   width: 500px;
   height: auto;
 }
 
-.experience__info{
+.experience__info {
   align-self: center;
+}
+
+/*CONTACTAME*/
+
+.formcontato {
+  border-top: 5px solid black;
+}
+
+.formcontato__contacto {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.formcontato--esquierda {
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.formcontato__img {
+  width: 350px;
+  height: 450px;
+}
+
+/*CONTACTAME -- FORM*/
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formcontato__input {
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.formcontato__botao {
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  width: 30%;
+  background: linear-gradient(to left, #240963, #1f2937);
+  transition: 500ms all;
+}
+
+.formcontato__botao:hover {
+  transform: scale(1.1);
+  background: #240963;
+  transition: transform 500ms, background 500ms;
 }
 
 @media screen and (max-width: 1230px) {
