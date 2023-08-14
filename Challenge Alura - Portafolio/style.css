@@ -162,8 +162,8 @@ main {
 /*FORMACION ACADEMICA*/
 
 .academic {
-  /*background: #F5F5F5;*/
-  border-bottom: 5px solid black;
+  /*background: #F5F5F5;
+  border-bottom: 5px solid black;*/
 }
 
 .academic__title {
@@ -198,6 +198,11 @@ main {
 
 /*EXPERIENCIA*/
 
+.experience {
+  background: #f5f5f5;
+  border-top: 5px solid black;
+}
+
 .experience__section__title {
   font-size: 30px;
   text-align: center;
@@ -207,21 +212,34 @@ main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 
 .experience__img {
   width: 500px;
-  height: auto;
+  height: 244.31px;
+  border-radius: 3px;
 }
 
 .experience__info {
-  align-self: center;
+  font-size: 20px;
+  width: 211px;
+}
+
+.experiencia__botao--repo {
+  padding: 6px 20px;
+  border: 2px solid #895bf3;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  color: #895bf3;
 }
 
 /*CONTACTAME*/
 
 .formcontato {
   border-top: 5px solid black;
+  background: #f5f5f5;
 }
 
 .formcontato__contacto {
@@ -232,12 +250,13 @@ main {
 
 .formcontato--esquierda {
   margin-right: 20px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .formcontato__img {
   width: 350px;
-  height: 450px;
+  height: 477px;
+  border-radius: 2px;
 }
 
 /*CONTACTAME -- FORM*/
@@ -246,12 +265,18 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .formcontato__input {
-  padding: 6px;
-  border: 1px solid black;
-  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formcontato__textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .formcontato__botao {
@@ -262,13 +287,38 @@ main {
   border-radius: 5px;
   width: 30%;
   background: linear-gradient(to left, #240963, #1f2937);
-  transition: 500ms all;
+  transition: all 300ms ease-in-out;
 }
 
 .formcontato__botao:hover {
-  transform: scale(1.1);
-  background: #240963;
-  transition: transform 500ms, background 500ms;
+  border: 1px solid transparent;
+  /* transform: scale(1.06);*/
+  background: linear-gradient(to right, #240963, #1f2937);
+  box-shadow: 5px 5px 2px 0px black; /*X Y BLUR SPREAD*/
+}
+.input-message-error {
+  display: none;
+}
+
+.input-container--invalid .input-message-error {
+  color: red;
+  display: block;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/*FOOTER*/
+
+.footer {
+  background: #f5f5f5;
+  display: flex;
+  border-top: 5px solid black;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer__rodape {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1230px) {
