@@ -1,18 +1,13 @@
 {
   "perfil": [
     {
-      "nombre": "Harland Lohora",
-      "email": "harland@alura.com",
-      "id": 1
-    },
-    {
       "nombre": "Sevastian Caballero",
       "email": "sevastian@alura.com",
       "id": 2
     },
     {
-      "nombre": "Renato Caballero",
-      "email": "renatoCaballero@gmail.com",
+      "nombre": "Example",
+      "email": "examplee@gmail.com",
       "id": "6f793d4b-26cc-4360-9454-3bffabd0c865"
     }
   ]
