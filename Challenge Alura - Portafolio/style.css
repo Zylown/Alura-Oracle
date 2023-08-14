@@ -194,6 +194,7 @@ main {
 .academic__courses__item__img img {
   width: 500px;
   height: 250px;
+  max-width: 100vw;
 }
 
 /*EXPERIENCIA*/
@@ -217,6 +218,7 @@ main {
 
 .experience__img {
   width: 500px;
+  max-width: 100vw;
   height: 244.31px;
   border-radius: 3px;
 }
@@ -255,7 +257,7 @@ main {
 
 .formcontato__img {
   width: 350px;
-  height: 477px;
+  height: 503px;
   border-radius: 2px;
 }
 
@@ -356,5 +358,13 @@ main {
   .contenedor__skills svg {
     width: 55px;
     height: 55px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .formcontato__text {
+    padding: 10px;
+  }
+  .formcontato--esquierda {
+    display: none;
   }
 }
