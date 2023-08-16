@@ -1,5 +1,7 @@
 * {
   font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
 .nav__alurageek {
@@ -17,7 +19,6 @@
 .nav__a {
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 
 .title__header {
@@ -109,6 +110,33 @@
 }
 
 /*HEADER*/
-.header__background--image{
-  
+header {
+  position: relative;
+  background-color: #000;
+  height: 480px;
+  width: 100%;
+}
+.header__background--image {
+  background-image: url(../assets/img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  opacity: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header__banner--text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+  margin-left: 90px;
+  bottom: 150px;
+}
+
+.header__banner--text h1{
+  font-size: 50px;
 }
