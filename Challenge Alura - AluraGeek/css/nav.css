@@ -91,6 +91,9 @@
 }
 
 @media screen and (max-width: 630px) {
+  .nav__a {
+    width: 185px;
+  }
   .nav__search {
     display: none;
   }
@@ -107,36 +110,4 @@
   .nav__button--login svg {
     display: block;
   }
-}
-
-/*HEADER*/
-header {
-  position: relative;
-  background-color: #000;
-  height: 480px;
-  width: 100%;
-}
-.header__background--image {
-  background-image: url(../assets/img/banner.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  opacity: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.header__banner--text {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  color: white;
-  margin-left: 90px;
-  bottom: 150px;
-}
-
-.header__banner--text h1{
-  font-size: 50px;
 }

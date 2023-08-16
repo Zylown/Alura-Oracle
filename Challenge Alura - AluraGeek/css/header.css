@@ -1,0 +1,70 @@
+/*HEADER*/
+header {
+  position: relative;
+  background-color: #000;
+  height: 480px;
+  width: 100%;
+}
+.header__background--image {
+  background-image: url(../assets/img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  opacity: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header__banner--text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #ffffff;
+  margin-left: 10%;
+  bottom: 150px;
+  gap: 16px;
+}
+
+.header__banner--text h1 {
+  font-size: 52px;
+  margin: 0;
+}
+
+.header__banner--text p {
+  font-size: 22px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header__banner--text a {
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  background: #2a7ae4;
+  color: white;
+  width: 100px;
+}
+
+@media screen and (max-width: 630px) {
+  .header__banner--text h1 {
+    font-size: 35px;
+  }
+
+  .header__banner--text p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header__banner--text h1 {
+    font-size: 22px;
+  }
+
+  .header__banner--text p {
+    font-size: 14px;
+  }
+}
