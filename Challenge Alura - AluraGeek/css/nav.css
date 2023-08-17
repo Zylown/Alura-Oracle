@@ -8,6 +8,7 @@
   max-width: 100%;
   display: flex;
   justify-content: space-around;
+  padding: 16px 0px;
 }
 
 .nav__alurageek--left {
