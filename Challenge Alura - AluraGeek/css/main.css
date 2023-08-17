@@ -71,7 +71,7 @@ main {
   line-height: normal;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 450px) {
   main{
     padding: 20px 16px;
   }
@@ -82,7 +82,7 @@ main {
     line-height: normal;
   }
   .container__vertodo a {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .image--producto{
