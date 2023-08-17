@@ -1,0 +1,127 @@
+section {
+  padding: 64px;
+  background-color: #eaf2fd;
+}
+
+.section__container {
+  display: flex;
+  align-self: center;
+  gap: 110px;
+}
+
+.section__container--left {
+  display: flex;
+  gap: 112px;
+}
+
+.section__container--logo {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  margin-left: 112px;
+}
+
+.section__container--list ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 176px;
+}
+
+.section__container--list ul a {
+  color: #464646;
+}
+
+.section__container--nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.section__container--nosotros p {
+  color: #464646;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.nosotros__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nosotros__form input {
+  padding: 16px 10px;
+  border: transparent;
+  border-bottom: 1px solid #c8c8c8;
+  border-radius: 4px;
+}
+
+.nosotros__form input:focus::placeholder {
+  transform: translateY(-110%);
+  font-size: 13px; /* Tamaño más pequeño */
+  opacity: 0.7; /* Puedes ajustar la opacidad según tus preferencias */
+}
+
+.nosotros__form textarea {
+  padding: 12px 10px;
+  height: 82px;
+  border: transparent;
+  border-bottom: 1px solid #c8c8c8;
+  border-radius: 4px;
+}
+
+.nosotros__form textarea::placeholder,
+.nosotros__form input::placeholder {
+  transition: all 0.3s ease; /* Agrega una transición suave */
+  color: #a2a2a2;
+}
+
+.nosotros__form textarea:focus,
+.nosotros__form input:focus {
+  outline: 1px solid #a2a2a2;
+}
+
+.nosotros__button {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #2a7ae4;
+  border: 0px;
+  color: white;
+  width: 144px;
+}
+
+@media screen and (max-width: 630px) {
+  section {
+    padding: 16px;
+  }
+  .section__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .section__container--left {
+    align-self: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .section__container--logo {
+    margin-left: 0;
+  }
+  .section__container--left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
