@@ -1,0 +1,11 @@
+footer {
+  padding: 32px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer p {
+  text-align: center;
+}
