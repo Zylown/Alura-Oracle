@@ -3,13 +3,15 @@ main {
 }
 .main__content {
   width: 100%;
+  padding-top: 64px;
 }
+
 .main__container__principal {
   display: flex;
   justify-content: space-between;
 }
 
-.container__vertodo {
+.container__vertodo a {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -38,7 +40,6 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  border: 1px solid #000;
 }
 
 .image--producto {
@@ -46,10 +47,46 @@ main {
   height: 174px;
 }
 
-.main__container--productos ul li p {
+.main__container--productos ul li h3 {
+  color: #464646;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.main__container--productos ul li h4 {
+  color: #464646;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.main__container--productos ul li a {
   color: #2a7ae4;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+@media screen and (max-width: 360px) {
+  main{
+    padding: 20px 16px;
+  }
+  .main__container__principal h1 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .container__vertodo a {
+    font-size: 14px;
+  }
+
+  .image--producto{
+    width: 156px;
+    height: 174px;
+  }
 }
