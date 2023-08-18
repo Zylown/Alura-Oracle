@@ -1,0 +1,144 @@
+* {
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav__alurageek {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0px;
+}
+
+.nav__container__logo {
+  align-self: center;
+}
+
+.nav__alurageek--left {
+  display: flex;
+  width: 62%;
+  gap: 32px;
+}
+
+.nav__a {
+  display: flex;
+  align-items: center;
+}
+
+.title__header {
+  color: #464646;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 32px;
+}
+
+.title__header::before {
+  content: attr(data-first-letters);
+  color: #2a7ae4;
+}
+
+.nav__search {
+  display: flex;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+}
+
+.nav__search svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 24px;
+}
+
+.input__search {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: #f5f5f5;
+
+  min-width: 155px;
+}
+
+.input__search:focus {
+  outline: 1px solid #a2a2a2;
+}
+
+.input__search::placeholder {
+  color: #a2a2a2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 16px;
+}
+
+.nav__button--login {
+  display: flex;
+  align-items: center;
+  margin-left: 42px;
+}
+
+.nav__button--login svg {
+  display: none;
+}
+
+.a__button--login {
+  /*width: 150px;
+    height: 48px;*/
+  padding: 16px;
+  border: 1px solid #2a7ae4;
+  background: transparent;
+  text-decoration: none;
+  color: #2a7ae4;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.a__button--login:hover {
+  background-color: #2a7ae4;
+  color: white;
+}
+
+@media screen and (max-width: 630px) {
+  .nav__a {
+    width: 185px;
+  }
+  .nav__search {
+    display: none;
+  }
+
+  .nav__alurageek--left {
+    width: 40%;
+  }
+
+  .nav__button--login {
+    gap: 25px;
+  }
+
+  .a__button--login {
+    padding: 8px;
+  }
+
+  .nav__button--login svg {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 392px) {
+  .nav__alurageek {
+    padding: 16px 8px;
+  }
+  .nav__a {
+    width: 150px;
+  }
+  .title__header {
+    font-size: 18px;
+  }
+  .nav__button--login {
+    margin-left: 15px;
+  }
+}
