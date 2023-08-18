@@ -32,7 +32,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .main__container--productos ul li {
@@ -71,9 +71,12 @@ main {
   line-height: normal;
 }
 
-@media screen and (max-width: 450px) {
-  main{
+@media screen and (max-width: 485px) {
+  main {
     padding: 20px 16px;
+  }
+  .main__content {
+    padding-top: 32px;
   }
   .main__container__principal h1 {
     font-size: 22px;
@@ -85,8 +88,14 @@ main {
     font-size: 16px;
   }
 
-  .image--producto{
+  .image--producto {
     width: 156px;
     height: 174px;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  .main__container--productos ul {
+    justify-content: center;
   }
 }
