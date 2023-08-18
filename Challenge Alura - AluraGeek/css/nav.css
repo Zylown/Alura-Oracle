@@ -89,6 +89,12 @@
   background: transparent;
   text-decoration: none;
   color: #2a7ae4;
+  transition: all 0.3s ease;
+}
+
+.a__button--login:hover{
+  background-color: #2a7ae4;
+  color: white;
 }
 
 @media screen and (max-width: 630px) {
