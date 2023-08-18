@@ -1,0 +1,142 @@
+main {
+  background-color: #f5f5f5;
+}
+
+.main__container--productos {
+  padding: 64px 60px 64px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main_all_container--cards {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.container__productos--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container__productos--title p {
+  color: #464646;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.container__productos--title a {
+  background-color: #2a7ae4;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.main__container--cards ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.container__cards--img {
+  position: relative;
+  width: 100%;
+  max-width: 176px;
+}
+
+.icon__trash {
+  position: absolute;
+  left: 65%;
+  top: 3%;
+  width: 24px;
+  cursor: pointer;
+}
+
+.icon__edit {
+  position: absolute;
+  left: 85%;
+  top: 3%;
+  width: 24px;
+  cursor: pointer;
+}
+
+.image--producto {
+  width: 176px;
+  height: 174px;
+}
+
+.main__container--productos ul li h3,
+.main__container--productos ul li p {
+  color: #464646;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  align-self: stretch;
+}
+
+.main__container--productos ul li h4 {
+  color: #464646;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 520px) {
+  .nav__alurageek {
+    margin-left: 5%;
+  }
+  .main__container--productos {
+    padding: 20px 16px;
+  }
+  .main__container__principal h1 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .container__productos--title a {
+    padding: 12px;
+  }
+
+  .container__productos--title p {
+    font-size: 16px;
+  }
+
+  .image--producto {
+    width: 156px;
+    height: 174px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .image--producto {
+    width: 126px;
+    height: 154px;
+  }
+  .container__productos--title p {
+    font-size: 15px;
+  }
+
+  .container__productos--title a {
+    padding: 11px;
+  }
+}
+
+@media screen and (max-width: 316px) {
+    .container__productos--title a{
+        width: 70%;
+    }
+  .main__container--cards ul{
+    justify-content: center;
+  }
+}
