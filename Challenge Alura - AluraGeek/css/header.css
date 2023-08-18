@@ -47,6 +47,13 @@ header {
   background: #2a7ae4;
   color: white;
   width: 100px;
+  transition: all 0.3s ease;
+}
+
+.header__banner--text a:hover {
+  background-color: transparent;
+  color: #2a7ae4;
+  border: 1px solid #2a7ae4;
 }
 
 @media screen and (max-width: 630px) {
