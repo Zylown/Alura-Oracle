@@ -67,9 +67,4 @@ header {
     max-width: 100%;
     padding: 0 20px; /* Agrega espacio en los costados */
   }
-
-  .form__login {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
 }
