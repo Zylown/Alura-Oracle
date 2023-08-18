@@ -97,6 +97,15 @@ section {
   border: 0px;
   color: white;
   width: 144px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.nosotros__button:hover {
+  background-color: transparent;
+  color: #2a7ae4;
+  border: 1px solid #2a7ae4;
 }
 
 @media screen and (max-width: 630px) {
