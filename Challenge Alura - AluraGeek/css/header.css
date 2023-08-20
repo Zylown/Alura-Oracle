@@ -57,6 +57,10 @@ header {
 }
 
 @media screen and (max-width: 630px) {
+  .header__banner--text {
+    margin-left: 5%;
+  }
+
   .header__banner--text h1 {
     font-size: 35px;
   }
