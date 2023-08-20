@@ -2,111 +2,91 @@ export function valida(input) {
   // Obtiene el tipo de input a través de los atributos de datos (data-*)
   const tipoDeInput = input.dataset.tipo;
 
-  // Si hay un validador definido para el tipo de input, llámalo
   if (validadores[tipoDeInput]) {
     validadores[tipoDeInput](input);
   }
+
+  //console.log(input.parentElement); //Este se dirige a la clase padre
+
+  //console.log(input.validity.valid); //Este es para validar con el required de HTML5
+  //console.log(input.validity);
+  // Verifica si el input es válido según las restricciones de validación HTML5
+  if (input.validity.valid) {
+    // Si es válido, elimina la apariencia de error del contenedor del input
+    input.parentElement.classList.remove("input-container--invalid");
+    // Limpia el mensaje de error
+    input.parentElement.querySelector(".input-message-error").innerHTML = "";
+  } else {
+    // Si no es válido, agrega la apariencia de error al contenedor del input
+    input.parentElement.classList.add("input-container--invalid");
+    // Muestra el mensaje de error correspondiente al tipo de input y error específico
+    input.parentElement.querySelector(".input-message-error").innerHTML =
+      mostrarMensajeDeError(tipoDeInput, input);
+  }
 }
 
-/*export function valida() {
-  const form = document.getElementById("nosotros__form");
-  const nombreInput = document.getElementById("input__nombre");
-  const mensajeTextarea = document.getElementById("mensaje");
-  const exitoMessage = document.getElementById("exito__messages");
-  const errorMessages = document.getElementById("error__messages");
+const tipoDeErrores = [
+  "valueMissing", //en caso el input no tenga nada
+  "typeMismatch", // ejm: si es type="email" usa del html su pattern default
+  "patternMismatch", // el html tiene que tener pattern y valida que se haga ese
+  "customError", // error personalizado con su respectiva función personalizada
+];
 
-  form.addEventListener("submit", (evento) => {
-    evento.preventDefault();
+const mensajesDeError = {
+  nombre: {
+    valueMissing: "El campo correo no puede estar vacío.",
+    //typeMismatch: "El correo no es válido",
+  },
+  mensaje: {
+    valueMissing: "El campo correo no puede estar vacío.",
+    //typeMismatch: "El correo no es válido",
+  },
+  email: {
+    valueMissing: "El campo correo no puede estar vacío.",
+    //typeMismatch: "El correo no es válido",
+    //patternMismatch: "El correo no tiene el formato correcto",
+    customError: "El correo no es válido",
+  },
+  password: {
+    valueMissing: "El campo contraseña no puede estar vacío.",
+    patternMismatch:
+      "Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.",
+  },
+};
 
-    // Oculta mensajes existentes
-    exitoMessage.style.display = "none";
-    errorMessages.style.display = "none";
-
-    const nombre = nombreInput.value.trim();
-    const mensaje = mensajeTextarea.value.trim();
-    console.log(mensaje + " " + nombre);
-
-    errorMessages.innerHTML = "";
-
-    if (nombre === "") {
-      mostrarError("Nombre no puede quedar vacío.");
-    } else if (nombre.length > 40) {
-      mostrarError("Nombre no puede superar los 40 caracteres.");
-    }
-
-    if (mensaje === "") {
-      mostrarError("Mensaje no puede quedar vacío.");
-    } else if (mensaje.length > 120) {
-      mostrarError("Mensaje no puede superar los 120 caracteres.");
-    }
-
-    if (errorMessages.innerHTML === "") {
-      // Si no hay errores, el formulario es válido
-      console.log("Formulario válido. Puedes enviar el mensaje.");
-      mostrarExito();
-      form.reset();
+function mostrarMensajeDeError(tipoDeInput, input) {
+  let mensaje = "";
+  // Itera a través de los tipos de errores posibles
+  tipoDeErrores.forEach((error) => {
+    // Verifica si el error está presente en la validación del input
+    if (input.validity[error]) {
+      /*console.log(tipoDeInput, error);
+      console.log(input.validity[error]);
+      console.log(mensajesDeError[tipoDeInput][error]);*/
+      // Obtiene el mensaje de error correspondiente al tipo de input y error específico
+      mensaje = mensajesDeError[tipoDeInput][error];
     }
   });
-
-  const mostrarError = (mensaje) => {
-    errorMessages.style.display = "block";
-    const errorDiv = document.createElement("div");
-    errorDiv.classList.add("error-message");
-    errorDiv.textContent = mensaje;
-    errorMessages.appendChild(errorDiv);
-  };
-
-  const mostrarExito = (mensaje) => {
-    exitoMessage.style.display = "block";
-  };
+  return mensaje;
 }
 
-export function validaLogin() {
-  const form = document.getElementById("form__login");
-  const emailInput = document.querySelector("[data-input-email]");
-  const passwordInput = document.querySelector("[data-input-password]");
+const validadores = {
+  email: (input) => validarCorreo(input),
+};
 
-  const exitoMessage = document.getElementById("exito__messages");
-  const errorMessages = document.getElementById("error__messages");
-  console.log(emailInput, passwordInput);
-  form.addEventListener("submit", (evento) => {
-    evento.preventDefault();
+function validarCorreo(input) {
+  const correo = input.value;
+  const regexCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  let mensaje = "";
 
-    // Oculta mensajes existentes
-    exitoMessage.style.display = "none";
-    errorMessages.style.display = "none";
-
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-    console.log(email + " " + password);
-
-    errorMessages.innerHTML = "";
-
-    if (email === "") {
-      mostrarError("Email no puede quedar vacío.");
-    }
-
-    if (password === "") {
-      mostrarError("Contraseña no puede quedar vacío.");
-    }
-
-    if (errorMessages.innerHTML === "") {
-      // Si no hay errores, el formulario es válido
-      console.log("Formulario válido. Puedes enviar el mensaje.");
-      mostrarExito();
-      form.reset();
-    }
-  });
-
-  const mostrarError = (mensaje) => {
-    errorMessages.style.display = "block";
-    const errorDiv = document.createElement("div");
-    errorDiv.classList.add("error-message");
-    errorDiv.textContent = mensaje;
-    errorMessages.appendChild(errorDiv);
-  };
-
-  const mostrarExito = (mensaje) => {
-    exitoMessage.style.display = "block";
-  };
-}*/
+  if(!correo){
+    // Si el campo está vacío, se aplicará la validación "valueMissing" predeterminada
+    input.setCustomValidity("El campo correo no puede estar vacío.");
+  }else if (!regexCorreo.test(correo)) {
+    mensaje = "Este correo no tiene el formato correcto";//Mensaje modal de HTML
+    //input.setCustomValidity("El correo no tiene el formato correcto");
+  } /*else {
+    input.setCustomValidity("");
+  }*/
+  input.setCustomValidity(mensaje);
+}

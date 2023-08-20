@@ -2,7 +2,7 @@
 import { valida } from "./validaciones.js";
 
 // Selecciona todos los elementos <input> en el documento
-const inputs = document.querySelectorAll("input"); //selecciona  todos los elementos tipo input
+const inputs = document.querySelectorAll("input, textarea"); //selecciona  todos los elementos tipo input
 
 // Itera a través de cada elemento <input> seleccionado
 inputs.forEach((input) => {
@@ -12,10 +12,3 @@ inputs.forEach((input) => {
     valida(input.target); //cuando los saque de foco va llamar a esta funcion
   });
 });
-
-/*import { validaLogin } from "./validaciones.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-  valida();
-  validaLogin();
-});*/
