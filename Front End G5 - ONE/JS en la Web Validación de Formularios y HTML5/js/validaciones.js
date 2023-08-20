@@ -12,6 +12,8 @@ export function valida(input) {
   //console.log(input.parentElement);
 
   // Verifica si el input es válido según las restricciones de validación HTML5
+  
+  console.log(input.validity.valid);
   if (input.validity.valid) {
     // Si es válido, elimina la apariencia de error del contenedor del input
     input.parentElement.classList.remove("input-container--invalid");
