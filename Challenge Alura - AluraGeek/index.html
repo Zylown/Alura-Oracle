@@ -451,19 +451,29 @@
         </div>
         <div class="section__container--nosotros">
           <p>Habla con nosotros</p>
-          <form class="nosotros__form" action="#">
-            <input type="text" placeholder="Nombre" />
+          <form class="nosotros__form" id="nosotros__form" action="#">
+            <input
+              id="input__nombre"
+              type="text"
+              placeholder="Nombre"
+              maxlength="40"
+            />
             <textarea
               name="mensaje"
               id="mensaje"
               cols="30"
               rows="10"
               placeholder="Escribe tu mensaje"
+              maxlength="120"
             ></textarea>
             <button class="nosotros__button" type="submit">
               Enviar mensaje
             </button>
           </form>
+          <div id="exito__messages" style="display: none; color: green">
+            ¡Formulario completado con éxito!
+          </div>
+          <div id="error__messages" style="display: none; color: red"></div>
         </div>
       </div>
     </section>
@@ -471,5 +481,6 @@
       <p>Desarrollado por Sevastian Caballero</p>
       <p>2023</p>
     </footer>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

@@ -80,9 +80,22 @@
     <header>
       <div class="header__container--login">
         <p>Iniciar Sesión</p>
-        <form class="form__login" action="productos.html">
-          <input placeholder="Escriba su correo electrónico" type="email" required/>
-          <input placeholder="Escriba su contraseña" type="password" required/>
+        <form id="form__login" class="form__login" action="productos.html">
+          <input
+          id="inputEmail"
+            placeholder="Escriba su correo electrónico"
+            type="email"
+            data-tipo="email"
+          />
+          <span class="input-message-error">Este campo no es valido</span>
+          <input
+          id="inputPassword"
+            placeholder="Escriba su contraseña"
+            type="password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+\-]).{6,12}$"
+            data-tipo="password"
+          />
+          <span class="input-message-error">Este campo no es valido</span>
           <button type="submit">Entrar</button>
         </form>
       </div>
@@ -130,7 +143,7 @@
         </div>
         <div class="section__container--nosotros">
           <p>Habla con nosotros</p>
-          <form class="nosotros__form" action="#">
+          <form id="nosotros__login" class="nosotros__form" action="#">
             <input type="text" placeholder="Nombre" />
             <textarea
               name="mensaje"
@@ -150,5 +163,6 @@
       <p>Desarrollado por Sevastian Caballero</p>
       <p>2023</p>
     </footer>
+    <script type="module" src="../js/app.js"></script>
   </body>
 </html>
