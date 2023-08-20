@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/login/headerLogin.css" />
     <link rel="stylesheet" href="../css/section.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/error.css" />
     <title>AluraGeek: Login</title>
   </head>
   <body>
@@ -81,21 +82,30 @@
       <div class="header__container--login">
         <p>Iniciar Sesión</p>
         <form id="form__login" class="form__login" action="productos.html">
-          <input
-          id="inputEmail"
-            placeholder="Escriba su correo electrónico"
-            type="email"
-            data-tipo="email"
-          />
-          <span class="input-message-error">Este campo no es valido</span>
-          <input
-          id="inputPassword"
-            placeholder="Escriba su contraseña"
-            type="password"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+\-]).{6,12}$"
-            data-tipo="password"
-          />
-          <span class="input-message-error">Este campo no es valido</span>
+          <div class="input-container">
+            <input
+              name="email"
+              id="email"
+              class="input"
+              type="text"
+              placeholder="Escriba su correo electrónico"
+              data-tipo="email"
+              required
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <div class="input-container">
+            <input
+              class="input"
+              placeholder="Escriba su contraseña"
+              type="password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+\-]).{6,12}$"
+              title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
+              data-tipo="password"
+              required
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
           <button type="submit">Entrar</button>
         </form>
       </div>
@@ -143,15 +153,33 @@
         </div>
         <div class="section__container--nosotros">
           <p>Habla con nosotros</p>
-          <form id="nosotros__login" class="nosotros__form" action="#">
-            <input type="text" placeholder="Nombre" />
-            <textarea
-              name="mensaje"
-              id="mensaje"
-              cols="30"
-              rows="10"
-              placeholder="Escribe tu mensaje"
-            ></textarea>
+          <form class="nosotros__form" id="nosotros__form" action="#">
+            <div class="input-container">
+              <input
+                class="input"
+                id="input__nombre"
+                type="text"
+                placeholder="Nombre"
+                maxlength="40"
+                data-tipo="nombre"
+                required
+              />
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
+            <div class="input-container">
+              <textarea
+                class="input"
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+                placeholder="Escribe tu mensaje"
+                maxlength="120"
+                data-tipo="mensaje"
+                required
+              ></textarea>
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
             <button class="nosotros__button" type="submit">
               Enviar mensaje
             </button>

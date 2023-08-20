@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/section.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/error.css" />
   </head>
   <body>
     <nav class="nav__alurageek">
@@ -452,28 +453,36 @@
         <div class="section__container--nosotros">
           <p>Habla con nosotros</p>
           <form class="nosotros__form" id="nosotros__form" action="#">
-            <input
-              id="input__nombre"
-              type="text"
-              placeholder="Nombre"
-              maxlength="40"
-            />
-            <textarea
-              name="mensaje"
-              id="mensaje"
-              cols="30"
-              rows="10"
-              placeholder="Escribe tu mensaje"
-              maxlength="120"
-            ></textarea>
+            <div class="input-container">
+              <input
+                class="input"
+                id="input__nombre"
+                type="text"
+                placeholder="Nombre"
+                maxlength="40"
+                data-tipo="nombre"
+                required
+              />
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
+            <div class="input-container">
+              <textarea
+                class="input"
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+                placeholder="Escribe tu mensaje"
+                maxlength="120"
+                data-tipo="mensaje"
+                required
+              ></textarea>
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
             <button class="nosotros__button" type="submit">
               Enviar mensaje
             </button>
           </form>
-          <div id="exito__messages" style="display: none; color: green">
-            ¡Formulario completado con éxito!
-          </div>
-          <div id="error__messages" style="display: none; color: red"></div>
         </div>
       </div>
     </section>
