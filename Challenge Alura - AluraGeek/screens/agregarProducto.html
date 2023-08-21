@@ -85,12 +85,11 @@
       <div class="container__add--product">
         <p>Agregar nuevo producto</p>
         <form class="form__producto" action="#">
-          <div id="file__container">
+          <div id="file__container" style="display: none;">
             <div class="container__img">
               <img src="../assets/img/image-alt.svg" class="bg__img--file" />
               <label> Arrastre para agregar una imagen para el producto</label>
             </div>
-            <!--<label>O</label>-->
             <div class="input-contain">
               <label for="imageInput" class="custom-file-upload">
                 Seleccionar imagen
@@ -100,11 +99,21 @@
                 type="file"
                 id="imageInput"
                 accept="image/*"
-                required
                 data-tipo="file"
               />
-              <span class="input-message-error">Este campo no es valido</span>
+              <h2 class="h2__drag--text"></h2>
+              <span id="error__drag" class="input-message-error">Este campo no es válido</span>
             </div>
+          </div>
+          <div class="input-container">
+            <input
+              class="input"
+              required
+              placeholder="URL de imagen"
+              type="text"
+              data-tipo="categoria"
+            />
+            <span class="input-message-error">Este campo no es valido</span>
           </div>
           <div class="input-container">
             <input
@@ -237,5 +246,6 @@
       <p>2023</p>
     </footer>
     <script type="module" src="../js/app.js"></script>
+    <script src="../js/dragandrop.js"></script>
   </body>
 </html>
