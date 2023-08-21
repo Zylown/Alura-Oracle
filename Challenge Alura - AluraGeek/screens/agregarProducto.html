@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/addProducto/mainAddProducto.css" />
     <link rel="stylesheet" href="../css/section.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/error.css" />
     <title>AluraGeek: Agregar Producto</title>
   </head>
   <body>
@@ -84,17 +85,72 @@
       <div class="container__add--product">
         <p>Agregar nuevo producto</p>
         <form class="form__producto" action="#">
-          <input required placeholder="URL de imagen" type="text" />
-          <input required placeholder="Categoría" type="text" />
-          <input required placeholder="Nombre del producto" type="text" />
-          <input required placeholder="Precio del producto" type="number" />
-          <textarea
-            placeholder="Descripción del producto"
-            name="descripcion"
-            id="descripcion"
-            cols="30"
-            rows="10"
-          ></textarea>
+          <div id="file__container">
+            <div class="container__img">
+              <img src="../assets/img/image-alt.svg" class="bg__img--file" />
+              <label> Arrastre para agregar una imagen para el producto</label>
+            </div>
+            <!--<label>O</label>-->
+            <div class="input-contain">
+              <label for="imageInput" class="custom-file-upload">
+                Seleccionar imagen
+              </label>
+              <input
+                class="custom-file-input"
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                required
+                data-tipo="file"
+              />
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
+          </div>
+          <div class="input-container">
+            <input
+              class="input"
+              required
+              placeholder="Categoría"
+              type="text"
+              data-tipo="categoria"
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <div class="input-container">
+            <input
+              class="input"
+              required
+              maxlength="20"
+              placeholder="Nombre del producto"
+              type="text"
+              data-tipo="nombre_producto"
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <div class="input-container">
+            <input
+              class="input"
+              required
+              placeholder="Precio del producto"
+              data-tipo="precio_producto"
+              type="number"
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <div class="input-container">
+            <textarea
+              class="input"
+              placeholder="Descripción del producto"
+              name="descripcion"
+              id="descripcion"
+              cols="30"
+              rows="10"
+              maxlength="150"
+              data-tipo="mensaje"
+              required
+            ></textarea>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
           <button type="submit">Agregar</button>
         </form>
       </div>
@@ -142,15 +198,33 @@
         </div>
         <div class="section__container--nosotros">
           <p>Habla con nosotros</p>
-          <form class="nosotros__form" action="#">
-            <input type="text" placeholder="Nombre" />
-            <textarea
-              name="mensaje"
-              id="mensaje"
-              cols="30"
-              rows="10"
-              placeholder="Escribe tu mensaje"
-            ></textarea>
+          <form class="nosotros__form" id="nosotros__form" action="#">
+            <div class="input-container">
+              <input
+                class="input"
+                id="input__nombre"
+                type="text"
+                placeholder="Nombre"
+                maxlength="40"
+                data-tipo="nombre"
+                required
+              />
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
+            <div class="input-container">
+              <textarea
+                class="input"
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+                placeholder="Escribe tu mensaje"
+                maxlength="120"
+                data-tipo="mensaje"
+                required
+              ></textarea>
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
             <button class="nosotros__button" type="submit">
               Enviar mensaje
             </button>
@@ -162,5 +236,6 @@
       <p>Desarrollado por Sevastian Caballero</p>
       <p>2023</p>
     </footer>
+    <script type="module" src="../js/app.js"></script>
   </body>
 </html>

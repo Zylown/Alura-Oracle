@@ -33,6 +33,7 @@ main {
 }
 
 .form__producto input {
+  width: 96%;
   padding: 16px 10px;
   border: transparent;
   border-bottom: 1px solid #c8c8c8;
@@ -44,6 +45,7 @@ main {
 }
 
 .form__producto textarea {
+  width: 96%;
   padding: 16px 10px;
   height: 66px;
   border: transparent;
@@ -66,6 +68,66 @@ main {
   background-color: transparent;
   color: #2a7ae4;
   border: 1px solid #2a7ae4;
+}
+
+/*IMG FILE*/
+#file__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container__img {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 40px 26px 40px;
+  border: 5px dashed gray;
+}
+
+.container__img label {
+  font-size: 15px;
+  text-align: center;
+  color: #c8c8c8;
+}
+
+#input {
+  border-bottom: none;
+}
+
+/* Estilos para el botón de tipo file */
+.input-contain{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.custom-file-upload {
+  padding: 16px;
+  border: 1px solid #2a7ae4;
+  background: transparent;
+  text-decoration: none;
+  color: #2a7ae4;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.custom-file-upload:hover{
+  background-color: #2a7ae4;
+  color: white;
+}
+
+/* Ocultar el input de tipo file */
+.custom-file-input {
+  display: none;
+}
+
+.bg__img--file {
+  width: 50px;
+  height: 50px;
 }
 
 @media screen and (max-width: 605px) {
