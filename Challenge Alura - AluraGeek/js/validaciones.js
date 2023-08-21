@@ -52,6 +52,18 @@ const mensajesDeError = {
     patternMismatch:
       "Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.",
   },
+  categoria: {
+    valueMissing: "El campo categoría no puede estar vacío.",
+  },
+  nombre_producto: {
+    valueMissing: "El campo nombre del producto no puede estar vacío.",
+  },
+  precio_producto:{
+    valueMissing: "El campo precio no puede estar vacío.",
+  },
+  file:{
+    valueMissing: "El campo archivo no puede estar vacío.",
+  },
 };
 
 function mostrarMensajeDeError(tipoDeInput, input) {
