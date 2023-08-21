@@ -1,0 +1,11 @@
+{
+  "producto": [
+    {
+      "url": "https://www.magitech.pe/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/i/n/intel-13-1.jpg",
+      "nombre": "Intel Core I9 10th",
+      "precio": "399.00",
+      "descripcion": "Procesador ultima generación",
+      "id":1
+    }
+  ]
+}
