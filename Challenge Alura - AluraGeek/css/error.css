@@ -13,3 +13,8 @@
   margin-top: 0.5rem;
   padding-left: 0.5rem;
 }
+
+#error__drag{
+  margin-top: 25px;
+  padding-left: 0;
+}
