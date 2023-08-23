@@ -84,8 +84,9 @@
     <main>
       <div class="container__add--product">
         <p>Agregar nuevo producto</p>
-        <form class="form__producto" action="#">
-          <div id="file__container" style="display: none;">
+        <form class="form__producto" action="#" data-form>
+          <!---->
+          <div id="file__container" style="display: none">
             <div class="container__img">
               <img src="../assets/img/image-alt.svg" class="bg__img--file" />
               <label> Arrastre para agregar una imagen para el producto</label>
@@ -102,7 +103,9 @@
                 data-tipo="file"
               />
               <h2 class="h2__drag--text"></h2>
-              <span id="error__drag" class="input-message-error">Este campo no es válido</span>
+              <span id="error__drag" class="input-message-error"
+                >Este campo no es válido</span
+              >
             </div>
           </div>
           <div class="input-container">
@@ -111,14 +114,13 @@
               required
               placeholder="URL de imagen"
               type="text"
-              data-tipo="categoria"
+              data-tipo="url"
             />
             <span class="input-message-error">Este campo no es valido</span>
           </div>
-          <div class="input-container">
+          <div class="input-container" style="display: none">
             <input
               class="input"
-              required
               placeholder="Categoría"
               type="text"
               data-tipo="categoria"
@@ -245,7 +247,17 @@
       <p>Desarrollado por Sevastian Caballero</p>
       <p>2023</p>
     </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="../js/app.js"></script>
     <script src="../js/dragandrop.js"></script>
+    <script
+      type="module"
+      src="../controller/agregarProducto_controller.js"
+    ></script>
   </body>
 </html>

@@ -5,7 +5,14 @@
       "nombre": "Intel Core I9 10th",
       "precio": "399.00",
       "descripcion": "Procesador ultima generación",
-      "id":1
+      "id": 1
+    },
+    {
+      "url": "https://cyccomputer.pe/37823-large_default/pasta-termica-arctic-mx-4-8grs-pnactcp-00008b.jpg",
+      "nombre": "PASTA TERMICA ARCTIC",
+      "precio": "18.00",
+      "descripcion": "PASTA TERMICA ARCTIC MX-4 8Grs",
+      "id": "58483cc9-b8d3-439e-8d62-ccf1722ad1ea"
     }
   ]
 }
