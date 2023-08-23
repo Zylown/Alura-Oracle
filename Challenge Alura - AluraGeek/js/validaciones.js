@@ -64,6 +64,9 @@ const mensajesDeError = {
   file:{
     valueMissing: "El campo archivo no puede estar vacío.",
   },
+  url:{
+    valueMissing: "El campo url no puede estar vacío.",
+  }
 };
 
 function mostrarMensajeDeError(tipoDeInput, input) {
