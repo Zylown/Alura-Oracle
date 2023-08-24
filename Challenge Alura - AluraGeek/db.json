@@ -6,6 +6,13 @@
       "precio": "399.00",
       "descripcion": "Procesador ultima generación",
       "id": 1
+    },
+    {
+      "url": "https://falabella.scene7.com/is/image/FalabellaPE/gsc_117921656_1914338_1?wid=800&hei=800&qlt=70",
+      "nombre": "Samsung SSD PRO 2TB",
+      "precio": "1213",
+      "descripcion": "Samsung SSD 2TB",
+      "id": "52c16a20-1e04-4cf2-ace9-a4d3aae1fec8"
     }
   ]
 }
