@@ -10,7 +10,7 @@ const crearNuevaLinea = (imagen, producto, precio, id) => {
     class="image--producto"
   />
   <img src="../assets/img/icon_trash.svg" class="icon__trash" id="${id}"/>
-  <img src="../assets/img/icon_edit.svg" class="icon__edit" />
+  <img src="../assets/img/icon_edit.svg" class="icon__edit" data-id="${id}"/>
 </div>
 <h3>${producto}</h3>
 <h4>${precio}</h4>
@@ -36,7 +36,9 @@ const crearNuevaLinea = (imagen, producto, precio, id) => {
   //icon va a pagina editar
   const btn_edit = linea.querySelector(".icon__edit");
   btn_edit.addEventListener("click", () => {
-    window.location.href = "../screens/editarProducto.html"
+    //getAttribute() devuelve el valor del atributo especificado en el elemento
+    const id = btn_edit.getAttribute("data-id");
+    window.location.href = `../screens/editarProducto.html?id=${id}`;
   });
   return linea;
 };
