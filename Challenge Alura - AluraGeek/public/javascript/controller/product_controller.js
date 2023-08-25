@@ -1,4 +1,5 @@
 import { productService } from "../service/product-service.js";
+console.log("Hola Product_controller");
 /*
 //MOSTRAR PRODUCTOS
 const crearNuevaLinea = (imagen, producto, precio) => {
@@ -78,6 +79,11 @@ searchInput.addEventListener("input", (event) => {
   filtrarProductos(searchTerm);
 });
 
-productService.listaProductos().then((productos) => {
-  mostrarProductos(productos);
-});
+productService
+  .listaProductos()
+  .then((productos) => {
+    mostrarProductos(productos);
+  })
+  .catch((error) => {
+    console.log("Error nos dice: " + error);
+  });
