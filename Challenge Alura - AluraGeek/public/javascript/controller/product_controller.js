@@ -40,7 +40,7 @@ productService
   });
 
 /*FILTRAR NOMRBE DE PRODUCTO*/
-/*
+
 const searchInput = document.querySelector(".input__search");
 const productList = document.getElementById("product__list");
 
@@ -87,4 +87,3 @@ productService
   .catch((error) => {
     console.log("Error nos dice: " + error);
   });
-*/
