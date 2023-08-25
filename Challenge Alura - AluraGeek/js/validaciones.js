@@ -38,7 +38,7 @@ const mensajesDeError = {
     //typeMismatch: "El correo no es válido",
   },
   mensaje: {
-    valueMissing: "El campo correo no puede estar vacío.",
+    valueMissing: "El campo mensaje no puede estar vacío.",
     //typeMismatch: "El correo no es válido",
   },
   email: {
