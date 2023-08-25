@@ -1,6 +1,6 @@
 import { productService } from "../service/product-service.js";
 console.log("Hola Product_controller");
-/*
+
 //MOSTRAR PRODUCTOS
 const crearNuevaLinea = (imagen, producto, precio) => {
   const linea = document.createElement("li");
@@ -37,10 +37,10 @@ productService
   })
   .catch((e) => {
     console.log("Error: " + e);
-  });*/
+  });
 
 /*FILTRAR NOMRBE DE PRODUCTO*/
-
+/*
 const searchInput = document.querySelector(".input__search");
 const productList = document.getElementById("product__list");
 
@@ -87,3 +87,4 @@ productService
   .catch((error) => {
     console.log("Error nos dice: " + error);
   });
+*/

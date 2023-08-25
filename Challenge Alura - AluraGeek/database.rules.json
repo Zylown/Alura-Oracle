@@ -1,11 +1,6 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null",
-    "nombre-de-tu-coleccion": {
-      ".read": "auth != null",
-      ".write": "auth != null",
-      ".indexOn": ["campo-para-indice"]
-    }
+    ".read": "now < 1695531600000",  
+    ".write": "now < 1695531600000" 
   }
 }
