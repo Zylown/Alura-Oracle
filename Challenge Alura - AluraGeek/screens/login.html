@@ -192,5 +192,19 @@
       <p>2023</p>
     </footer>
     <script type="module" src="../js/app.js"></script>
+    <script>
+      const formulario = document.getElementById("form__login");
+
+      formulario.addEventListener("submit", (evento) => {
+        evento.preventDefault(); //evita que se envie por defecto
+        const correo = document.querySelector('[data-tipo="email"]').value;
+        const pass = document.querySelector('[data-tipo="password"]').value;
+        if (correo === "a@a.com" && pass === "Hola123") {
+          window.location.href = "productos.html";
+        } else {
+          window.location.href = "../index.html";
+        }
+      });
+    </script>
   </body>
 </html>
