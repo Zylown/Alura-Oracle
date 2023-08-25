@@ -34,7 +34,7 @@ const tipoDeErrores = [
 
 const mensajesDeError = {
   nombre: {
-    valueMissing: "El campo correo no puede estar vacío.",
+    valueMissing: "El campo nombre no puede estar vacío.",
     //typeMismatch: "El correo no es válido",
   },
   mensaje: {
@@ -58,15 +58,15 @@ const mensajesDeError = {
   nombre_producto: {
     valueMissing: "El campo nombre del producto no puede estar vacío.",
   },
-  precio_producto:{
+  precio_producto: {
     valueMissing: "El campo precio no puede estar vacío.",
   },
-  file:{
+  file: {
     valueMissing: "El campo archivo no puede estar vacío.",
   },
-  url:{
+  url: {
     valueMissing: "El campo url no puede estar vacío.",
-  }
+  },
 };
 
 function mostrarMensajeDeError(tipoDeInput, input) {
@@ -94,11 +94,11 @@ function validarCorreo(input) {
   const regexCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   let mensaje = "";
 
-  if(!correo){
+  if (!correo) {
     // Si el campo está vacío, se aplicará la validación "valueMissing" predeterminada
     input.setCustomValidity("El campo correo no puede estar vacío.");
-  }else if (!regexCorreo.test(correo)) {
-    mensaje = "Este correo no tiene el formato correcto";//Mensaje modal de HTML
+  } else if (!regexCorreo.test(correo)) {
+    mensaje = "Este correo no tiene el formato correcto"; //Mensaje modal de HTML
     //input.setCustomValidity("El correo no tiene el formato correcto");
   } /*else {
     input.setCustomValidity("");

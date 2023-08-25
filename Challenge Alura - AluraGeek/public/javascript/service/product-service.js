@@ -1,11 +1,14 @@
 console.log("Hola Product_service");
 const listaProductos = () =>
-  //a mi respuesta le da un formato de json
-  //https://alurageek-api-jade.vercel.app/producto
   fetch("https://alurageek-a13d2-default-rtdb.firebaseio.com/producto.json")
     .then((respuesta) => respuesta.json())
     .then((data) => {
-      console.log(data);
+      // Verificar si la respuesta es un objeto y convertirlo a un array
+      if (data && typeof data === "object") {
+        return Object.values(data);
+      } else {
+        return []; // Devolver un array vacío si no hay datos
+      }
     })
     .catch((err) => {
       console.log("Error al obtener los datos: " + err);

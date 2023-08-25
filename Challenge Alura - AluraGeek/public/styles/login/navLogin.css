@@ -78,6 +78,28 @@
   display: none;
 }
 
+.nav__button--login {
+  display: flex;
+  align-items: center;
+}
+
+.a__button--login {
+  /*width: 150px;
+  height: 48px;*/
+  padding: 10px 40px 10px 40px;
+  border: 1px solid #2a7ae4;
+  background: transparent;
+  text-decoration: none;
+  color: #2a7ae4;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+}
+
+.a__button--login:hover{
+  background-color: #2a7ae4;
+  color: white;
+}
+
 @media screen and (max-width: 630px) {
   .nav__a {
     width: 185px;
