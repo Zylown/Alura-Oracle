@@ -13,6 +13,76 @@
       "precio": "1213",
       "descripcion": "Samsung SSD 2TB",
       "id": "52c16a20-1e04-4cf2-ace9-a4d3aae1fec8"
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/249089-800-auto?v=638096573592370000&width=800&height=auto&aspect=true",
+      "nombre": "Unidad de estado sólido SSD",
+      "precio": "179.90",
+      "descripcion": "Unidad de estado sólido SSD Kingston NV2 1TB de capacidad, M.2, NVMe, PCIe 4.0",
+      "id": 2
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/288836-800-auto?v=638254621673600000&",
+      "nombre": "Tarjeta de vídeo Msi NVIDIA RTX 4070",
+      "precio": "2799.00",
+      "descripcion": "Tarjeta de vídeo Msi NVIDIA RTX 4070 Ventus 2x OC 12GB GDDR6X, 192-Bit, Pcle 4.0",
+      "id": 3
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/301146-800-auto",
+      "nombre": " Asus B760M-K AM4",
+      "precio": "649.00",
+      "descripcion": "Placa madre Asus B760M-K AM4, DDR4 ",
+      "id": 4
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/280351-800-auto",
+      "nombre": "Intel Core i7-13700K",
+      "precio": "1949.00",
+      "descripcion": "Procesador Intel Core i7-13700K, 5.4Ghz, 8+8 cores, LGA1700",
+      "id": 5
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/193827-800-auto",
+      "nombre": "Sistema de refrigeración líquida MSI MPG Coreliquid K360",
+      "precio": "1599.00",
+      "descripcion": "Sistema de refrigeración líquida MSI MPG Coreliquid K360, 360mm, 3-FAN, pantalla LCD 2.4",
+      "id": 6
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/244855-800-auto",
+      "nombre": "Fuente de poder Antryx Kirin 750W",
+      "precio": "470.00",
+      "descripcion": "Fuente de poder Antryx Kirin 750 GOLD, 750W, 80 Plus Gold, modular",
+      "id": 7
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/229557-800-auto",
+      "nombre": "RAM Kingston Fury Beast 16GB DDR5, 5200 Mhz",
+      "precio": "489.00",
+      "descripcion": "Memoria ram Kingston Fury Beast 16GB (1x16GB) DDR5, 5200 Mhz, CL40",
+      "id": 8
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/289154-800-auto",
+      "nombre": "Case sin fuente Cooler Master Masterbox MB311L ARGB",
+      "precio": "399.00",
+      "descripcion": "Case sin fuente Cooler Master Masterbox MB311L ARGB",
+      "id": 9
+    },
+    {
+      "url": "https://coolboxpe.vtexassets.com/arquivos/ids/226837-800-auto",
+      "nombre": "CPU, Intel Core i7 12va, 16GB ram, SSD 512GB, RTX3060 12GB",
+      "precio": "4999.00",
+      "descripcion": "CPU HP OMEN GT15-0011LA, Intel Core i7 12va, 16GB ram, SSD 512GB, RTX3060 12GB, Win11H, blanco",
+      "id": 10
+    },
+    {
+      "url": "https://pophuntersperu.com/cdn/shop/products/13329170-1774931194029345.jpg?v=1644897238",
+      "nombre": "Funko de Lucario",
+      "precio": "1",
+      "descripcion": "Funko de pokemon Lucario",
+      "id": "58feca51-4220-46cc-98c3-b78472477770"
     }
   ]
 }
