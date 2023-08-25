@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/login/navLogin.css" />
+    <link rel="stylesheet" href="../styles/login/headerLogin.css" />
+    <link rel="stylesheet" href="../styles/section.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/error.css" />
+    <title>AluraGeek: Login</title>
+  </head>
+  <body>
+    <nav class="nav__alurageek">
+      <div class="nav__alurageek--left">
+        <div class="nav__container__logo">
+          <a href="../index.html" class="nav__a">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="51"
+              viewBox="0 0 50 51"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_40)">
+                <path
+                  d="M44.9556 34.0208L42.6849 18.0625C42.1016 13.9583 38.581 10.9167 34.4354 10.9167H15.5614C11.4158 10.9167 7.8952 13.9583 7.3119 18.0625L5.04119 34.0208C4.58288 37.2292 7.06191 40.0833 10.2909 40.0833C11.7075 40.0833 13.0407 39.5208 14.0407 38.5208L18.7487 33.8333H31.248L35.9353 38.5208C36.9352 39.5208 38.2893 40.0833 39.6851 40.0833C42.9349 40.0833 45.4139 37.2292 44.9556 34.0208ZM22.9152 23.4167H18.7487V27.5833H16.6655V23.4167H12.4991V21.3333H16.6655V17.1667H18.7487V21.3333H22.9152V23.4167ZM31.248 21.3333C30.1023 21.3333 29.1648 20.3958 29.1648 19.25C29.1648 18.1042 30.1023 17.1667 31.248 17.1667C32.3938 17.1667 33.3313 18.1042 33.3313 19.25C33.3313 20.3958 32.3938 21.3333 31.248 21.3333ZM35.4145 27.5833C34.2687 27.5833 33.3313 26.6458 33.3313 25.5C33.3313 24.3542 34.2687 23.4167 35.4145 23.4167C36.5602 23.4167 37.4977 24.3542 37.4977 25.5C37.4977 26.6458 36.5602 27.5833 35.4145 27.5833Z"
+                  fill="#2A7AE4"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_40">
+                  <rect
+                    width="49.9972"
+                    height="50"
+                    fill="white"
+                    transform="translate(0 0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="title__header" data-first-letters="Alura">Geek</p>
+          </a>
+        </div>
+        <div class="nav__search">
+          <input
+            placeholder="¿Qué deseas buscar?"
+            type="text"
+            class="input__search"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M15.5 14.5H14.71L14.43 14.23C15.63 12.83 16.25 10.92 15.91 8.89C15.44 6.11 13.12 3.89 10.32 3.55C6.09001 3.03 2.53002 6.59 3.05002 10.82C3.39002 13.62 5.61002 15.94 8.39002 16.41C10.42 16.75 12.33 16.13 13.73 14.93L14 15.21V16L18.25 20.25C18.66 20.66 19.33 20.66 19.74 20.25C20.15 19.84 20.15 19.17 19.74 18.76L15.5 14.5ZM9.50002 14.5C7.01002 14.5 5.00002 12.49 5.00002 10C5.00002 7.51 7.01002 5.5 9.50002 5.5C11.99 5.5 14 7.51 14 10C14 12.49 11.99 14.5 9.50002 14.5Z"
+              fill="#A2A2A2"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="container__search--icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+        >
+          <path
+            d="M15.5 14.5H14.71L14.43 14.23C15.63 12.83 16.25 10.92 15.91 8.89C15.44 6.11 13.12 3.89 10.32 3.55C6.09001 3.03 2.53002 6.59 3.05002 10.82C3.39002 13.62 5.61002 15.94 8.39002 16.41C10.42 16.75 12.33 16.13 13.73 14.93L14 15.21V16L18.25 20.25C18.66 20.66 19.33 20.66 19.74 20.25C20.15 19.84 20.15 19.17 19.74 18.76L15.5 14.5ZM9.50002 14.5C7.01002 14.5 5.00002 12.49 5.00002 10C5.00002 7.51 7.01002 5.5 9.50002 5.5C11.99 5.5 14 7.51 14 10C14 12.49 11.99 14.5 9.50002 14.5Z"
+            fill="#A2A2A2"
+          />
+        </svg>
+      </div>
+    </nav>
+    <header>
+      <div class="header__container--login">
+        <p>Iniciar Sesión</p>
+        <form id="form__login" class="form__login" action="productos.html">
+          <div class="input-container">
+            <input
+              name="email"
+              id="email"
+              class="input"
+              type="text"
+              placeholder="Escriba su correo electrónico"
+              data-tipo="email"
+              required
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <div class="input-container">
+            <input
+              class="input"
+              placeholder="Escriba su contraseña"
+              type="password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+\-]).{6,12}$"
+              title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
+              data-tipo="password"
+              required
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </header>
+    <section>
+      <div class="section__container">
+        <div class="section__container--left">
+          <div class="section__container--logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="51"
+              viewBox="0 0 50 51"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_40)">
+                <path
+                  d="M44.9556 34.0208L42.6849 18.0625C42.1016 13.9583 38.581 10.9167 34.4354 10.9167H15.5614C11.4158 10.9167 7.8952 13.9583 7.3119 18.0625L5.04119 34.0208C4.58288 37.2292 7.06191 40.0833 10.2909 40.0833C11.7075 40.0833 13.0407 39.5208 14.0407 38.5208L18.7487 33.8333H31.248L35.9353 38.5208C36.9352 39.5208 38.2893 40.0833 39.6851 40.0833C42.9349 40.0833 45.4139 37.2292 44.9556 34.0208ZM22.9152 23.4167H18.7487V27.5833H16.6655V23.4167H12.4991V21.3333H16.6655V17.1667H18.7487V21.3333H22.9152V23.4167ZM31.248 21.3333C30.1023 21.3333 29.1648 20.3958 29.1648 19.25C29.1648 18.1042 30.1023 17.1667 31.248 17.1667C32.3938 17.1667 33.3313 18.1042 33.3313 19.25C33.3313 20.3958 32.3938 21.3333 31.248 21.3333ZM35.4145 27.5833C34.2687 27.5833 33.3313 26.6458 33.3313 25.5C33.3313 24.3542 34.2687 23.4167 35.4145 23.4167C36.5602 23.4167 37.4977 24.3542 37.4977 25.5C37.4977 26.6458 36.5602 27.5833 35.4145 27.5833Z"
+                  fill="#2A7AE4"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_40">
+                  <rect
+                    width="49.9972"
+                    height="50"
+                    fill="white"
+                    transform="translate(0 0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="title__header" data-first-letters="Alura">Geek</p>
+          </div>
+          <div class="section__container--list">
+            <ul>
+              <li><a href="#">Quienes somos</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Programa de fidelidad</a></li>
+              <li><a href="#">Nuestras tiendas</a></li>
+              <li><a href="#">Quiero ser franquiciado</a></li>
+              <li><a href="#">Anuncie aquí</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="section__container--nosotros">
+          <p>Habla con nosotros</p>
+          <form class="nosotros__form" id="nosotros__form" action="#">
+            <div class="input-container">
+              <input
+                class="input"
+                id="input__nombre"
+                type="text"
+                placeholder="Nombre"
+                maxlength="40"
+                data-tipo="nombre"
+                required
+              />
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
+            <div class="input-container">
+              <textarea
+                class="input"
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+                placeholder="Escribe tu mensaje"
+                maxlength="120"
+                data-tipo="mensaje"
+                required
+              ></textarea>
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
+            <button class="nosotros__button" type="submit">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Desarrollado por Sevastian Caballero</p>
+      <p>2023</p>
+    </footer>
+    <script type="module" src="../javascript/app.js"></script>
+    <script>
+      const formulario = document.getElementById("form__login");
+
+      formulario.addEventListener("submit", (evento) => {
+        evento.preventDefault(); //evita que se envie por defecto
+        const correo = document.querySelector('[data-tipo="email"]').value;
+        const pass = document.querySelector('[data-tipo="password"]').value;
+        if (correo === "a@a.com" && pass === "Hola123") {
+          window.location.href = "productos.html";
+        } else {
+          window.location.href = "../index.html";
+        }
+      });
+    </script>
+  </body>
+</html>
