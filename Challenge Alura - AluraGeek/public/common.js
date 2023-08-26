@@ -34,7 +34,8 @@ export class ManageAccount {
   }
 
   authenticate(email, password) {
-    signInWithEmailAndPassword(getAuth(), email, password)
+    const auth = getAuth(app);
+    signInWithEmailAndPassword(auth, email, password)
       .then((_) => {
         window.location.href = "/screens/home-login.html";
       })
@@ -47,6 +48,7 @@ export class ManageAccount {
     signOut(getAuth())
       .then((_) => {
         window.location.href = "index.html";
+        console.error("Sesión cerrada");
       })
       .catch((err) => {
         console.error(err.message);

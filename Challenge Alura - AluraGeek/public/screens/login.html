@@ -86,7 +86,7 @@
     <header>
       <div class="header__container--login">
         <p>Iniciar Sesión</p>
-        <form id="form__login" class="form__login" action="productos.html">
+        <form id="form__login" class="form__login" action="home-login.html">
           <div class="input-container">
             <input
               name="email"
@@ -101,6 +101,7 @@
           </div>
           <div class="input-container">
             <input
+              id="password"
               class="input"
               placeholder="Escriba su contraseña"
               type="password"
@@ -112,6 +113,7 @@
             <span class="input-message-error">Este campo no es valido</span>
           </div>
           <button id="button-login" type="submit">Entrar</button>
+          <div id="error-message" style="color: red;" class="error-message"></div>
         </form>
       </div>
     </header>
