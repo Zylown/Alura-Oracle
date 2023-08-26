@@ -40,7 +40,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  width: 242px;
+  width: 200px;
 }
 
 .image--producto {
@@ -72,7 +72,7 @@ main {
   line-height: normal;
 }
 
-@media screen and (max-width: 485px) {
+@media screen and (max-width: 535px) {
   main {
     padding: 20px 16px;
   }
@@ -93,9 +93,22 @@ main {
     width: 156px;
     height: 174px;
   }
+  .main__container--productos ul li {
+    width: 165px;
+    align-self: flex-end;
+  }
 }
 
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 395px) {
+  /*.main__container--productos ul {
+    justify-content: center;
+  }*/
+  .main__container--productos ul li {
+    width: 145px;
+  }
+}
+
+@media screen and (max-width: 356px) {
   .main__container--productos ul {
     justify-content: center;
   }
