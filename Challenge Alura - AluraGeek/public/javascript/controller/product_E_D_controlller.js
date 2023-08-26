@@ -48,7 +48,8 @@ const ul = document.querySelector("[data-ul]");
 productService
   .listaProductos()
   .then((data) => {
-    data.forEach(({ url, nombre, precio, id }) => {
+    const validData = data.filter((item) => item !== null); // Filtrar elementos null
+    validData.forEach(({ url, nombre, precio, id }) => {
       const nuevaLinea = crearNuevaLinea(url, nombre, precio, id); //trae los datos del db.json
       ul.appendChild(nuevaLinea);
     });

@@ -10,7 +10,7 @@ formulario.addEventListener("submit", (evento) => {
   const precio = document.querySelector('[data-tipo="precio_producto"]').value;
   const mensaje = document.querySelector('[data-tipo="mensaje"]').value;
   productService
-    .crearCliente(url, nombre, precio, mensaje)
+    .crearProducto(url, nombre, precio, mensaje)
     .then((result) => {
       console.log("Producto agregado correctamente: " + result);
     })

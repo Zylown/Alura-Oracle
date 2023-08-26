@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
+//import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -26,7 +26,7 @@ export class ManageAccount {
   register(email, password) {
     createUserWithEmailAndPassword(getAuth(), email, password)
       .then((_) => {
-        window.location.href = "/screens/productos.html";
+        window.location.href = "/screens/home-login.html";
       })
       .catch((err) => {
         console.error(err.message);
@@ -36,7 +36,7 @@ export class ManageAccount {
   authenticate(email, password) {
     signInWithEmailAndPassword(getAuth(), email, password)
       .then((_) => {
-        window.location.href = "/screens/productos.html";
+        window.location.href = "/screens/home-login.html";
       })
       .catch((err) => {
         console.error(err.message);

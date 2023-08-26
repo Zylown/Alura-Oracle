@@ -11,7 +11,6 @@ const obtenerInformacion = async () => {
   }
 
   const urlImagen = document.querySelector('[data-tipo="url"]');
-  //const categoria = document.querySelector('[data-tipo="categoria"]').value;
   const nombre = document.querySelector('[data-tipo="nombre_producto"]');
   const precio = document.querySelector('[data-tipo="precio_producto"]');
   const mensaje = document.querySelector('[data-tipo="mensaje"]');
@@ -19,18 +18,23 @@ const obtenerInformacion = async () => {
   try {
     const perfil = await productService.detalleProducto(id);
 
-    if (perfil.url && perfil.nombre && perfil.precio && perfil.descripcion) {
-      //perfil viene a ser los valores del JSON
+    if (
+      perfil &&
+      perfil !== null &&
+      perfil.url &&
+      perfil.nombre &&
+      perfil.precio &&
+      perfil.descripcion
+    ) {
       urlImagen.value = perfil.url;
       nombre.value = perfil.nombre;
       precio.value = perfil.precio;
       mensaje.value = perfil.descripcion;
     } else {
-      throw new Error();
+      console.log("Perfil no encontrado o datos faltantes.");
     }
   } catch (error) {
     console.log("Catch error: " + error);
-    alert("Hubo un error");
   }
 };
 
