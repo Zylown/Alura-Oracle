@@ -1,6 +1,6 @@
 import "./ListaOpciones.css";
 
-const ListaOpciones = () => {
+const ListaOpciones = (props) => {
   const equipos = [
     "Programación",
     "Front End",
@@ -16,12 +16,26 @@ const ListaOpciones = () => {
 
   <option key={index}>{equipo}</option>: Dentro de la función de flecha, se crea un elemento <option> para cada equipo. Se establece el atributo key en el índice del elemento para ayudar a React a identificar cada opción de manera única. El contenido de la opción ({equipo}) es simplemente el nombre del equipo que se está iterando.
   */
+  //<select value={props.valor}> viene del Formulario valor
+
+  const manejarCambio = (e) => {
+    console.log("cambio", e.target.value);
+    props.actualizarEquipo(e.target.value);
+  };
 
   return (
     <div className="lista-opciones">
       <label>Equipo</label>
-      <select>
-        {equipos.map((equipo, index) => <option key={index}>{equipo}</option>)};
+      <select value={props.valor} onChange={manejarCambio}>
+        <option value="" disabled defaultValue="" hidden>
+          Seleccionar equipo
+        </option>
+        {equipos.map((equipo, index) => (
+          <option key={index} value={equipo}>
+            {equipo}
+          </option>
+        ))}
+        ;
       </select>
     </div>
   );
