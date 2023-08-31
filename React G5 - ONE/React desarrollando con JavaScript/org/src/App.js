@@ -11,7 +11,7 @@ function App() {
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario);
   };
-//condicion && seMuestra [esto se llama cortocircuito]
+//condicion && seMuestra [esto se llama cortocircuito] -> {mostrarFormulario && <Formulario />}
   return (
     <div>
       <Header />
