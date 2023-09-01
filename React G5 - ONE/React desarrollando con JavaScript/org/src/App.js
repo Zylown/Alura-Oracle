@@ -9,6 +9,8 @@ import Equipo from "./components/Equipo"; //index.js
 function App() {
   //ternario --> condicion ? seMuestra : noSeMuestra
   const [mostrarFormulario, actualizarMostrar] = useState(false); //el estado inicializa en true
+  const [colaboradores, actualizarColaboradores] = useState([]); //1er momento no existia nada en el arreglo
+  
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario); //para mostrar o ocultar formulario
   };
@@ -52,12 +54,22 @@ function App() {
     },
   ];
 
+  const registrarColaborador = (colaborador) => {
+    console.log("Registrando nuevo colaborador: ", colaborador);
+    //spread operator = [...] está copiando algo este caso el valor de colaboradores
+    actualizarColaboradores([...colaboradores, colaborador]);
+  };
   //condicion && seMuestra [esto se llama cortocircuito] -> {mostrarFormulario && <Formulario />}
   return (
     <div>
       <Header />
       {/*mostrarFormulario === true ? <Formulario /> : <></>*/}
-      {mostrarFormulario && <Formulario />}
+      {mostrarFormulario && (
+        <Formulario
+          equipos={equipos.map((equipo) => equipo.titulo)}
+          registrarColaborador={registrarColaborador}
+        />
+      )}
       <MiOrg cambiarMostrar={cambiarMostrar}></MiOrg>
       {equipos.map((equipo, index) => (
         <Equipo key={index} value={equipo}></Equipo>

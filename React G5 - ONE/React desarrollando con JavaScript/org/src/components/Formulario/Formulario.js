@@ -7,11 +7,14 @@ import Boton from "../Boton"; //index.js
 /*
 tarjet: es el comando que nos permite acceder a la propiedad target de un objeto event.
 */
-const Formulario = () => {
+const Formulario = (props) => {
   const [nombre, actualizarNombre] = useState("");
   const [puesto, actualizarPuesto] = useState("");
   const [foto, actualizarFoto] = useState("");
   const [equipo, actualizarEquipo] = useState("");
+
+  //Destructurar
+  const{registrarColaborador} = props;
 
   const manejarEnvio = (e) => {
     e.preventDefault();
@@ -25,7 +28,7 @@ const Formulario = () => {
       nombre,puesto,foto,equipo
       */
     };
-    console.log(datosAEnviar);
+    registrarColaborador(datosAEnviar);
   };
 
   return (
@@ -56,6 +59,7 @@ const Formulario = () => {
         <ListaOpciones
           valor={equipo}
           actualizarEquipo={actualizarEquipo}
+          equipos={props.equipos}
         ></ListaOpciones>
         <Boton></Boton>
       </form>
