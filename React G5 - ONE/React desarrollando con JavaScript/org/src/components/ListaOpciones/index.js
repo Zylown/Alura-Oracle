@@ -1,15 +1,6 @@
 import "./ListaOpciones.css";
 
 const ListaOpciones = (props) => {
-  const equipos = [
-    "Programación",
-    "Front End",
-    "Data Science",
-    "Devops",
-    "UX y Diseño",
-    "Móvil",
-    "Innovación y Gestión",
-  ];
 
   /*
   {equipos.map((equipo, index) => { ... })}: Aquí se utiliza el método map para recorrer cada elemento del arreglo equipos y ejecutar una función de flecha por cada elemento. Esta función de flecha toma dos argumentos: equipo y index. El equipo es el valor actual del arreglo en la iteración, y el index es la posición del elemento en el arreglo.
@@ -19,7 +10,7 @@ const ListaOpciones = (props) => {
   //<select value={props.valor}> viene del Formulario valor
 
   const manejarCambio = (e) => {
-    console.log("cambio", e.target.value);
+    //console.log("cambio", e.target.value);
     props.actualizarEquipo(e.target.value);
   };
 
@@ -30,7 +21,7 @@ const ListaOpciones = (props) => {
         <option value="" disabled defaultValue="" hidden>
           Seleccionar equipo
         </option>
-        {equipos.map((equipo, index) => (
+        {props.equipos.map((equipo, index) => (
           <option key={index} value={equipo}>
             {equipo}
           </option>
