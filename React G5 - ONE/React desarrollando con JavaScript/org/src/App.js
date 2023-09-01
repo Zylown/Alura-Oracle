@@ -10,7 +10,7 @@ function App() {
   //ternario --> condicion ? seMuestra : noSeMuestra
   const [mostrarFormulario, actualizarMostrar] = useState(false); //el estado inicializa en true
   const [colaboradores, actualizarColaboradores] = useState([]); //1er momento no existia nada en el arreglo
-  
+
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario); //para mostrar o ocultar formulario
   };
@@ -72,7 +72,11 @@ function App() {
       )}
       <MiOrg cambiarMostrar={cambiarMostrar}></MiOrg>
       {equipos.map((equipo, index) => (
-        <Equipo key={index} value={equipo}></Equipo>
+        <Equipo
+          key={index}
+          value={equipo}
+          colaboradores={colaboradores}
+        ></Equipo>
       ))}
       ;
     </div>
