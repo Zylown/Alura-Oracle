@@ -4,7 +4,7 @@ import Colaborador from "../Colaborador"; //index.js
 const Equipo = (props) => {
   //Destructuracion
   const { color, colorSecundario, titulo } = props.value;
-  const { colaboradores } = props;
+  const { colaboradores, eliminarColaborador } = props; //eliminarColaborador viene de App.js
 
   const obj = {
     backgroundColor: colorSecundario,
@@ -28,6 +28,7 @@ const Equipo = (props) => {
                 datos={colaborador}
                 key={index}
                 colorPrimario={color}
+                eliminarColaborador={eliminarColaborador}
               ></Colaborador>
             ))}
           </div>

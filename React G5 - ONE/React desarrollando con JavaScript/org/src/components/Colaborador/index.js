@@ -2,9 +2,10 @@ import "./Colaborador.css";
 
 const Colaborador = (props) => {
   const { nombre, puesto, foto, equipo } = props.datos;
-  const { colorPrimario } = props;
+  const { colorPrimario, eliminarColaborador } = props; //eliminarColaborador viene de Equipo
   return (
     <div className="colaborador">
+      <span onClick={eliminarColaborador}>X</span>
       <div className="encabezado" style={{backgroundColor:colorPrimario}}>
         <img src={foto} alt={nombre}></img>
       </div>

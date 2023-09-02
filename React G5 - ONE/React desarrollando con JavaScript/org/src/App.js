@@ -13,9 +13,33 @@ function App() {
   const [colaboradores, actualizarColaboradores] = useState([
     {
       equipo: "Front End",
-      foto: "https://github.com/Zylown.png",
-      nombre: "Sevastian Caballero",
-      puesto: "Desarrollador",
+      foto: "https://github.com/harlandlohora.png",
+      nombre: "Harland Lohora",
+      puesto: "Instructor",
+    },
+    {
+      equipo: "Programación",
+      foto: "https://github.com/genesysrm.png",
+      nombre: "Genesys Rondon",
+      puesto: "Desarrolladora de software e instructora",
+    },
+    {
+      equipo: "UX y Diseño",
+      foto: "https://github.com/JeanmarieAluraLatam.png",
+      nombre: "Jeanmarie Quijada",
+      puesto: "Instructora en Alura Latam",
+    },
+    {
+      equipo: "Programación",
+      foto: "https://github.com/christianpva.png",
+      nombre: "Christian Velasco",
+      puesto: "Head de Alura e Instructor",
+    },
+    {
+      equipo: "Innovación y Gestión",
+      foto: "https://github.com/JoseDarioGonzalezCha.png",
+      nombre: "Jose Gonzalez",
+      puesto: "Dev FullStack",
     },
   ]); //1er momento no existia nada en el arreglo // Para tenerme como card default
 
@@ -67,6 +91,12 @@ function App() {
     //spread operator = [...] está copiando algo este caso el valor de colaboradores
     actualizarColaboradores([...colaboradores, colaborador]);
   };
+
+  //Eliminar Colaborador
+  const eliminarColaborador = (id) => {
+    console.log("Eliminando colaborador: ", id);
+  };
+
   //condicion && seMuestra [esto se llama cortocircuito] -> {mostrarFormulario && <Formulario />}
   return (
     <div>
@@ -86,6 +116,8 @@ function App() {
           colaboradores={colaboradores.filter(
             (colaborador) => colaborador.equipo === equipo.titulo
           )}
+          //cualquiernombre de la props = {nombre de la funcion}
+          eliminarColaborador={eliminarColaborador}
         ></Equipo>
       ))}
       ;<Footer></Footer>
