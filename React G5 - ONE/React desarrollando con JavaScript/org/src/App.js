@@ -4,12 +4,20 @@ import Header from "./components/Header/Header.js";
 import Formulario from "./components/Formulario/Formulario.js";
 import MiOrg from "./components/MiOrg"; //index.js
 import Equipo from "./components/Equipo"; //index.js
+import Footer from "./components/Footer";
 //console.log(Header);
 
 function App() {
   //ternario --> condicion ? seMuestra : noSeMuestra
   const [mostrarFormulario, actualizarMostrar] = useState(false); //el estado inicializa en true
-  const [colaboradores, actualizarColaboradores] = useState([]); //1er momento no existia nada en el arreglo
+  const [colaboradores, actualizarColaboradores] = useState([
+    {
+      equipo: "Front End",
+      foto: "https://github.com/Zylown.png",
+      nombre: "Sevastian Caballero",
+      puesto: "Desarrollador",
+    },
+  ]); //1er momento no existia nada en el arreglo // Para tenerme como card default
 
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario); //para mostrar o ocultar formulario
@@ -75,10 +83,12 @@ function App() {
         <Equipo
           key={index}
           value={equipo}
-          colaboradores={colaboradores}
+          colaboradores={colaboradores.filter(
+            (colaborador) => colaborador.equipo === equipo.titulo
+          )}
         ></Equipo>
       ))}
-      ;
+      ;<Footer></Footer>
     </div>
   );
 }
