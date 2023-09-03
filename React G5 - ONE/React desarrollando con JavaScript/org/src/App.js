@@ -42,13 +42,8 @@ function App() {
       puesto: "Dev FullStack",
     },
   ]); //1er momento no existia nada en el arreglo // Para tenerme como card default
-
-  const cambiarMostrar = () => {
-    actualizarMostrar(!mostrarFormulario); //para mostrar o ocultar formulario
-  };
-
-  //Lista de equipos
-  const equipos = [
+  //con useState está a la espera de un cambio react
+  const [equipos, actualizarEquipos] = useState([
     {
       titulo: "Programación",
       color: "#57c278",
@@ -84,7 +79,13 @@ function App() {
       color: "#FF8A29",
       colorSecundario: "#FFEEDF",
     },
-  ];
+  ]);
+
+  const cambiarMostrar = () => {
+    actualizarMostrar(!mostrarFormulario); //para mostrar o ocultar formulario
+  };
+
+  //Lista de equipos
 
   const registrarColaborador = (colaborador) => {
     console.log("Registrando nuevo colaborador: ", colaborador);
@@ -95,6 +96,18 @@ function App() {
   //Eliminar Colaborador
   const eliminarColaborador = (id) => {
     console.log("Eliminando colaborador: ", id);
+  };
+
+  //Actualizar color de equipo
+  const actualizarColor = (color, titulo) => {
+    console.log("Actualizando color", color, titulo);
+    const equiposActualizados = equipos.map((equipo) => {
+      if (equipo.titulo === titulo) {
+        equipo.color = color;
+      }
+      return equipo;
+    });
+    actualizarEquipos(equiposActualizados);
   };
 
   //condicion && seMuestra [esto se llama cortocircuito] -> {mostrarFormulario && <Formulario />}
@@ -118,6 +131,7 @@ function App() {
           )}
           //cualquiernombre de la props = {nombre de la funcion}
           eliminarColaborador={eliminarColaborador}
+          actualizarColor={actualizarColor}
         ></Equipo>
       ))}
       ;<Footer></Footer>
