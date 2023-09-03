@@ -1,9 +1,16 @@
 .equipo {
+  position: relative;
   width: 100%;
   padding: 32px;
   box-sizing: border-box; /*se sumen y tenga el máximo del 100%*/
   text-align: center;
   font-size: 32px;
+}
+
+.equipo input {
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }
 
 .equipo h3 {
@@ -14,7 +21,7 @@
   padding-bottom: 8px;
 }
 
-.colaboradores{
+.colaboradores {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
