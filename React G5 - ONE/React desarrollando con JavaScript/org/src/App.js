@@ -129,6 +129,12 @@ function App() {
     actualizarEquipos(equiposActualizados);
   };
 
+  //Crear equipo
+  const crearEquipo = (nuevoEquipo) => {
+    console.log("Crear equipo", nuevoEquipo);
+    actualizarEquipos([...equipos, { ...nuevoEquipo, id: uuid() }]);
+  };
+
   //condicion && seMuestra [esto se llama cortocircuito] -> {mostrarFormulario && <Formulario />}
   return (
     <div>
@@ -138,6 +144,7 @@ function App() {
         <Formulario
           equipos={equipos.map((equipo) => equipo.titulo)}
           registrarColaborador={registrarColaborador}
+          crearEquipo={crearEquipo}
         />
       )}
       <MiOrg cambiarMostrar={cambiarMostrar}></MiOrg>
