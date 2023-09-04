@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Formulario.css"; //add css
-import CampoTexto from "../CampoTexto"; //index.js
+import Campo from "../Campo"; //index.js
 import ListaOpciones from "../ListaOpciones"; //index.js
 import Boton from "../Boton"; //index.js
 
@@ -43,27 +43,27 @@ const Formulario = (props) => {
     <section className="formulario">
       <form onSubmit={manejarEnvio}>
         <h2>Rellena el formulario para crear el colaborador.</h2>
-        <CampoTexto
+        <Campo
           titulo="Nombre"
           placeholder="Ingresar nombre"
           required
           valor={nombre}
           actualizarValor={actualizarNombre}
-        ></CampoTexto>
-        <CampoTexto
+        ></Campo>
+        <Campo
           titulo="Puesto"
           placeholder="Ingresar puesto"
           required
           valor={puesto}
           actualizarValor={actualizarPuesto}
-        ></CampoTexto>
-        <CampoTexto
+        ></Campo>
+        <Campo
           titulo="Foto"
           placeholder="Ingresar enlace de foto"
           required
           valor={foto}
           actualizarValor={actualizarFoto}
-        ></CampoTexto>
+        ></Campo>
         <ListaOpciones
           valor={equipo}
           actualizarEquipo={actualizarEquipo}
@@ -73,20 +73,21 @@ const Formulario = (props) => {
       </form>
       <form onSubmit={manejarNuevoEquipo}>
         <h2>Rellena el formulario para crear nuevo equipo</h2>
-        <CampoTexto
+        <Campo
           titulo="Titulo"
           placeholder="Ingresar titulo"
           required
           valor={titulo}
           actualizarValor={actualizarTitulo}
-        ></CampoTexto>
-        <CampoTexto
+        ></Campo>
+        <Campo
           titulo="Color"
           placeholder="Ingresar el color en Hex"
           required
           valor={color}
           actualizarValor={actualizarColor}
-        ></CampoTexto>
+          type="color"
+        ></Campo>
         <Boton>Registrar equipo</Boton>
       </form>
     </section>
