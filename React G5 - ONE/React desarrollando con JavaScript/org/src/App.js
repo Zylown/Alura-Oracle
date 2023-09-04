@@ -18,6 +18,7 @@ function App() {
       foto: "https://github.com/harlandlohora.png",
       nombre: "Harland Lohora",
       puesto: "Instructor",
+      fav: true,
     },
     {
       id: uuid(),
@@ -25,6 +26,7 @@ function App() {
       foto: "https://github.com/genesysrm.png",
       nombre: "Genesys Rondon",
       puesto: "Desarrolladora de software e instructora",
+      fav: false,
     },
     {
       id: uuid(),
@@ -32,6 +34,7 @@ function App() {
       foto: "https://github.com/JeanmarieAluraLatam.png",
       nombre: "Jeanmarie Quijada",
       puesto: "Instructora en Alura Latam",
+      fav: false,
     },
     {
       id: uuid(),
@@ -39,6 +42,7 @@ function App() {
       foto: "https://github.com/christianpva.png",
       nombre: "Christian Velasco",
       puesto: "Head de Alura e Instructor",
+      fav: false,
     },
     {
       id: uuid(),
@@ -46,6 +50,7 @@ function App() {
       foto: "https://github.com/JoseDarioGonzalezCha.png",
       nombre: "Jose Gonzalez",
       puesto: "Dev FullStack",
+      fav: false,
     },
   ]); //1er momento no existia nada en el arreglo // Para tenerme como card default
   //con useState está a la espera de un cambio react
@@ -135,6 +140,20 @@ function App() {
     actualizarEquipos([...equipos, { ...nuevoEquipo, id: uuid() }]);
   };
 
+  //Icon Like
+  const like = (id) => {
+    console.log("Like", id);
+    const colaboradoresActualizados = colaboradores.map((colaborador) => {
+      //if (verifica si es el mismo colaborador osea si tiene el mismo id al que le estamos dando like)
+      if (colaborador.id === id) {
+        //colaborador.fav va ser igual a negar el valor de colaborador.fav
+        colaborador.fav = !colaborador.fav;
+      }
+      return colaborador;
+    });
+    actualizarColaboradores(colaboradoresActualizados);
+  };
+
   //condicion && seMuestra [esto se llama cortocircuito] -> {mostrarFormulario && <Formulario />}
   return (
     <div>
@@ -158,6 +177,7 @@ function App() {
           //cualquiernombre de la props = {nombre de la funcion}
           eliminarColaborador={eliminarColaborador}
           actualizarColor={actualizarColor}
+          like={like}
         ></Equipo>
       ))}
       <Footer></Footer>
