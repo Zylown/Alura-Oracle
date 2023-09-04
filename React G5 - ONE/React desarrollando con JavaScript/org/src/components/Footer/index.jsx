@@ -13,7 +13,7 @@ const Footer = () =>{
             <img src="/img/instagram.svg" alt="instagram" />
         </a>
         </div>
-        <img src='/img/Logo.png' alt='org' /> 
+        <img src='/img/logo.png' alt='org' /> 
         <strong>Desarrollado por Sevastian Caballero</strong>
     </footer>
 }
