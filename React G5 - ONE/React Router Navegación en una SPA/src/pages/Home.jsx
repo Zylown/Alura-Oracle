@@ -1,4 +1,5 @@
-import ListPosts from "../components/ListPosts/ListPosts"
+import ListPosts from "../components/ListPosts/ListPosts";
+import ListCategories from "../components/ListCategories/ListCategories";
 
 const Home = () => {
   return (
@@ -6,11 +7,10 @@ const Home = () => {
       <div className="container">
         <h2 className="title-page">Pet noticias</h2>
       </div>
-    <ListPosts url={"/posts"}>
-      
-    </ListPosts>
+      <ListCategories></ListCategories>
+      <ListPosts url={"/posts"}></ListPosts>
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
