@@ -35,7 +35,7 @@ const Header = () => {
       <Logo src={logo} alt="Logo Smart Bank" />
       <div>
         <BtnHeader href="https://google.com">Ayuda</BtnHeader>
-        <BtnHeader primary href="https://google.com">
+        <BtnHeader primary="true" href="https://google.com">
           Salir
         </BtnHeader>
       </div>
