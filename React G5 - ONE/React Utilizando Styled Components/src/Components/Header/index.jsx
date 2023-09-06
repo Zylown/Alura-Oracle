@@ -30,6 +30,11 @@ const BtnHeader = styled.a`
 `;
 
 const Header = () => {
+  /* WARNING: THIS IS VERY VERY BAD AND SLOW, DO NOT DO THIS!!! 
+   const StyledWrapper = styled.div`
+    ....
+   `  
+  */
   return (
     <StyleHeader>
       <Logo src={logo} alt="Logo Smart Bank" />
