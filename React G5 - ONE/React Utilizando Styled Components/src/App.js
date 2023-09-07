@@ -30,8 +30,8 @@ function App() {
 
   const toggleTema = () => {
     const nuevoTema = !tema;
-    setTema(nuevoTema);
-    setLocalStorage(nuevoTema);
+    setTema(nuevoTema); // para actualizar el estado tema en tu componente
+    setLocalStorage(nuevoTema); // para guardar el nuevo tema en el localStorage para que persista entre sesiones.
     //usar setLocalStorage dentro de toggleTema para actualizar el tema y guardar el valor actual en el localStorage
   };
 
