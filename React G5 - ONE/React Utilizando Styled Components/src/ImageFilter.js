@@ -4,16 +4,16 @@ import salud from "./assets/images/salud.svg";
 import otros from "./assets/images/otros.svg";
 import transporte from "./assets/images/transporte.svg";
 import utilidades from "./assets/images/utilidades.svg";
-import { Icono } from "./Components/UI";
+import { Icono, IconoTema } from "./Components/UI";
 
 export default (type) => {
   //console.log(type);
   const Images = {
-    Restaurante: <Icono src={alimentacion} alt="Restaurant"></Icono>,
-    Salud: <Icono src={salud} alt="salud"></Icono>,
-    Transporte: <Icono src={transporte} alt="transporte"></Icono>,
-    Utilidades: <Icono src={utilidades} alt="utilidades"></Icono>,
-    default: <Icono src={otros} alt="otros"></Icono>,
+    Restaurante: <IconoTema src={alimentacion} alt="Restaurant"></IconoTema>,
+    Salud: <IconoTema src={salud} alt="salud"></IconoTema>,
+    Transporte: <IconoTema src={transporte} alt="transporte"></IconoTema>,
+    Utilidades: <IconoTema src={utilidades} alt="utilidades"></IconoTema>,
+    default: <IconoTema src={otros} alt="otros"></IconoTema>,
   };
   return Images[type] || Images["default"]; //accede al objeto dependiendo el type
 };

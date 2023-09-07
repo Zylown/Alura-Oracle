@@ -5,7 +5,8 @@ import Account from "../Account";
 import List from "../List";
 
 const StyledContainer = styled.div`
-  background-color: #f1f1f1;
+  background-color: ${({ theme }) =>
+    theme.body}; //viene app.js; {nombre del prop en app.js} => nombreDelProp.lo que quieras acceder del objeto
   min-height: 90vh;
   padding: 0px 15vw;
 `;
