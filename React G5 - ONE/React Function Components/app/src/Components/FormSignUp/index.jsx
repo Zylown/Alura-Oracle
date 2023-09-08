@@ -1,21 +1,47 @@
-import { Button } from "@mui/material";
+import {
+  Button,
+  Switch,
+  TextField,
+  FormGroup,
+  FormControlLabel,
+} from "@mui/material";
 
 function FormSingUp() {
   return (
     <form>
-      <label>Nombre</label>
-      <input type="text"></input>
-      <label>Apellidos</label>
-      <input type="text"></input>
-      <label>Correo Electrónico</label>
-      <input type="email"></input>
-      <label>Promociones</label>
-      <input type="checkbox"></input>
-      <label>Novedades</label>
-      <input type="checkbox"></input>
-      <Button variant="contained">
-        Registrarse
-      </Button>
+      <TextField
+        id="name"
+        label="Nombre"
+        variant="outlined"
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        id="apellidos"
+        label="Apellidos"
+        variant="outlined"
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        id="email"
+        label="Email"
+        variant="outlined"
+        type="email"
+        fullWidth
+        margin="normal"
+      />
+      <FormGroup>
+        <FormControlLabel
+          label="Promociones"
+          control={<Switch defaultChecked></Switch>}
+        ></FormControlLabel>
+        <FormControlLabel
+          label="Novedades"
+          control={<Switch defaultChecked></Switch>}
+        ></FormControlLabel>
+      </FormGroup>
+      <Button variant="contained">Registrarse</Button>
     </form>
   );
 }
