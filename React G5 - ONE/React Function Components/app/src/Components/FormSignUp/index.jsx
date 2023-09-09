@@ -26,25 +26,56 @@ function FormSignUp({ handleSubmit }) {
       error: false,
       message: "Deben ser al menos 3 caracteres",
     },
+    lastName: {
+      error: false,
+      message: "Deben ser al menos 3 caracteres",
+    },
+    email: {
+      error: false,
+      message: "El correo no tiene el formato correcto",
+    },
   });
 
-  const validarNombre = (e) => {
-    if (name.length >= 3) {
-      return { name: { error: false, message: "" } };
-    } else {
-      return {
-        name: { error: true, message: "Deben ser al menos 3 caracteres" },
-      };
-    }
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+    handleSubmit({ name, lastName, email, prom, nov });
+  };
+
+  const handleNameBlur = () => {
+    const nameValidation = name.length >= 3;
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      name: {
+        error: !nameValidation,
+        message: nameValidation ? "" : "Deben ser al menos 3 caracteres",
+      },
+    }));
+  };
+
+  const handleLastNameBlur = () => {
+    const lastNameValidation = lastName.length >= 3;
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      lastName: {
+        error: !lastNameValidation,
+        message: lastNameValidation ? "" : "Deben ser al menos 3 caracteres",
+      },
+    }));
+  };
+
+  const handleEmailBlur = () => {
+    const lastNameValidation = lastName.length >= 3;
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      email: {
+        error: !lastNameValidation,
+        message: lastNameValidation ? "" : "Deben ser al menos 3 caracteres",
+      },
+    }));
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSubmit({ name, lastName, email, prom, nov });
-      }}
-    >
+    <form onSubmit={handleSubmitForm}>
       <TextField
         id="name"
         label="Nombre"
@@ -52,15 +83,13 @@ function FormSignUp({ handleSubmit }) {
         fullWidth
         margin="normal"
         onChange={(e) => {
-          //console.log(e.target.value); para ver lo que se escribe en los input
+          //console.log(e.target.value); el valor para ver lo que se escribe en los input
           setName(e.target.value);
         }}
         value={name}
         error={errors.name.error}
         helperText={errors.name.error ? errors.name.message : ""}
-        onBlur={(e) => {
-          setErrors(validarNombre(e.target.value));
-        }}
+        onBlur={handleNameBlur}
       />
       <TextField
         id="apellidos"
@@ -72,6 +101,9 @@ function FormSignUp({ handleSubmit }) {
           setLastName(e.target.value);
         }}
         value={lastName}
+        error={errors.lastName.error}
+        helperText={errors.lastName.error ? errors.lastName.message : ""}
+        onBlur={handleLastNameBlur}
       />
       <TextField
         id="email"
@@ -84,6 +116,9 @@ function FormSignUp({ handleSubmit }) {
           setEmail(e.target.value);
         }}
         value={email}
+        error={errors.email.error}
+        helperText={errors.email.error ? errors.email.message : ""}
+        onBlur={handleEmailBlur}
       />
       <FormGroup>
         <FormControlLabel
@@ -119,3 +154,27 @@ function FormSignUp({ handleSubmit }) {
 }
 
 export default FormSignUp;
+
+/*const errorValidation = {
+    name: (value) => {
+      return value.length >= 3
+        ? { error: false, message: "" }
+        : { error: true, message: "Deben ser al menos 3 caracteres" };
+    },
+  };*/
+
+/*
+  const validarNombre = () => {
+    return name.length >= 3
+      ? { name: { error: false, message: "" } }
+      : { name: { error: true, message: "Deben ser al menos 3 caracteres" } };
+  };
+
+  const validarApellido = () => {
+    return lastName.length >= 3
+      ? { lastName: { error: false, message: "" } }
+      : {
+          lastName: { error: true, message: "Deben ser al menos 3 caracteres" },
+        };
+  };
+*/
