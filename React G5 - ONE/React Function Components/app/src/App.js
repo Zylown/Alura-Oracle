@@ -1,5 +1,5 @@
 import "./App.css";
-import FormSingUp from "./Components/FormSignUp";
+import FormSignUp from "./Components/FormSignUp";
 import { Container, Typography } from "@mui/material";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Typography variant="h3" align="center" component="h3">
         Formulario Registro
       </Typography>
-      <FormSingUp handleSubmit={handleSubmit}></FormSingUp>
+      <FormSignUp handleSubmit={handleSubmit}></FormSignUp>
     </Container>
   );
 }
