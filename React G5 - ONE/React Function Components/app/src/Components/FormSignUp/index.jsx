@@ -4,6 +4,7 @@ import {
   TextField,
   FormGroup,
   FormControlLabel,
+  Checkbox,
 } from "@mui/material";
 import { useState } from "react";
 
@@ -63,16 +64,42 @@ function FormSignUp({ handleSubmit }) {
     }));
   };
 
+  // Esta función se llama cuando el campo de correo electrónico pierde el foco (onBlur).
   const handleEmailBlur = () => {
-    const lastNameValidation = lastName.length >= 3;
+    // Llama a la función de validación personalizada 'validarCorreo' y obtiene el resultado de la validación.
+    const emailValidation = validarCorreo(email);
+
+    // Actualiza el estado de los errores para el campo de correo electrónico ('email').
     setErrors((prevErrors) => ({
       ...prevErrors,
       email: {
-        error: !lastNameValidation,
-        message: lastNameValidation ? "" : "Deben ser al menos 3 caracteres",
+        // Establece 'error' en 'true' si hay un error de validación, 'false' de lo contrario.
+        error: emailValidation.error,
+        // Asigna el mensaje de error obtenido de la función de validación.
+        message: emailValidation.message,
       },
     }));
   };
+
+  // Función de validación personalizada para el campo de correo electrónico.
+  function validarCorreo(correo) {
+    // Expresión regular para verificar el formato del correo electrónico.
+    const regexCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let error = false; // Inicializa 'error' como 'false' (sin errores).
+    let message = ""; // Inicializa 'message' como una cadena vacía (sin mensaje de error).
+
+    // Verifica si el campo de correo electrónico está vacío.
+    if (!correo) {
+      error = true; // Hay un error si el campo está vacío.
+      message = "El campo correo no puede estar vacío."; // Establece el mensaje de error correspondiente.
+    } else if (!regexCorreo.test(correo)) {
+      // Verifica si el correo electrónico no cumple con el formato correcto.
+      error = true; // Hay un error si el formato no es válido.
+      message = "El correo no tiene el formato correcto."; // Establece el mensaje de error correspondiente.
+    }
+    // Devuelve un objeto con 'error' y 'message' para indicar el resultado de la validación.
+    return { error, message };
+  }
 
   return (
     <form onSubmit={handleSubmitForm}>
@@ -90,6 +117,7 @@ function FormSignUp({ handleSubmit }) {
         error={errors.name.error}
         helperText={errors.name.error ? errors.name.message : ""}
         onBlur={handleNameBlur}
+        required
       />
       <TextField
         id="apellidos"
@@ -104,6 +132,7 @@ function FormSignUp({ handleSubmit }) {
         error={errors.lastName.error}
         helperText={errors.lastName.error ? errors.lastName.message : ""}
         onBlur={handleLastNameBlur}
+        required
       />
       <TextField
         id="email"
@@ -119,6 +148,7 @@ function FormSignUp({ handleSubmit }) {
         error={errors.email.error}
         helperText={errors.email.error ? errors.email.message : ""}
         onBlur={handleEmailBlur}
+        required
       />
       <FormGroup>
         <FormControlLabel
@@ -141,6 +171,10 @@ function FormSignUp({ handleSubmit }) {
               }}
             ></Switch>
           }
+        ></FormControlLabel>
+        <FormControlLabel
+          label="Acepto los términos y condiciones"
+          control={<Checkbox size="small" required></Checkbox>}
         ></FormControlLabel>
       </FormGroup>
       <Button variant="contained" type="submit">
