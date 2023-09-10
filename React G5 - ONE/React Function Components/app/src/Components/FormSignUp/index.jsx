@@ -18,6 +18,7 @@ function FormSignUp({ handleSubmit }) {
   const [email, setEmail] = useState("");
   const [prom, setProm] = useState(true);
   const [nov, setNov] = useState(false);
+  //const [helperText, setHelperText] = useState("No puede estar vacío");
   /*useEffect(() => {
     console.log("Name cambio: ", name);
   }, [name]);*/
@@ -40,6 +41,15 @@ function FormSignUp({ handleSubmit }) {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     handleSubmit({ name, lastName, email, prom, nov });
+    /*
+    const registerForm = document.getElementById("registerForm");
+    registerForm.addEventListener("submit", (event) => {
+      const form = event.target;
+      const { name } = event.target.elements;
+      if (name.value === "") {
+        mostrarError("El nombre, no puede estar vacío");
+      }
+    });*/
   };
 
   const handleNameBlur = () => {
@@ -102,7 +112,7 @@ function FormSignUp({ handleSubmit }) {
   }
 
   return (
-    <form onSubmit={handleSubmitForm}>
+    <form id="register-form" onSubmit={handleSubmitForm}>
       <TextField
         id="name"
         label="Nombre"
@@ -148,7 +158,6 @@ function FormSignUp({ handleSubmit }) {
         error={errors.email.error}
         helperText={errors.email.error ? errors.email.message : ""}
         onBlur={handleEmailBlur}
-        required
       />
       <FormGroup>
         <FormControlLabel
