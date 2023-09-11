@@ -1,7 +1,9 @@
 import React from "react";
 import { TextField, Button, Box } from "@mui/material";
-
-const DatosEntrega = () => {
+//(props) es = a ({updateStep}) -> ya esta destructurado
+const DatosEntrega = ({ updateStep }) => {
+  //const updateStep = props.updateStep; //sin destructurar
+  //const {updateStep} = props; // destructurado
   return (
     <Box
       component="form"
@@ -11,6 +13,11 @@ const DatosEntrega = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+      }}
+      onSubmit={(e) => {
+        e.preventDefault();
+        //props.updateStep(3);
+        updateStep(3);
       }}
     >
       <TextField

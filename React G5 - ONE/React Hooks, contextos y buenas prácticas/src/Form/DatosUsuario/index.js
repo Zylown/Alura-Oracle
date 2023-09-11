@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button, Box } from "@mui/material";
 import { validarEmail, validarPassword } from "./validaciones";
 
-const DatosUsuario = () => {
+const DatosUsuario = ({updateStep}) => {
   //[el primero es la manera que nos referimos, valor que modificamos el valor de ese estado]
   const [email, setEmail] = useState({
     value: "",
@@ -22,12 +22,14 @@ const DatosUsuario = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+        marginTop: "15px",
       }}
       onSubmit={(e) => {
         e.preventDefault();
         if (email.valid && password.valid) {
           console.log("Siguiente Formulario");
           console.log({ email, password });
+          updateStep(1);
         } else {
           console.log("Error");
         }
@@ -58,7 +60,7 @@ const DatosUsuario = () => {
         type="password"
         value={password.value}
         error={password.valid === false}
-         /*verifica si password.valid es igual a false, lo que significa que la contraseña no es válida.
+        /*verifica si password.valid es igual a false, lo que significa que la contraseña no es válida.
          Si password.valid es false, entonces la expresión password.valid === false será true
          */
         helperText={
@@ -73,7 +75,7 @@ const DatosUsuario = () => {
           });
         }}
       />
-      <Button variant="contained" type="submit">
+      <Button variant="contained" type="submit" sx={{ marginTop: "15px" }}>
         Siguiente
       </Button>
     </Box>
