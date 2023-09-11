@@ -13,10 +13,13 @@ NaN: Un valor especial que representa "Not-a-Number" y se utiliza para denotar r
   if (!email) {
     // es igual (email == false)
     console.log("Email Vacio o falso");
+    return false;
   } else if (!regexEmail.test(email)) {
     console.log("Email Invalido");
+    return false;
   } else {
     console.log("Válido");
+    return true;
   }
 
   //   if (length > 8 && length < 25 && email.includes("@")) {
@@ -28,7 +31,7 @@ NaN: Un valor especial que representa "Not-a-Number" y se utiliza para denotar r
 //esto pasa luego de darle al botón siguiente del form
 export function validarPassword(password) {
   const length = password.length;
-  if (length > 8 && length < 20) {
+  if (length >= 8 && length < 20) {
     //console.log("Valido");
     return true;
   } else {

@@ -6,12 +6,12 @@ const DatosUsuario = () => {
   //[el primero es la manera que nos referimos, valor que modificamos el valor de ese estado]
   const [email, setEmail] = useState({
     value: "",
-    valid: true,
+    valid: null,
   });
 
   const [password, setPassword] = useState({
     value: "",
-    valid: true,
+    valid: null,
   });
   return (
     <Box
@@ -25,7 +25,12 @@ const DatosUsuario = () => {
       }}
       onSubmit={(e) => {
         e.preventDefault();
-        console.log({ email, password });
+        if (email.valid && password.valid) {
+          console.log("Siguiente Formulario");
+          console.log({ email, password });
+        } else {
+          console.log("Error");
+        }
       }}
     >
       <TextField
@@ -34,8 +39,10 @@ const DatosUsuario = () => {
         fullWidth
         margin="dense"
         type="email"
-        error={false}
-        helperText={false && "Ingresa un correo electrónico válido"}
+        error={email.valid === false} //tiene que ser cuando el email NO SEA VALIDO; cuando sea true que aparezca el error
+        helperText={
+          email.valid === false && "Ingresa un correo electrónico válido"
+        }
         value={email.value}
         onChange={(event) => {
           const emailChange = event.target.value;
@@ -50,6 +57,14 @@ const DatosUsuario = () => {
         margin="dense"
         type="password"
         value={password.value}
+        error={password.valid === false}
+         /*verifica si password.valid es igual a false, lo que significa que la contraseña no es válida.
+         Si password.valid es false, entonces la expresión password.valid === false será true
+         */
+        helperText={
+          password.valid === false &&
+          "Ingresa una contraseña válida, al menos 8 caracteres"
+        }
         onChange={(event) => {
           const passwordChange = event.target.value;
           setPassword({
