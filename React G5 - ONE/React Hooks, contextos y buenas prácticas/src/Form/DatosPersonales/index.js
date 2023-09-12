@@ -33,6 +33,11 @@ const DatosPersonales = ({ updateStep }) => {
         fullWidth
         margin="dense"
         type="text"
+        error={name.valid === false} //tiene que ser cuando el email NO SEA VALIDO; cuando sea true que aparezca el error
+        helperText={
+          name.valid === false &&
+          "Ingresa un nombre con más de 1 caracter y máximo de 30 caracteres"
+        }
         value={name.value}
         onChange={(e) => {
           const value = e.target.value;
@@ -52,6 +57,11 @@ const DatosPersonales = ({ updateStep }) => {
         fullWidth
         margin="dense"
         type="text"
+        error={lastName.valid === false} //tiene que ser cuando el email NO SEA VALIDO; cuando sea true que aparezca el error
+        helperText={
+          lastName.valid === false &&
+          "Ingresa un apellido con más de 1 caracter y máximo de 50 caracteres"
+        }
         value={lastName.value}
         onChange={(e) => {
           const value = e.target.value;
@@ -66,6 +76,11 @@ const DatosPersonales = ({ updateStep }) => {
         fullWidth
         margin="dense"
         type="number"
+        error={phone.valid === false} //tiene que ser cuando el email NO SEA VALIDO; cuando sea true que aparezca el error
+        helperText={
+          phone.valid === false &&
+          "Ingresa al menos 8 dígitos y máximo 14 dígitos"
+        }
         value={phone.value}
         inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
         onChange={(e) => {
