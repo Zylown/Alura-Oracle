@@ -1,0 +1,9 @@
+.pepe {
+  color: green;
+  background-color: red;
+  &:hover {
+    background-color: goldenrod;
+    color: white !important;
+    border: 32px solid purple !important;
+  }
+}
