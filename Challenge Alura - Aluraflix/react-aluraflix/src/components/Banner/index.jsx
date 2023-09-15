@@ -26,7 +26,7 @@ const ContentText = styled.div`
   display: flex;
   flex-direction: column;
   color: #f5f5f5;
-  font-family: "Roboto", sans-serif;
+  
   width: 100%;
   /*margin-top: 10%;
   margin-left: 2%;*/
@@ -60,9 +60,9 @@ const ContentText = styled.div`
       font-size: 35px;
     }
     @media (max-width: 320px) {
-        font-size: 32px;
-        margin-bottom: 20px;
-      }
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
   }
   p {
     font-size: 15px;
