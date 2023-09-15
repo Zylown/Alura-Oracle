@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,6 +35,7 @@ const EspecialidadContainer = styled.div`
 `;
 
 export const Carrusel = () => {
+  const [Img, setImg] = useState([I1, I1, I1, I1, I2]);
   return (
     <>
       <EspecialidadContainer>
@@ -42,7 +43,18 @@ export const Carrusel = () => {
         <p>Formación Front End de Alura Latam</p>
       </EspecialidadContainer>
       <Slider {...settings}>
-        <div>
+        {Img.map((image, index) => (
+          <div key={index}>
+            <ImagenAlura src={image}></ImagenAlura>
+          </div>
+        ))}
+      </Slider>
+    </>
+  );
+};
+
+/*
+ <div>
           <ImagenAlura src={I1}></ImagenAlura>
         </div>
         <div>
@@ -57,7 +69,4 @@ export const Carrusel = () => {
         <div>
           <ImagenAlura src={I2}></ImagenAlura>
         </div>
-      </Slider>
-    </>
-  );
-};
+*/

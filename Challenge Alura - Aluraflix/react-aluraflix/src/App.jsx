@@ -1,5 +1,6 @@
 //ejecutar npm run dev
 //yarn run dev
+//yarn dev
 import GlobalStyle from "./GlobalStyle";
 import { Header } from "./components/Header/Header";
 import { Main } from "./components/Main";
