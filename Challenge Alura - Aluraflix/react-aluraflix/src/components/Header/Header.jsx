@@ -1,21 +1,40 @@
-import banner from "../../assets/HeaderBanner.jpg";
 import styled from "styled-components";
+import { Banner, BannerText, BannerVideo } from "../Banner";
 
 const StyleHeader = styled.header`
   width: 100%;
+  //background-color: black;
+  position: relative;
+  height: 630px;
 `;
-const StyledImage = styled.img`
-  max-width: 100%;
-  height: auto;
-  background-color: black;
-  //--opacidad-negro: 0.5;
-  /*background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/fondo.jpg");*/
-  filter: brightness(0.5);
+
+const StyleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 45px 0px 70px;
+  gap: 45px;
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
+  @media (max-width: 676px) {
+    //padding: 120px 50px 0px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  @media (max-width: 320px) {
+    gap: 15px;
+  }
 `;
+
 export const Header = () => {
   return (
     <StyleHeader>
-      <StyledImage src={banner} alt="Banner" />
+      <Banner />
+      <StyleContainer>
+        <BannerText></BannerText>
+        <BannerVideo></BannerVideo>
+      </StyleContainer>
     </StyleHeader>
   );
 };
