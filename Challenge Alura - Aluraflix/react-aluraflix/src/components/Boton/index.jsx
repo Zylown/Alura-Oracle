@@ -12,6 +12,7 @@ const AntButton = styled(Button)`
   && {
     border: 2px solid white;
     font-weight: 600;
+    color: white;
     &:hover {
       color: #c2c2c2 !important;
       border: 2px solid #c2c2c2 !important;
@@ -22,10 +23,10 @@ const AntButton = styled(Button)`
   }
 `;
 
-export const Boton = ({ text,icon,size }) => {
+export const Boton = ({ text,icon,size,type }) => {
   return (
     <Space className="site-button-ghost-wrapper" wrap>
-      <AntButton size={size} ghost icon={icon}>
+      <AntButton size={size} type={type} icon={icon}>
         {text}
       </AntButton>
     </Space>

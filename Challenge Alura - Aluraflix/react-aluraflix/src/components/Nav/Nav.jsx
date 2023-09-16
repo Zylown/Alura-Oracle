@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Boton } from "../Boton";
 import { CloudUploadOutlined } from "@ant-design/icons";
 //import "./Nav.css";
+import { Link } from "react-router-dom";
 
 const StyleNav = styled.nav`
   background-color: #000;
@@ -22,11 +23,14 @@ export const Nav = () => {
       <ContainerImg>
         <img src={aluraflix} alt="Logo" />
       </ContainerImg>
-      <Boton
-        text={"Nuevo Video"}
-        size={"large"}
-        icon={<CloudUploadOutlined />}
-      ></Boton>
+      <Link to={"/newvideo"}>
+        <Boton
+          type={"link"}
+          text={"Nuevo Video"}
+          size={"large"}
+          icon={<CloudUploadOutlined />}
+        ></Boton>
+      </Link>
     </StyleNav>
   );
 };
