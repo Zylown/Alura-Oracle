@@ -23,7 +23,7 @@ const AntButton = styled(Button)`
   }
 `;
 
-export const Boton = ({ text,icon,size,type }) => {
+export const Boton = ({ text, icon, size, type }) => {
   return (
     <Space className="site-button-ghost-wrapper" wrap>
       <AntButton size={size} type={type} icon={icon}>
@@ -32,3 +32,34 @@ export const Boton = ({ text,icon,size,type }) => {
     </Space>
   );
 };
+/*
+//Con Props
+export const Boton = (props) => {
+  return (
+    <Space className="site-button-ghost-wrapper" wrap>
+      <AntButton size={props.size} type={props.types} icon={props.icon}>
+        {props.text}
+      </AntButton>
+    </Space>
+  );
+};
+
+//El nav que recibe:
+export const Nav = () => {
+  return (
+    <StyleNav>
+      <ContainerImg>
+        <img src={aluraflix} alt="Logo" />
+      </ContainerImg>
+      <Link to={"/newvideo"}>
+        <Boton
+          types={"link"}
+          text={"Nuevo Video"}
+          size={"large"}
+          icon={<CloudUploadOutlined />}
+        ></Boton>
+      </Link>
+    </StyleNav>
+  );
+};
+*/
