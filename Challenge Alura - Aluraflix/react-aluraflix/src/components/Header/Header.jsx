@@ -12,7 +12,7 @@ const StyleContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 120px 45px 0px 70px;
+  padding: 120px 38px 0px 50px;
   gap: 45px;
   @media (max-width: 770px) {
     flex-direction: column;
