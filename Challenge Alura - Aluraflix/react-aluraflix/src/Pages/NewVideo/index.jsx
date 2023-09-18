@@ -1,7 +1,22 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+import { Formulario } from "../../components/Formulario";
+
+const ContainerVideo = styled.div`
+  background-color: #191919;
+  h1 {
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+  }
+`;
 
 export const NewVideo = () => {
   return (
-    <div>NewVideo</div>
-  )
-}
+    <ContainerVideo>
+      <h1>Nuevo Video</h1>
+      <Formulario></Formulario>
+    </ContainerVideo>
+  );
+};
