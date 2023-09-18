@@ -1,31 +1,11 @@
-import styled from "styled-components";
 import { Button, Space } from "antd";
 
-const AntButton = styled(Button)`
-  /* .btn-Ant {
-    color: red;
-    background-color: red ;
-  }
-  .btn-Ant:hover {
-    background-color: yellow !important;
-  } */
-  font-weight: 600;
-  color: white;
-  &:hover {
-    color: #c2c2c2 !important;
-    border: 2px solid #c2c2c2 !important;
-  }
-  @media (max-width: 480px) {
-    display: none;
-  }
-`;
-
-export const Boton = ({ text, icon, size, type }) => {
+export const Boton = ({ text, icon, size, type,estilo }) => {
   return (
     <Space className="site-button-ghost-wrapper" wrap>
-      <Boton size={size} type={type} icon={icon}>
+      <Button size={size} type={type} icon={icon} className={estilo}>
         {text}
-      </Boton>
+      </Button>
     </Space>
   );
 };

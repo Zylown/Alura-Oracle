@@ -5,7 +5,7 @@ import { Formulario } from "../../components/Formulario";
 const ContainerVideo = styled.div`
   background-color: #191919;
   h1 {
-    padding: 15px;
+    padding: 50px;
     color: #fff;
     text-align: center;
     margin: 0;

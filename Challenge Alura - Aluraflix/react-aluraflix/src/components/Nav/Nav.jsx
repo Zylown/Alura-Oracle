@@ -2,7 +2,7 @@ import aluraflix from "../../assets/aluraflix.svg";
 import styled from "styled-components";
 import { Boton } from "../Boton";
 import { CloudUploadOutlined } from "@ant-design/icons";
-//import "./Nav.css";
+import "./Nav.css";
 import { Link } from "react-router-dom";
 
 const StyleNav = styled.nav`
@@ -16,7 +16,6 @@ const StyleNav = styled.nav`
   }
 `;
 const ContainerImg = styled.div``;
-
 export const Nav = () => {
   return (
     <StyleNav>
@@ -29,6 +28,7 @@ export const Nav = () => {
           text={"Nuevo Video"}
           size={"large"}
           icon={<CloudUploadOutlined />}
+          estilo={"custom-button"}
         ></Boton>
       </Link>
     </StyleNav>

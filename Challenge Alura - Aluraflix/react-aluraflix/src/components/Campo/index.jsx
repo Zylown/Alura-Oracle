@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Input } from "antd";
+import { Input, Space } from "antd";
 import { Boton } from "../Boton";
 const { TextArea } = Input;
 
@@ -31,11 +31,18 @@ const TextAreaStyle = styled(TextArea)`
   }
 `;
 
-const BotonStyle = styled(Boton)`
-  
-    border: 2px solid red !important;
-  
+const ContainerBtn = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
+
+const ContainerBtnLeft = styled.div`
+  display: flex;
+  gap: 40px;
+`;
+
+const ContainerBtnRight = styled.div``;
 
 export const Campo = (props) => {
   return (
@@ -46,7 +53,19 @@ export const Campo = (props) => {
       <InputStyle placeholder="Escoja una categoría" size="large"></InputStyle>
       <TextAreaStyle rows={4} placeholder="Descripción" size="large" />
       <InputStyle placeholder="Código de seguridad" size="large"></InputStyle>
-      <BotonStyle size={"large"} text={"Guardar"} type={"primary"}></BotonStyle>
+      <ContainerBtn>
+        <ContainerBtnLeft>
+          <Boton size={"large"} text={"Guardar"} type={"primary"}></Boton>
+          <Boton size={"large"} text={"Limpiar"} type={"default"}></Boton>
+        </ContainerBtnLeft>
+        <ContainerBtnRight>
+          <Boton
+            size={"large"}
+            text={"Nueva Categoría"}
+            type={"primary"}
+          ></Boton>
+        </ContainerBtnRight>
+      </ContainerBtn>
     </InputContainer>
   );
 };
