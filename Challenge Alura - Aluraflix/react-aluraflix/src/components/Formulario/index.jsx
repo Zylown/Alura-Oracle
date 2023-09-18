@@ -92,6 +92,11 @@ export const Formulario = () => {
           size={"large"}
           clase={"custom-campo"}
         ></TextAreaStyle>
+        <Campo
+          textPlaceholder={"Código de seguridad"}
+          tamanio={"large"}
+          clase={"custom-campo"}
+        ></Campo>
       </InputContainer>
       <ContainerBtn>
         <ContainerBtnLeft>
