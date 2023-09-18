@@ -4,6 +4,7 @@ import { Input } from "antd";
 import { Campo } from "../Campo";
 import { Boton } from "../Boton";
 import { AreaTexto } from "../AreaTexto";
+import { Link } from "react-router-dom";
 //const { TextArea } = Input;
 //CSS
 import "./Formulario.css";
@@ -98,11 +99,13 @@ export const Formulario = () => {
           <Boton size={"large"} text={"Limpiar"} type={"default"}></Boton>
         </ContainerBtnLeft>
         <ContainerBtnRight>
-          <Boton
-            size={"large"}
-            text={"Nueva Categoría"}
-            type={"primary"}
-          ></Boton>
+          <Link to={"/newcategory"}>
+            <Boton
+              size={"large"}
+              text={"Nueva Categoría"}
+              type={"primary"}
+            ></Boton>
+          </Link>
         </ContainerBtnRight>
       </ContainerBtn>
     </FormContainer>
