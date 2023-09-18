@@ -19,9 +19,11 @@ const ContainerImg = styled.div``;
 export const Nav = () => {
   return (
     <StyleNav>
-      <ContainerImg>
-        <img src={aluraflix} alt="Logo" />
-      </ContainerImg>
+      <Link to={"/"}>
+        <ContainerImg>
+          <img src={aluraflix} alt="Logo" />
+        </ContainerImg>
+      </Link>
       <Link to={"/newvideo"}>
         <Boton
           type={"link"}
