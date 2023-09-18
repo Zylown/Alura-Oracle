@@ -32,17 +32,29 @@ const TextAreaStyle = styled(TextArea)`
 `;
 
 const ContainerBtn = styled.div`
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  @media (max-width: 430px) {
+    /* Cuando la pantalla sea más pequeña que 430px */
+    flex-direction: column; /* Cambia a diseño de columna */
+  }
 `;
 
 const ContainerBtnLeft = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 20px;
+  @media (max-width: 430px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
-const ContainerBtnRight = styled.div``;
+const ContainerBtnRight = styled.div`
+  @media (max-width: 430px) {
+    display: none;
+  }
+`;
 
 export const Campo = (props) => {
   return (
