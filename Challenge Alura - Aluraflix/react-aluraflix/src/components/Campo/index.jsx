@@ -6,6 +6,7 @@ export const Campo = (props) => {
       placeholder={props.textPlaceholder}
       size={props.tamanio}
       className={props.clase}
+      type={props.tipo}
     ></Input>
   );
 };
