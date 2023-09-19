@@ -1,0 +1,45 @@
+.custom-campo {
+  color: white;
+  background-color: #53585d;
+  border-radius: 4px;
+  border: none;
+  &::placeholder {
+    color: #e5e5e5;
+    font-size: 15px;
+  }
+  &:focus {
+    box-shadow: inset 0 0 0 1px #e5e5e5;
+  }
+}
+
+.ant-input-data-count {
+  /* Color del contador TextArea*/
+  color: #c5c5c5 !important;
+}
+
+/*ESTILO DE TEXT AREA*/
+:where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-input-textarea-affix-wrapper.ant-input-affix-wrapper {
+  border: none !important;
+}
+
+:where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-input-textarea-affix-wrapper.ant-input-affix-wrapper
+  > textarea.ant-input {
+  color: white;
+  background-color: #53585d;
+  border-radius: 4px;
+  border: none;
+  &::placeholder {
+    color: #e5e5e5;
+    font-size: 15px;
+  }
+}
+:where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-input-textarea-affix-wrapper.ant-input-affix-wrapper
+  > textarea.ant-input:focus {
+  box-shadow: inset 0 0 0 1px #e5e5e5 !important;
+}

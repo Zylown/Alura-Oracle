@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { Form } from "antd";
-import { Input } from "antd";
-import { Campo } from "../Campo";
-import { Boton } from "../Boton";
-import { AreaTexto } from "../AreaTexto";
 import { Link } from "react-router-dom";
+import { Campo } from "../../../components/Campo";
+import { Boton } from "../../../components/Boton";
+import { AreaTexto } from "../../../components/AreaTexto";
 //const { TextArea } = Input;
 //CSS
 import "./Formulario.css";
@@ -50,19 +49,6 @@ const ContainerBtnRight = styled.div`
   }
 `;
 
-const TextAreaStyle = styled(AreaTexto)`
-  background-color: #53585d;
-  border-radius: 4px;
-  border: none;
-  &::placeholder {
-    color: #e5e5e5;
-    font-size: 15px;
-  }
-  &:focus {
-    box-shadow: inset 0 0 0 1px #e5e5e5;
-  }
-`;
-
 export const Formulario = () => {
   return (
     <FormContainer>
@@ -87,11 +73,12 @@ export const Formulario = () => {
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
-        <TextAreaStyle
+        <AreaTexto
           textPlaceholder={"Descripción"}
           size={"large"}
-          clase={"custom-campo"}
-        ></TextAreaStyle>
+          showCount={true}
+          maxLength={100}
+        ></AreaTexto>
         <Campo
           textPlaceholder={"Código de seguridad"}
           tamanio={"large"}

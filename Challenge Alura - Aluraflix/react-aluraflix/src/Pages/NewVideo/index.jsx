@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Formulario } from "../../components/Formulario";
+import { Formulario } from "./Formulario";
 
 const ContainerVideo = styled.div`
   background-color: #191919;

@@ -8,6 +8,9 @@ export const AreaTexto = (props) => {
       placeholder={props.textPlaceholder}
       size={props.tamanio}
       className={props.clase}
+      showCount={props.showCount}
+      maxLength={props.maxLength}
+      onChange={props.onChange}
     />
   );
 };
