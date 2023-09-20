@@ -25,7 +25,7 @@ export const Rodapie = () => {
   return (
     <FooterContainer>
       <img src={aluraflix} alt="Logo" />
-      <p>Site made by Sevastian Caballero</p>
+      <p>Site made by Sevastian Caballero Hoyos</p>
     </FooterContainer>
   );
 };
