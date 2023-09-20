@@ -23,3 +23,22 @@ export const buscar = async (url, setData) => {
   // Actualizar el estado de datos utilizando la función "setData" con los datos de la respuesta
   setData(respuesta.data); //trae todos los datos(objetos) de los arreglos
 };
+/*
+//HACE LO MISMO PERO CON FETCH 
+// Definir una función llamada "buscar" que realiza una solicitud GET
+export const buscar = async (url, setData) => {
+  // Conectarse a la URL base y luego...
+  const respuesta = await fetch(`http://localhost:5000${url}`); // ...esperar a obtener una respuesta
+
+  // Comprobar si la respuesta es exitosa
+  if (!respuesta.ok) {
+    throw new Error(`HTTP error! status: ${respuesta.status}`);
+  } else {
+    // Convertir la respuesta a JSON
+    const data = await respuesta.json();
+
+    // Actualizar el estado de datos utilizando la función "setData" con los datos de la respuesta
+    setData(data); //trae todos los datos(objetos) de los arreglos
+  }
+};
+*/

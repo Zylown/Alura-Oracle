@@ -13,7 +13,7 @@ import {
 import SubCategoria from "./SubCategoria";
 
 const Categoria = () => {
-  const [suvCategorias, setSubCategorias] = useState([]);
+  const [subCategorias, setSubCategorias] = useState([]);
   const { id } = useParams();
   const url = useResolvedPath("").pathname; //muestra la url donde estoy ahora
   useEffect(() => {
@@ -28,7 +28,7 @@ const Categoria = () => {
       </div>
       <ListCategories>
         <ul className="category-list container flex">
-          {subcategorias.map((subcategoria) => (
+          {subCategorias.map((subcategoria) => (
             <li
               className={`category-list__category category-list__category--${id}`}
               key={subcategoria}
