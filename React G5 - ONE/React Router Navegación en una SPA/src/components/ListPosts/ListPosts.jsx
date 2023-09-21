@@ -15,7 +15,7 @@ const ListPosts = ({ url }) => {
     /*
     llama a la función buscar con la URL y la función setPosts como argumentos. Esto significa que cuando la URL cambie, se realizará una solicitud HTTP utilizando la función buscar y los datos de respuesta se actualizarán en la variable de estado posts.
     */
-  }, [url]);
+  }, [url]);//cada vez que cambie esta url se ejecuta la funcion
 
   return (
     <section className="posts container">
