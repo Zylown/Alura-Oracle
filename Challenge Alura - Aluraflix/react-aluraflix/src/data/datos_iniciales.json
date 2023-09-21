@@ -1,66 +1,112 @@
 {
-  "frontImages": [
-    {
-      "id": 1,
-      "urlImagen": "https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=PztCEdIJITY"
+  "data-carrusel": {
+    "FR-00": {
+      "formacion": "Front End",
+      "color": "#6bd1ff",
+      "videos": [
+        {
+          "id": 1,
+          "urlImagen": "https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=PztCEdIJITY"
+        },
+        {
+          "id": 2,
+          "urlImagen": "https://img.youtube.com/vi/GJfOSoaXk4s/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=GJfOSoaXk4s"
+        },
+        {
+          "id": 3,
+          "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+        },
+        {
+          "id": 4,
+          "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+        },
+        {
+          "id": 5,
+          "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+        },
+        {
+          "id": 6,
+          "urlImagen": "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=UuAX5azcvDQ"
+        }
+      ]
     },
-    {
-      "id": 2,
-      "urlImagen": "https://img.youtube.com/vi/GJfOSoaXk4s/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=GJfOSoaXk4s"
+    "BA-00": {
+      "formacion": "Back End",
+      "color": "#00C86F",
+      "videos": [
+        {
+          "id": 7,
+          "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+        },
+        {
+          "id": 8,
+          "urlImagen": "https://img.youtube.com/vi/FqztWwPIrKo/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=FqztWwPIrKo"
+        },
+        {
+          "id": 9,
+          "urlImagen": "https://img.youtube.com/vi/EoPvlE85XAQ/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=EoPvlE85XAQ"
+        },
+        {
+          "id": 10,
+          "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+        },
+        {
+          "id": 11,
+          "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+        },
+        {
+          "id": 12,
+          "urlImagen": "https://img.youtube.com/vi/cLLKVd5CNLc/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=cLLKVd5CNLc"
+        }
+      ]
     },
-    {
-      "id": 3,
-      "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
-    },
-    {
-      "id": 4,
-      "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
-    },
-    {
-      "id": 5,
-      "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
-    },
-    {
-      "id": 6,
-      "urlImagen": "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=UuAX5azcvDQ"
+    "IN-00": {
+      "formacion": "Innovación y Gestión",
+      "color": "#FE8C2A",
+      "videos": [
+        {
+          "id": 13,
+          "urlImagen": "https://img.youtube.com/vi/vhwspfvI52k/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=vhwspfvI52k"
+        },
+        {
+          "id": 14,
+          "urlImagen": "https://img.youtube.com/vi/YhR7Zp8NUzE/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=YhR7Zp8NUzE"
+        },
+        {
+          "id": 15,
+          "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+        },
+        {
+          "id": 16,
+          "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+        },
+        {
+          "id": 17,
+          "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+        },
+        {
+          "id": 18,
+          "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+        }
+      ]
     }
-  ],
-  "backImages": [
-    {
-      "id": 1,
-      "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
-    },
-    {
-      "id": 2,
-      "urlImagen": "https://img.youtube.com/vi/FqztWwPIrKo/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=FqztWwPIrKo"
-    },
-    {
-      "id": 3,
-      "urlImagen": "https://img.youtube.com/vi/EoPvlE85XAQ/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=EoPvlE85XAQ"
-    },
-    {
-      "id": 4,
-      "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
-    },
-    {
-      "id": 5,
-      "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
-    },
-    {
-      "id": 6,
-      "urlImagen": "https://img.youtube.com/vi/cLLKVd5CNLc/maxresdefault.jpg",
-      "urlVideos": "https://www.youtube.com/watch?v=cLLKVd5CNLc"
-    }
-  ]
+  }
 }
