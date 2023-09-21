@@ -8,7 +8,7 @@ import { Link, useLocation } from "react-router-dom";
 const StyleNav = styled.nav`
   background-color: #000;
   display: flex;
-  padding: 15px 50px; //(arriba y abajo)px (derecha y izquierda)px
+  padding: 15px 32px; //(arriba y abajo)px (derecha y izquierda)px
   justify-content: space-between;
   align-items: center;
   @media (max-width: 480px) {
