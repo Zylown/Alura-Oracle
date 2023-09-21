@@ -1,13 +1,15 @@
-import { Input } from "antd";
+import { Form, Input } from 'antd';
+import styled from 'styled-components';
 
-export const Campo = (props) => {
+const FormItem = styled(Form.Item)`
+  margin: 0;
+`
+
+export const Campo = ({ name, rules, textPlaceholder, tamanio, clase, tipo, status }) => {
   return (
-    <Input
-      placeholder={props.textPlaceholder}
-      size={props.tamanio}
-      className={props.clase}
-      type={props.tipo}
-    ></Input>
+    <FormItem name={name} rules={rules}>
+      <Input placeholder={textPlaceholder} size={tamanio} className={clase} type={tipo} status={status} />
+    </FormItem>
   );
 };
 /*
