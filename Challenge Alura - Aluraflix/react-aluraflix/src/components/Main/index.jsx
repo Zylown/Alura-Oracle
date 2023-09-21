@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useApicito } from "../../Api/Apicito";
 import { Carrusel } from "../Carrusel";
 
 const MainContainer = styled.main`
@@ -10,72 +11,52 @@ const MainContainer = styled.main`
   gap: 20px;
 `;
 
-const FrontEndImages = [
-  {
-    url: "https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/GJfOSoaXk4s/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
-  },
-];
-
-const BackEndImages = [
-  {
-    url: "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/FqztWwPIrKo/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/EoPvlE85XAQ/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/cLLKVd5CNLc/maxresdefault.jpg",
-  },
-];
-const InnovacionEndImages = [
-  {
-    url: "https://img.youtube.com/vi/vhwspfvI52k/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/YhR7Zp8NUzE/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/YhR7Zp8NUzE/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/YhR7Zp8NUzE/maxresdefault.jpg",
-  },
-  {
-    url: "https://img.youtube.com/vi/YhR7Zp8NUzE/maxresdefault.jpg",
-  },
-];
-
 export const Main = () => {
+  const { dataCarrusel } = useApicito();
+  //console.log(Object.keys(dataCarrusel)); // convierte el objeto de array =>  ['FR-00', 'BA-00', 'IN-00']
+  // console.log(Object.entries(dataCarrusel));
+  /* convierte el objeto de array pero individual
+  0: (2) ['FR-00', {…}]
+  1: (2) ['BA-00', {…}]
+  2: (2) ['IN-00', {…}]*/
+  // console.log(Object.values(dataCarrusel)); // entra defrente a los valores de los objetos [{…}, {…}, {…}]
+
+  //console.log(dataCarrusel);
   return (
     <MainContainer>
-      <Carrusel
+      {Object.keys(dataCarrusel).map((valor) => (
+        <Carrusel data={valor} key={valor} />
+      ))}
+    </MainContainer>
+  );
+};
+/*
+//Recorriendo un objeto
+{Object.entries(dataCarrusel).map((value, index) => {
+        return <Carrusel key={index} data={value} />;
+      })}
+*/
+/*
+<Carrusel color="#6bd1ff" formacion="Front End" data="FR-00"/>
+      <Carrusel color="#00C86F" formacion="Back End" data="BA-00"/>
+      <Carrusel color="#FE8C2A" formacion="Innovación y Gestión" data="IN-00"/>
+
+*/
+
+/*
+{dataCarrusel.map((data) => (
+        <div key={data.id}>
+          <Carrusel
+          color="#6bd1ff"
+          title="Front End"
+          formacion="Front End"
+          imagen={data.urlImagen}
+          />
+        </div>
+      ))}
+*/
+/*
+<Carrusel
         color="#6bd1ff"
         title="Front End"
         formacion="Front End"
@@ -93,9 +74,7 @@ export const Main = () => {
         formacion="Innovación y Gestión"
         imagen={InnovacionEndImages}
       ></Carrusel>
-    </MainContainer>
-  );
-};
+*/
 
 /*
 //Acá en Main.jsx recibe las props de Carrusel.jsx, las props son (border,color,title,formacion,imagen)

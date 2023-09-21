@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ImageCard } from "./VideoCard";
 import { SliderComponent } from "./SliderComponent";
 
+import { useApicito } from "../../Api/Apicito";
 // const ImagenAlura = styled.img`
 //   width: 450px;
 //   height: 247px;
@@ -28,15 +29,38 @@ const SliderContainer = styled.div`
 `;
 
 export const Carrusel = (props) => {
+  const { dataCarrusel } = useApicito();
+  const categoryData = dataCarrusel[props.data] || {};
+  
   return (
     <>
       <EspecialidadContainer>
-        <h1 style={{ backgroundColor: `${props.color}` }}>{props.title}</h1>
-        <p>Formación {props.formacion} de Alura Latam</p>
+        <h1 style={{ backgroundColor: `${categoryData.color}` }}>
+          {categoryData.formacion}
+        </h1>
+        <p>Formación {categoryData.formacion} de Alura Latam</p>
       </EspecialidadContainer>
       <SliderContainer>
         <SliderComponent>
-          {props.imagen.map((imagen, index) => {
+          {categoryData.videos
+            ? categoryData.videos.map((video) => (
+                <ImageCard
+                  key={video.id}
+                  colorV={`2px solid ${categoryData.color}`}
+                  urlV={video.urlImagen}
+                />
+              ))
+            : null}
+        </SliderComponent>
+      </SliderContainer>
+    </>
+  );
+};
+/*
+En este código, categoryData.videos ? categoryData.videos.map(...) : null. Si categoryData.videos existe, se ejecutará el código después del signo de interrogación (?), que es categoryData.videos.map(...). Si categoryData.videos no existe (es decir, es null o undefined), se ejecutará el código después de los dos puntos (:), que en este caso es null. Esto significa que si no hay videos, no se renderizará nada.
+*/
+/*
+{props.imagen.map((imagen, index) => {
             return (
               <div key={index}>
                 <ImageCard
@@ -46,11 +70,7 @@ export const Carrusel = (props) => {
               </div>
             );
           })}
-        </SliderComponent>
-      </SliderContainer>
-    </>
-  );
-};
+*/
 
 /*
 En el codigo ese h1 usa la propiedad style para que cambie el fondo con backgroundColor y manda la
