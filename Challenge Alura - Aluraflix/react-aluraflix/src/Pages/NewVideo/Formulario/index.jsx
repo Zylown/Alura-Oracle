@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Campo } from "../../../components/Campo";
 import { Boton } from "../../../components/Boton";
 import { AreaTexto } from "../../../components/AreaTexto";
-//const { TextArea } = Input;
 //CSS
 import "./Formulario.css";
 
@@ -50,36 +49,68 @@ const ContainerBtnRight = styled.div`
 `;
 
 export const Formulario = () => {
+  const [form] = Form.useForm();
+
+  const HandleOnSubmit = (e) => {
+    // e.preventDefault();
+    // const hijo = e.target.querySelector('.sc-hiTCBY WWSxH');
+    console.log(e);
+  };
+
+  const HandleOnFinishFailed = (e) => {
+    console.log(e);
+  };
+
+  const HandleOnReset = (e) => {
+    console.log(form.resetFields());
+    form.resetFields();
+  };
   return (
-    <FormContainer>
+    <FormContainer
+      form={form}
+      onFinish={HandleOnSubmit}
+      onFinishFailed={HandleOnFinishFailed}
+    >
       <InputContainer>
         <Campo
+          name="titulo"
+          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
           textPlaceholder={"Título"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <Campo
+          name="linkVideo"
+          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
           textPlaceholder={"Link del video"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <Campo
+          name="linkImg"
+          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
           textPlaceholder={"Link imagen del video"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <Campo
+          name="categoria"
+          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
           textPlaceholder={"Escoja una categoría"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <AreaTexto
+          name="descripcion"
+          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
           textPlaceholder={"Descripción"}
           size={"large"}
           showCount={true}
           maxLength={100}
         ></AreaTexto>
         <Campo
+          name="seguridad"
+          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
           textPlaceholder={"Código de seguridad"}
           tamanio={"large"}
           clase={"custom-campo"}
@@ -87,8 +118,19 @@ export const Formulario = () => {
       </InputContainer>
       <ContainerBtn>
         <ContainerBtnLeft>
-          <Boton size={"large"} text={"Guardar"} type={"primary"}></Boton>
-          <Boton size={"large"} text={"Limpiar"} type={"default"}></Boton>
+          <Boton
+            size={"large"}
+            text={"Guardar"}
+            type={"primary"}
+            htmlTipo={"submit"}
+          ></Boton>
+          <Boton
+            size={"large"}
+            text={"Limpiar"}
+            type={"default"}
+            htmlTipo={"button"}
+            onClick={HandleOnReset}
+          ></Boton>
         </ContainerBtnLeft>
         <ContainerBtnRight>
           <Link to={"/newcategory"}>
