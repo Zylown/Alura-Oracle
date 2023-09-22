@@ -113,8 +113,9 @@ export const Formulario = () => {
           clase={"custom-campo"}
         ></Campo>
         <CampoSelect
+          initialValue={null}
+          placeholder={"Ingrese una categoría"}
           clase={"custom-campo-select"}
-          initialValue={"Ingrese una categoría"}
           rules={[
             { required: true, message: "Por favor ingresa una categoría" },
           ]}

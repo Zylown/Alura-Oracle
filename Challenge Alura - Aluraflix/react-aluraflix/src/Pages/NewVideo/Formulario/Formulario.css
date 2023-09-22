@@ -70,12 +70,15 @@
   .ant-select-selector {
     background-color: #53585d !important;
     border-radius: 4px !important;
-    /* border-color: transparent; */
     color: #e5e5e5 !important;
     font-size: 15px !important;
-    border: transparent !important;
+    /* border: transparent; */
+    border-color: transparent !important;
     &:hover {
-      border: transparent !important;
+      border-color: transparent !important;
+    }
+    &::placeholder {
+      color: #e5e5e5 !important;
     }
   }
 }
@@ -90,4 +93,12 @@ El selector .custom-campo-select .ant-select-selector:focus funciona porque espe
 
 .ant-select-arrow {
   color: #e5e5e5 !important;
+}
+
+.ant-select-selection-placeholder {
+  color: #e5e5e5 !important;
+}
+
+:where(.css-dev-only-do-not-override-18iikkb).ant-select-status-error:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector {
+  border-color: #ff7875 !important;
 }
