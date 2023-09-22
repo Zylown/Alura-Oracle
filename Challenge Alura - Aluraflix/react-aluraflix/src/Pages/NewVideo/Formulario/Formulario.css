@@ -1,5 +1,4 @@
 .custom-campo {
-  color: white;
   background-color: #53585d;
   border-radius: 4px;
   border-color: transparent;
@@ -64,4 +63,31 @@
   > textarea.ant-input:focus {
   box-shadow: inset 0 0 0 1px #e5e5e5 !important;
   border-color: transparent;
+}
+
+/* SELECT STYLES*/
+.custom-campo-select {
+  .ant-select-selector {
+    background-color: #53585d !important;
+    border-radius: 4px !important;
+    /* border-color: transparent; */
+    color: #e5e5e5 !important;
+    font-size: 15px !important;
+    border: transparent !important;
+    &:hover {
+      border: transparent !important;
+    }
+  }
+}
+/*
+El selector .custom-campo-select .ant-select-selector:focus funciona porque específicamente se aplica cuando el elemento con la clase .custom-campo-select está enfocado (:focus). Además, .custom-campo-select .ant-select-focused .ant-select-selector también funciona porque Ant Design agrega la clase .ant-select-focused al elemento cuando está enfocado.
+*/
+.custom-campo-select .ant-select-selector:focus,
+.custom-campo-select .ant-select-focused .ant-select-selector {
+  box-shadow: inset 0 0 0 1px #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+}
+
+.ant-select-arrow {
+  color: #e5e5e5 !important;
 }

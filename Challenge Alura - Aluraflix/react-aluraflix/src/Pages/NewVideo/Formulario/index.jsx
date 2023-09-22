@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { Form } from "antd";
+import { Form, Select } from "antd";
 import { Link } from "react-router-dom";
-import { Campo } from "../../../components/Campo";
+import { Campo, CampoSelect } from "../../../components/Campo";
 import { Boton } from "../../../components/Boton";
 import { AreaTexto } from "../../../components/AreaTexto";
+const { Option } = Select;
 //CSS
 import "./Formulario.css";
 
@@ -62,9 +63,20 @@ export const Formulario = () => {
   };
 
   const HandleOnReset = (e) => {
-    console.log(form.resetFields());
     form.resetFields();
   };
+
+  const options = [
+    {
+      value: "Namber 1",
+      label: "Namber 1",
+    },
+    {
+      value: "Namber 2",
+      label: "Namber 2",
+    },
+  ];
+  const onCategoryChange = (e) => {};
   return (
     <FormContainer
       form={form}
@@ -74,35 +86,47 @@ export const Formulario = () => {
       <InputContainer>
         <Campo
           name="titulo"
-          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
+          rules={[{ required: true, message: "Por favor ingresa un título" }]}
           textPlaceholder={"Título"}
           tamanio={"large"}
           clase={"custom-campo"}
+          maxLength={50}
         ></Campo>
         <Campo
           name="linkVideo"
-          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
+          rules={[
+            { required: true, message: "Por favor ingresa una url de video" },
+            { type: "url", message: "Video URL no válida" },
+          ]}
           textPlaceholder={"Link del video"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <Campo
           name="linkImg"
-          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
+          rules={[
+            { required: true, message: "Por favor ingresa una url de imagen" },
+            { type: "url", message: "Video URL no válida" },
+          ]}
           textPlaceholder={"Link imagen del video"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
-        <Campo
-          name="categoria"
-          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
-          textPlaceholder={"Escoja una categoría"}
-          tamanio={"large"}
-          clase={"custom-campo"}
-        ></Campo>
+        <CampoSelect
+          clase={"custom-campo-select"}
+          initialValue={"Ingrese una categoría"}
+          rules={[
+            { required: true, message: "Por favor ingresa una categoría" },
+          ]}
+          name={"category"}
+          tamanio="large"
+          opciones={options}
+        />
         <AreaTexto
           name="descripcion"
-          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
+          rules={[
+            { required: true, message: "Por favor ingresa una descripción" },
+          ]}
           textPlaceholder={"Descripción"}
           size={"large"}
           showCount={true}
@@ -110,7 +134,12 @@ export const Formulario = () => {
         ></AreaTexto>
         <Campo
           name="seguridad"
-          rules={[{ required: true, message: "Por favor ingresa un título!" }]}
+          rules={[
+            {
+              required: true,
+              message: "Por favor ingresa un código de seguridad",
+            },
+          ]}
           textPlaceholder={"Código de seguridad"}
           tamanio={"large"}
           clase={"custom-campo"}
@@ -145,3 +174,15 @@ export const Formulario = () => {
     </FormContainer>
   );
 };
+
+/*
+<Campo
+            name="categoria"
+            rules={[
+              { required: true, message: "Por favor ingresa una categoría" },
+            ]}
+            textPlaceholder={"Escoja una categoría"}
+            tamanio={"large"}
+            clase={"custom-campo"}
+          ></Campo>
+          */
