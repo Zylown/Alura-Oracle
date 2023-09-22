@@ -35,6 +35,7 @@ export const CampoSelect = ({
   opciones,
   defaultValue,
   initialValue,
+  placeholder,
   clase,
   tamanio,
 }) => {
@@ -50,6 +51,7 @@ export const CampoSelect = ({
         defaultValue={defaultValue}
         size={tamanio}
         dropdownStyle={{ backgroundColor: "#ccc" }}
+        placeholder={placeholder}
       ></Select>
     </FormItem>
   );
