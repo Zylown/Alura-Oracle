@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-export const useApicito = () => {
-  const baseURL = "http://localhost:3000/data-carrusel";
+const baseURL = "http://localhost:3000/data-carrusel";
 
+export const listDataCarrusel = () => {
   const [dataCarrusel, setDataCarrusel] = useState([]);
 
-    useEffect(() => {
+  useEffect(() => {
     fetch(baseURL)
       .then((respuesta) => respuesta.json())
       .then((data) => {
@@ -14,4 +14,21 @@ export const useApicito = () => {
       });
   }, []);
   return { dataCarrusel };
+};
+
+export const createNuevoVideo = () => {
+  useEffect(() => {
+    fetch(baseURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        titulo,
+        linkImg,
+        linkVideo,
+        categoria,
+        descripcion,
+        id: Date.now(),
+      }),
+    });
+  }, []);
 };
