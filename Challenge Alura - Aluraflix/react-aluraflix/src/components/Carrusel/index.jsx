@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ImageCard } from "./VideoCard";
 import { SliderComponent } from "./SliderComponent";
 
-import { useApicito } from "../../Api/Apicito";
+import { listDataCarrusel } from "../../Api/Apicito";
 // const ImagenAlura = styled.img`
 //   width: 450px;
 //   height: 247px;
@@ -29,7 +29,7 @@ const SliderContainer = styled.div`
 `;
 
 export const Carrusel = (props) => {
-  const { dataCarrusel } = useApicito();
+  const { dataCarrusel } = listDataCarrusel();
   const categoryData = dataCarrusel[props.data] || {};
 
   return (

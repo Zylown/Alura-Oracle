@@ -1,13 +1,22 @@
 import styled from "styled-components";
-import { Form, Select } from "antd";
+import { Form, Select, message } from "antd";
 import { Link } from "react-router-dom";
 import { Campo, CampoSelect } from "../../../components/Campo";
 import { Boton } from "../../../components/Boton";
 import { AreaTexto } from "../../../components/AreaTexto";
-import { useApicito } from "../../../Api/Apicito";
+import { listDataCarrusel } from "../../../Api/Apicito";
 import { useNavigate } from "react-router-dom";
+import {
+  CampoAreaTexto,
+  CampoCategoria,
+  CampoSeguridad,
+  CampoTitulo,
+  CampoUrlImagen,
+  CampoUrlVideo,
+} from "../../../components/Validations";
 //CSS
 import "./Formulario.css";
+import { useState } from "react";
 //import { Option } from "antd/es/mentions";
 const { Option } = Select;
 const FormContainer = styled(Form)`
@@ -53,12 +62,22 @@ const ContainerBtnRight = styled.div`
 
 export const Formulario = () => {
   const [form] = Form.useForm();
-  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    titulo: "",
+    linkVideo: "",
+    linkImg: "",
+    categoria: "",
+    descripcion: "",
+    seguridad: "",
+  });
+  //const navigate = useNavigate();
+
   const HandleOnSubmit = (e) => {
     const saveData = e;
     console.log(saveData);
     // console.log(e);
-    navigate("/success");
+    //navigate("/success");
+    message.success("Video Guardado");
   };
 
   const HandleOnFinishFailed = (e) => {
@@ -68,8 +87,11 @@ export const Formulario = () => {
   const HandleOnReset = (e) => {
     form.resetFields();
   };
-  const { dataCarrusel } = useApicito();
-  const dataCategories = Object.values(dataCarrusel);
+  const { dataCarrusel } = listDataCarrusel();
+  const dCat = Object.entries(dataCarrusel);
+  //console.log(Object.entries(dataCarrusel)[0]);
+  // console.log(Object.entries(dataCarrusel)[0][1].formacion);
+  // console.log(Object.entries(dataCarrusel)[1][1].formacion);
 
   const onCategoryChange = (e) => {};
   return (
@@ -82,7 +104,7 @@ export const Formulario = () => {
       <InputContainer>
         <Campo
           name="titulo"
-          rules={[{ required: true, message: "Por favor ingresa un título" }]}
+          rules={CampoTitulo}
           textPlaceholder={"Título"}
           tamanio={"large"}
           clase={"custom-campo"}
@@ -90,20 +112,14 @@ export const Formulario = () => {
         ></Campo>
         <Campo
           name="linkVideo"
-          rules={[
-            { required: true, message: "Por favor ingresa una url de video" },
-            { type: "url", message: "Video URL no válida" },
-          ]}
+          rules={CampoUrlVideo}
           textPlaceholder={"Link del video"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <Campo
           name="linkImg"
-          rules={[
-            { required: true, message: "Por favor ingresa una url de imagen" },
-            { type: "url", message: "Video URL no válida" },
-          ]}
+          rules={CampoUrlImagen}
           textPlaceholder={"Link imagen del video"}
           tamanio={"large"}
           clase={"custom-campo"}
@@ -111,23 +127,20 @@ export const Formulario = () => {
         <CampoSelect
           placeholder={"Ingrese una categoría"}
           clase={"custom-campo-select"}
-          rules={[
-            { required: true, message: "Por favor ingresa una categoría" },
-          ]}
+          rules={CampoCategoria}
           name={"category"}
           tamanio="large"
         >
-          {dataCategories.map((options, index) => (
-            <Option key={index} value={options.formacion}>
-              {options.formacion}
-            </Option>
-          ))}
+          {dCat.map(
+            ([key, value]) => (
+              // console.log(key, "valor", value),
+              (<Option key={key}>{value.formacion}</Option>)
+            )
+          )}
         </CampoSelect>
         <AreaTexto
           name="descripcion"
-          rules={[
-            { required: true, message: "Por favor ingresa una descripción" },
-          ]}
+          rules={CampoAreaTexto}
           textPlaceholder={"Descripción"}
           size={"large"}
           showCount={true}
@@ -135,12 +148,7 @@ export const Formulario = () => {
         ></AreaTexto>
         <Campo
           name="seguridad"
-          rules={[
-            {
-              required: false,
-              message: "Por favor ingresa un código de seguridad",
-            },
-          ]}
+          rules={CampoSeguridad}
           textPlaceholder={"Código de seguridad"}
           tamanio={"large"}
           clase={"custom-campo"}
@@ -175,6 +183,31 @@ export const Formulario = () => {
     </FormContainer>
   );
 };
+/*
+  const dataCategories = Object.values(dataCarrusel);
+ {dataCategories.map((options, index) => (
+      <Option key={index} value={options.formacion}>
+       {options.formacion}
+      </Option>
+  ))} 
+*/
+/*
+//y como haria si quiero acceder a los objetos de los videos como urlImagen?
+{dCat.map(([key, value]) => (
+  <div key={key}>
+    <h1>{value.formacion}</h1>
+    {value.videos.map((video) => (
+      <img src={video.urlImagen} alt="" />
+    ))}
+  </div>
+))}
+
+////////////////////////////////////
+{dCat.map(([key, value]) => (
+              console.log(key, "valor" , value),
+            <Option key={key}>{value.videos.map((video) => (<p>{video.urlImagen}</p>))}</Option>
+          ))}
+*/
 
 /*
 <Campo

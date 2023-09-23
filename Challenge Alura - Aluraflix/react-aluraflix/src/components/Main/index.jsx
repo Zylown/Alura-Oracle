@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useApicito } from "../../Api/Apicito";
+import { listDataCarrusel } from "../../Api/Apicito";
 import { Carrusel } from "../Carrusel";
 
 const MainContainer = styled.main`
@@ -12,7 +12,7 @@ const MainContainer = styled.main`
 `;
 
 export const Main = () => {
-  const { dataCarrusel } = useApicito();
+  const { dataCarrusel } = listDataCarrusel();
   //console.log(Object.keys(dataCarrusel)); // convierte el objeto de array =>  ['FR-00', 'BA-00', 'IN-00']
   // console.log(Object.entries(dataCarrusel));
   /* convierte el objeto de array pero individual
