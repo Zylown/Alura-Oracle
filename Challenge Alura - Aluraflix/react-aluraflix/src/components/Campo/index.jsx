@@ -32,32 +32,30 @@ export const Campo = ({
 export const CampoSelect = ({
   name,
   rules,
-  opciones,
-  defaultValue,
-  initialValue,
   placeholder,
   clase,
   tamanio,
+  children,
 }) => {
   return (
     <FormItem
       name={name}
       rules={rules}
-      initialValue={initialValue}
       className={clase}
     >
       <Select
-        options={opciones}
-        defaultValue={defaultValue}
         size={tamanio}
         dropdownStyle={{ backgroundColor: "#ccc" }}
         placeholder={placeholder}
-      ></Select>
+      >
+        {children}
+      </Select>
     </FormItem>
   );
 };
 
 /*
+//<Option value={opciones}></Option>
 // dropdownStyle={{backgroundColor:"red"}}
 //  validateStatus='error' help="Error pe mano"
 <Form.Item label="Titulo" style={{ color: "fff !important" }}>

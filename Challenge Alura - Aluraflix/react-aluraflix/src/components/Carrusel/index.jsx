@@ -31,7 +31,7 @@ const SliderContainer = styled.div`
 export const Carrusel = (props) => {
   const { dataCarrusel } = useApicito();
   const categoryData = dataCarrusel[props.data] || {};
-  
+
   return (
     <>
       <EspecialidadContainer>
@@ -57,19 +57,18 @@ export const Carrusel = (props) => {
   );
 };
 /*
-En este código, categoryData.videos ? categoryData.videos.map(...) : null. Si categoryData.videos existe, se ejecutará el código después del signo de interrogación (?), que es categoryData.videos.map(...). Si categoryData.videos no existe (es decir, es null o undefined), se ejecutará el código después de los dos puntos (:), que en este caso es null. Esto significa que si no hay videos, no se renderizará nada.
+//OTRA FORMA
+{categoryData.videos && categoryData.videos.map((video) => (
+  <ImageCard
+    key={video.id}
+    colorV={`2px solid ${categoryData.color}`}
+    urlV={video.urlImagen}
+  />
+))}
+ si categoryData.videos es null o undefined, la expresión categoryData.videos && ... se evaluará como false, y la parte de mapeo no se ejecutará. Si categoryData.videos tiene un valor válido, entonces la parte de mapeo se ejecutará 
 */
 /*
-{props.imagen.map((imagen, index) => {
-            return (
-              <div key={index}>
-                <ImageCard
-                  colorV={`2px solid ${props.color}`}
-                  urlV={imagen.url}
-                ></ImageCard>
-              </div>
-            );
-          })}
+En este código, categoryData.videos ? categoryData.videos.map(...) : null. Si categoryData.videos existe, se ejecutará el código después del signo de interrogación (?), que es categoryData.videos.map(...). Si categoryData.videos no existe (es decir, es null o undefined), se ejecutará el código después de los dos puntos (:), que en este caso es null. Esto significa que si no hay videos, no se renderizará nada.
 */
 
 /*

@@ -8,6 +8,7 @@ import { Nav } from "./components/Nav/Nav";
 import { Rodapie } from "./components/Rodapie";
 import { NewVideo } from "./Pages/NewVideo";
 import { NewCategory } from "./Pages/NewCategory";
+import { Success } from "./Pages/Success";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" exact element={<Home />}></Route>
         <Route path="/newvideo" element={<NewVideo />}></Route>
         <Route path="/newcategory" element={<NewCategory />}></Route>
+        <Route path="/success" element={<Success />}></Route>
         <Route path="*" element={<Page404 />}></Route>
       </Routes>
       <Rodapie></Rodapie>
