@@ -14,6 +14,9 @@ export const Campo = ({
   tipo,
   status,
   maxLength,
+  minLength,
+  value,
+  onChange,
 }) => {
   return (
     <FormItem name={name} rules={rules}>
@@ -24,6 +27,9 @@ export const Campo = ({
         type={tipo}
         status={status}
         maxLength={maxLength}
+        minLength={minLength}
+        value={value}
+        onChange={onChange}
       />
     </FormItem>
   );
@@ -38,11 +44,7 @@ export const CampoSelect = ({
   children,
 }) => {
   return (
-    <FormItem
-      name={name}
-      rules={rules}
-      className={clase}
-    >
+    <FormItem name={name} rules={rules} className={clase}>
       <Select
         size={tamanio}
         dropdownStyle={{ backgroundColor: "#ccc" }}
