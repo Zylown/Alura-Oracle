@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { Campo, CampoSelect } from "../../../components/Campo";
 import { Boton } from "../../../components/Boton";
 import { AreaTexto } from "../../../components/AreaTexto";
-const { Option } = Select;
+import { useApicito } from "../../../Api/Apicito";
+import { useNavigate } from "react-router-dom";
 //CSS
 import "./Formulario.css";
-
+//import { Option } from "antd/es/mentions";
+const { Option } = Select;
 const FormContainer = styled(Form)`
   width: 100%;
   display: flex;
@@ -51,11 +53,12 @@ const ContainerBtnRight = styled.div`
 
 export const Formulario = () => {
   const [form] = Form.useForm();
-
+  const navigate = useNavigate();
   const HandleOnSubmit = (e) => {
-    // e.preventDefault();
-    // const hijo = e.target.querySelector('.sc-hiTCBY WWSxH');
-    console.log(e);
+    const saveData = e;
+    console.log(saveData);
+    // console.log(e);
+    navigate("/success");
   };
 
   const HandleOnFinishFailed = (e) => {
@@ -65,23 +68,16 @@ export const Formulario = () => {
   const HandleOnReset = (e) => {
     form.resetFields();
   };
+  const { dataCarrusel } = useApicito();
+  const dataCategories = Object.values(dataCarrusel);
 
-  const options = [
-    {
-      value: "Namber 1",
-      label: "Namber 1",
-    },
-    {
-      value: "Namber 2",
-      label: "Namber 2",
-    },
-  ];
   const onCategoryChange = (e) => {};
   return (
     <FormContainer
       form={form}
       onFinish={HandleOnSubmit}
       onFinishFailed={HandleOnFinishFailed}
+      autoComplete="off"
     >
       <InputContainer>
         <Campo
@@ -113,7 +109,6 @@ export const Formulario = () => {
           clase={"custom-campo"}
         ></Campo>
         <CampoSelect
-          initialValue={null}
           placeholder={"Ingrese una categoría"}
           clase={"custom-campo-select"}
           rules={[
@@ -121,8 +116,13 @@ export const Formulario = () => {
           ]}
           name={"category"}
           tamanio="large"
-          opciones={options}
-        />
+        >
+          {dataCategories.map((options, index) => (
+            <Option key={index} value={options.formacion}>
+              {options.formacion}
+            </Option>
+          ))}
+        </CampoSelect>
         <AreaTexto
           name="descripcion"
           rules={[
@@ -137,7 +137,7 @@ export const Formulario = () => {
           name="seguridad"
           rules={[
             {
-              required: true,
+              required: false,
               message: "Por favor ingresa un código de seguridad",
             },
           ]}
