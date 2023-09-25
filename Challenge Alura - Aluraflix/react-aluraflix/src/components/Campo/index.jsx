@@ -42,6 +42,7 @@ export const CampoSelect = ({
   clase,
   tamanio,
   children,
+  onChange,
 }) => {
   return (
     <FormItem name={name} rules={rules} className={clase}>
@@ -49,6 +50,7 @@ export const CampoSelect = ({
         size={tamanio}
         dropdownStyle={{ backgroundColor: "#ccc" }}
         placeholder={placeholder}
+        onChange={onChange}
       >
         {children}
       </Select>

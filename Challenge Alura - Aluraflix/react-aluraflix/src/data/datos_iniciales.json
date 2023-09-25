@@ -5,34 +5,46 @@
       "color": "#6bd1ff",
       "videos": [
         {
-          "id": 1,
+          "titulo": "Video Front",
+          "urlVideos": "https://www.youtube.com/watch?v=PztCEdIJITY",
           "urlImagen": "https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=PztCEdIJITY"
+          "descripcion": "Video Front",
+          "id": 1
         },
         {
-          "id": 2,
+          "titulo": "Video Front",
+          "urlVideos": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
           "urlImagen": "https://img.youtube.com/vi/GJfOSoaXk4s/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=GJfOSoaXk4s"
+          "descripcion": "Video Front",
+          "id": 2
         },
         {
-          "id": 3,
+          "titulo": "Video Front",
+          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
           "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+          "descripcion": "Video Front",
+          "id": 3
         },
         {
-          "id": 4,
+          "titulo": "Video Front",
+          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
           "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+          "descripcion": "Video Front",
+          "id": 4
         },
         {
-          "id": 5,
+          "titulo": "Video Front",
+          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
           "urlImagen": "https://img.youtube.com/vi/rpvrLaBQwgg/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+          "descripcion": "Video Front",
+          "id": 5
         },
         {
-          "id": 6,
+          "titulo": "Video Front",
+          "urlVideos": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
           "urlImagen": "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=UuAX5azcvDQ"
+          "descripcion": "Video Front",
+          "id": 6
         }
       ]
     },
@@ -41,34 +53,46 @@
       "color": "#00C86F",
       "videos": [
         {
-          "id": 7,
+          "titulo": "Video Back End",
+          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
           "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+          "descripcion": "Video Back End",
+          "id": 7
         },
         {
-          "id": 8,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=FqztWwPIrKo",
           "urlImagen": "https://img.youtube.com/vi/FqztWwPIrKo/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=FqztWwPIrKo"
+          "descripcion": "Video",
+          "id": 8
         },
         {
-          "id": 9,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
           "urlImagen": "https://img.youtube.com/vi/EoPvlE85XAQ/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=EoPvlE85XAQ"
+          "descripcion": "Video",
+          "id": 9
         },
         {
-          "id": 10,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
           "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+          "descripcion": "Video",
+          "id": 10
         },
         {
-          "id": 11,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
           "urlImagen": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+          "descripcion": "Video",
+          "id": 11
         },
         {
-          "id": 12,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
           "urlImagen": "https://img.youtube.com/vi/cLLKVd5CNLc/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=cLLKVd5CNLc"
+          "descripcion": "Video",
+          "id": 12
         }
       ]
     },
@@ -77,34 +101,46 @@
       "color": "#FE8C2A",
       "videos": [
         {
-          "id": 13,
+          "titulo": "Video Innovación",
+          "urlVideos": "https://www.youtube.com/watch?v=vhwspfvI52k",
           "urlImagen": "https://img.youtube.com/vi/vhwspfvI52k/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=vhwspfvI52k"
+          "descripcion": "Video Innovación",
+          "id": 13
         },
         {
-          "id": 14,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
           "urlImagen": "https://img.youtube.com/vi/YhR7Zp8NUzE/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=YhR7Zp8NUzE"
+          "descripcion": "Video",
+          "id": 14
         },
         {
-          "id": 15,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
           "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+          "descripcion": "Video",
+          "id": 15
         },
         {
-          "id": 16,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
           "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+          "descripcion": "Video",
+          "id": 16
         },
         {
-          "id": 17,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
           "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+          "descripcion": "Video",
+          "id": 17
         },
         {
-          "id": 18,
+          "titulo": "Video",
+          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
           "urlImagen": "https://img.youtube.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
-          "urlVideos": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+          "descripcion": "Video",
+          "id": 18
         }
       ]
     }

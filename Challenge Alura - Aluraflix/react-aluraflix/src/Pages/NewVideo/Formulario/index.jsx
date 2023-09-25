@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Campo, CampoSelect } from "../../../components/Campo";
 import { Boton } from "../../../components/Boton";
 import { AreaTexto } from "../../../components/AreaTexto";
-import { listDataCarrusel } from "../../../Api/Apicito";
+import { createNuevoVideo, listDataCarrusel } from "../../../Api/Apicito";
 import { useNavigate } from "react-router-dom";
 import {
   CampoAreaTexto,
@@ -62,38 +62,36 @@ const ContainerBtnRight = styled.div`
 
 export const Formulario = () => {
   const [form] = Form.useForm();
-  const [formData, setFormData] = useState({
-    titulo: "",
-    linkVideo: "",
-    linkImg: "",
-    categoria: "",
-    descripcion: "",
-    seguridad: "",
-  });
-  //const navigate = useNavigate();
+  const { dataCarrusel } = listDataCarrusel();
+  // console.log(dataCarrusel);
+  const dCat = Object.entries(dataCarrusel);
 
-  const HandleOnSubmit = (e) => {
-    const saveData = e;
-    console.log(saveData);
-    // console.log(e);
-    //navigate("/success");
-    message.success("Video Guardado");
+  const HandleOnSubmit = (values) => {
+    let datosAEnviar = {
+      titulo: values.titulo,
+      urlVideos: values.linkVideo,
+      urlImagen: values.linkImg,
+      descripcion: values.descripcion,
+      id: Date.now(),
+    };
+    console.log(datosAEnviar);
+    // de dataCarrusel[values.formacion] entra dependiendo que seleccione en el select
+    const category = dataCarrusel[values.formacion];
+    if (category) {
+      category.videos.push(datosAEnviar);
+      message.success("Video subido correctamente");
+    }
+    console.log(category.videos);
   };
 
   const HandleOnFinishFailed = (e) => {
-    console.log(e);
+    console.log("Error en: ", e);
   };
 
   const HandleOnReset = (e) => {
     form.resetFields();
   };
-  const { dataCarrusel } = listDataCarrusel();
-  const dCat = Object.entries(dataCarrusel);
-  //console.log(Object.entries(dataCarrusel)[0]);
-  // console.log(Object.entries(dataCarrusel)[0][1].formacion);
-  // console.log(Object.entries(dataCarrusel)[1][1].formacion);
 
-  const onCategoryChange = (e) => {};
   return (
     <FormContainer
       form={form}
@@ -128,15 +126,13 @@ export const Formulario = () => {
           placeholder={"Ingrese una categoría"}
           clase={"custom-campo-select"}
           rules={CampoCategoria}
-          name={"category"}
+          name={"formacion"}
           tamanio="large"
         >
-          {dCat.map(
-            ([key, value]) => (
-              // console.log(key, "valor", value),
-              (<Option key={key}>{value.formacion}</Option>)
-            )
-          )}
+          {dCat.map(([key, value]) => (
+            // console.log(key, "valor", value),
+            <Option key={key}>{value.formacion}</Option>
+          ))}
         </CampoSelect>
         <AreaTexto
           name="descripcion"
