@@ -74,14 +74,26 @@ export const Formulario = () => {
       descripcion: values.descripcion,
       id: Date.now(),
     };
-    console.log(datosAEnviar);
     // de dataCarrusel[values.formacion] entra dependiendo que seleccione en el select
     const category = dataCarrusel[values.formacion];
-    if (category) {
+    // console.log(category);
+    let isDuplicate = false;
+    // Utiliza Array.some() para verificar si hay algún duplicado, devuelve true or false
+    isDuplicate = category.videos.some((video) => {
+      return (
+        datosAEnviar.urlImagen === video.urlImagen.trim() ||
+        datosAEnviar.urlVideos === video.urlVideos.trim() ||
+        datosAEnviar.titulo === video.titulo.trim()
+      );
+    });
+    console.log("Es duplicado, ", isDuplicate);
+    if (!isDuplicate) {
       category.videos.push(datosAEnviar);
+      console.log(category.videos);
       message.success("Video subido correctamente");
+    } else {
+      message.error("Formulario con datos duplicados");
     }
-    console.log(category.videos);
   };
 
   const HandleOnFinishFailed = (e) => {
