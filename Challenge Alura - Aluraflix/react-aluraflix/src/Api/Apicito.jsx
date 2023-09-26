@@ -4,7 +4,6 @@ const baseURL = "http://localhost:3000/data-carrusel";
 
 export const listDataCarrusel = () => {
   const [dataCarrusel, setDataCarrusel] = useState([]);
-
   useEffect(() => {
     fetch(baseURL)
       .then((respuesta) => respuesta.json())
@@ -16,19 +15,16 @@ export const listDataCarrusel = () => {
   return { dataCarrusel };
 };
 
-export const createNuevoVideo = () => {
-  useEffect(() => {
-    fetch(baseURL, {
-      method: "POST",
+export const createNuevoVideo = async (category) => {
+  try {
+    const response = await fetch(`${baseURL}/${category.id}`, {
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        titulo,
-        linkImg,
-        linkVideo,
-        categoria,
-        descripcion,
-        id: Date.now(),
-      }),
+      body: JSON.stringify(category),
     });
-  }, []);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
 };

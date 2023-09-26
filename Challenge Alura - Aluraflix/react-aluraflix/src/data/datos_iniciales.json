@@ -1,6 +1,7 @@
 {
-  "data-carrusel": {
-    "FR-00": {
+  "data-carrusel": [
+    {
+      "id": "FR-00",
       "formacion": "Front End",
       "color": "#6bd1ff",
       "videos": [
@@ -48,7 +49,8 @@
         }
       ]
     },
-    "BA-00": {
+    {
+      "id": "BA-00",
       "formacion": "Back End",
       "color": "#00C86F",
       "videos": [
@@ -96,7 +98,8 @@
         }
       ]
     },
-    "IN-00": {
+    {
+      "id": "IN-00",
       "formacion": "Innovación y Gestión",
       "color": "#FE8C2A",
       "videos": [
@@ -144,5 +147,5 @@
         }
       ]
     }
-  }
+  ]
 }

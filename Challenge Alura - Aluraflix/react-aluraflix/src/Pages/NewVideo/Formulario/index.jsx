@@ -5,7 +5,6 @@ import { Campo, CampoSelect } from "../../../components/Campo";
 import { Boton } from "../../../components/Boton";
 import { AreaTexto } from "../../../components/AreaTexto";
 import { createNuevoVideo, listDataCarrusel } from "../../../Api/Apicito";
-import { useNavigate } from "react-router-dom";
 import {
   CampoAreaTexto,
   CampoCategoria,
@@ -63,20 +62,22 @@ const ContainerBtnRight = styled.div`
 export const Formulario = () => {
   const [form] = Form.useForm();
   const { dataCarrusel } = listDataCarrusel();
-  // console.log(dataCarrusel);
+  // console.log(dataCarrusel[0].id);
   const dCat = Object.entries(dataCarrusel);
-
-  const HandleOnSubmit = (values) => {
+  // console.log(dCat);
+  const HandleOnSubmit = async (values) => {
     let datosAEnviar = {
       titulo: values.titulo,
       urlVideos: values.linkVideo,
       urlImagen: values.linkImg,
+      categoria: values.formacion,
       descripcion: values.descripcion,
       id: Date.now(),
     };
-    // de dataCarrusel[values.formacion] entra dependiendo que seleccione en el select
-    const category = dataCarrusel[values.formacion];
-    // console.log(category);
+    const category = dataCarrusel.find(
+      (data) => data.id === datosAEnviar.categoria
+    );
+    console.log(category);
     let isDuplicate = false;
     // Utiliza Array.some() para verificar si hay algún duplicado, devuelve true or false
     isDuplicate = category.videos.some((video) => {
@@ -90,17 +91,20 @@ export const Formulario = () => {
     if (!isDuplicate) {
       category.videos.push(datosAEnviar);
       console.log(category.videos);
+
+      const response = await createNuevoVideo(category);
+      console.log(response); // Aquí puedes ver la respuesta de tu solicitud POST
       message.success("Video subido correctamente");
     } else {
       message.error("Formulario con datos duplicados");
     }
   };
 
-  const HandleOnFinishFailed = (e) => {
-    console.log("Error en: ", e);
+  const HandleOnFinishFailed = () => {
+    message.error("Formulario incorrecto");
   };
 
-  const HandleOnReset = (e) => {
+  const HandleOnReset = () => {
     form.resetFields();
   };
 
@@ -142,8 +146,8 @@ export const Formulario = () => {
           tamanio="large"
         >
           {dCat.map(([key, value]) => (
-            // console.log(key, "valor", value),
-            <Option key={key}>{value.formacion}</Option>
+            // console.log(value.id, "valor", value.formacion),
+            <Option key={value.id}>{value.formacion}</Option>
           ))}
         </CampoSelect>
         <AreaTexto
