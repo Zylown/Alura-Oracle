@@ -134,7 +134,9 @@ export const Formulario = () => {
         <Campo
           name="linkImg"
           rules={CampoUrlImagen}
-          textPlaceholder={"Link imagen del video"}
+          textPlaceholder={
+            "Link imagen del video, ejemplo: https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg"
+          }
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>

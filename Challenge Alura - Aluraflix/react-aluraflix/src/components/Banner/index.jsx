@@ -26,24 +26,30 @@ const ContentText = styled.div`
   display: flex;
   flex-direction: column;
   color: #f5f5f5;
-  
-  width: 100%;
+  gap: 25px;
+  width: 78%;
   /*margin-top: 10%;
   margin-left: 2%;*/
+  @media (max-width: 435px) {
+    
+  }
   div {
     h1 {
+      margin: 0;
       font-size: 60px;
       background: #6bd1ff;
       border: none;
       border-radius: 3px;
       padding: 5px 13px;
       display: inline-block;
-      @media (max-width: 840px) {
-        font-size: 48px;
-        margin: 0;
+      @media (max-width: 940px) {
+        font-size: 50px;
+      }
+      @media (max-width: 435px) {
+        font-size: 35px;
       }
       @media (max-width: 320px) {
-        font-size: 28px;
+        font-size: 40px;
       }
     }
     @media (max-width: 320px) {
@@ -59,8 +65,11 @@ const ContentText = styled.div`
     @media (max-width: 840px) {
       font-size: 35px;
     }
+    @media (max-width: 435px) {
+        font-size: 32px;
+      }
     @media (max-width: 320px) {
-      font-size: 32px;
+      font-size: 30px;
       margin-bottom: 20px;
     }
   }
@@ -73,8 +82,7 @@ const ContentText = styled.div`
       display: none;
     }
   }
-  @media (max-width: 770px) {
-  }
+  
 `;
 
 export const BannerText = () => {
@@ -94,19 +102,28 @@ export const BannerText = () => {
 };
 
 const ContentVideo = styled.div`
+  width: 68vw;
+  height: 28vw;
   iframe {
-    width: 45vw;
-    height: 25vw;
-    /* min-width: 320px;
-    min-height: 150px; */
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 800px) {
+    width: 70%;
+  height: 300px;
+  }
+  @media (max-width: 400px) {
+    width: 81%;
+  height: 250px;
   }
 `;
 
-export const BannerVideo = () => {
+export const BannerVideo = (props) => {
+  const x = "ov7vA5HFe6w?si";
   return (
     <ContentVideo>
       <iframe
-        src="https://www.youtube.com/embed/ov7vA5HFe6w?si=dvBVVuPkSxmz3s30"
+        src={`https://www.youtube.com/embed/${x}`}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

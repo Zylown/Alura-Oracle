@@ -3,6 +3,7 @@ import { ImageCard } from "./VideoCard";
 import { SliderComponent } from "./SliderComponent";
 
 import { listDataCarrusel } from "../../Api/Apicito";
+import { Link } from "react-router-dom";
 // const ImagenAlura = styled.img`
 //   width: 450px;
 //   height: 247px;
@@ -11,9 +12,15 @@ import { listDataCarrusel } from "../../Api/Apicito";
 const EspecialidadContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-left: 9px;
+  gap: 20px;
   //flex-direction: column;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: start;
+    p {
+      margin: 0;
+    }
+  }
   h1 {
     margin: 0;
     //    background: #6bd1ff;
@@ -21,11 +28,16 @@ const EspecialidadContainer = styled.div`
     border-radius: 3px;
     padding: 12px 22px;
     font-size: 25px;
+    @media (max-width: 390px) {
+      font-size: 20px;
+      width: 50%;
+    }
   }
 `;
 
-const SliderContainer = styled.div`
-  padding: 10px;
+const LinkContainer = styled(Link)`
+  width: 424px !important;
+  height: 247px !important;
 `;
 
 export const Carrusel = (props) => {
@@ -40,19 +52,19 @@ export const Carrusel = (props) => {
         </h1>
         <p>Formación {categoryData.formacion} de Alura Latam</p>
       </EspecialidadContainer>
-      <SliderContainer>
-        <SliderComponent>
-          {categoryData.videos
-            ? categoryData.videos.map((video) => (
+      <SliderComponent>
+        {categoryData.videos
+          ? categoryData.videos.map((video) => (
+              <LinkContainer key={video.id}>
                 <ImageCard
                   key={video.id}
                   colorV={`2px solid ${categoryData.color}`}
                   urlV={video.urlImagen}
                 />
-              ))
-            : null}
-        </SliderComponent>
-      </SliderContainer>
+              </LinkContainer>
+            ))
+          : null}
+      </SliderComponent>
     </>
   );
 };
