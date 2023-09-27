@@ -15,7 +15,8 @@ import {
 } from "../../../components/Validations";
 //CSS
 import "./Formulario.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DataCarruselContext } from "../../../Context";
 //import { Option } from "antd/es/mentions";
 const { Option } = Select;
 const FormContainer = styled(Form)`
@@ -61,7 +62,8 @@ const ContainerBtnRight = styled.div`
 
 export const Formulario = () => {
   const [form] = Form.useForm();
-  const { dataCarrusel } = listDataCarrusel();
+  // const { dataCarrusel } = listDataCarrusel();
+  const dataCarrusel = useContext(DataCarruselContext);
   // console.log(dataCarrusel[0].id);
   const dCat = Object.entries(dataCarrusel);
   // console.log(dCat);

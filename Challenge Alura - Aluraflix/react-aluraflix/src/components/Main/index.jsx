@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { listDataCarrusel } from "../../Api/Apicito";
 import { Carrusel } from "../Carrusel";
+import { useContext } from "react";
+import { DataCarruselContext } from "../../Context";
 
 const MainContainer = styled.main`
   padding: 30px;
@@ -12,7 +14,8 @@ const MainContainer = styled.main`
 `;
 
 export const Main = () => {
-  const { dataCarrusel } = listDataCarrusel();
+  // const { dataCarrusel } = listDataCarrusel();
+  const dataCarrusel = useContext(DataCarruselContext);
   //console.log(Object.keys(dataCarrusel)); // convierte el objeto de array =>  ['FR-00', 'BA-00', 'IN-00']
   // console.log(Object.entries(dataCarrusel));
   /* convierte el objeto de array pero individual

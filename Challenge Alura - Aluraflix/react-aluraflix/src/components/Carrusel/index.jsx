@@ -4,6 +4,9 @@ import { SliderComponent } from "./SliderComponent";
 
 import { listDataCarrusel } from "../../Api/Apicito";
 import { Link } from "react-router-dom";
+
+import { useContext } from "react";
+import { DataCarruselContext } from "../../Context";
 // const ImagenAlura = styled.img`
 //   width: 450px;
 //   height: 247px;
@@ -41,7 +44,8 @@ const LinkContainer = styled(Link)`
 `;
 
 export const Carrusel = (props) => {
-  const { dataCarrusel } = listDataCarrusel();
+  // const { dataCarrusel } = listDataCarrusel();
+  const dataCarrusel = useContext(DataCarruselContext);
   const categoryData = dataCarrusel[props.data] || {};
 
   return (
