@@ -33,37 +33,68 @@ const ContainerBtn = styled.div`
   }
 `;
 
-const onChange = (e) => {
-  console.log("Change:", e.target.value);
-};
-
 export const Formulario = () => {
+  const [form] = Form.useForm();
+
+  const HandleOnFinishFailed = () => {
+    message.error("Formulario incorrecto");
+  };
+
+  const HandleOnReset = () => {
+    form.resetFields();
+  };
+
+  const HandleOnSubmit = (e) => {
+    console.log(e);
+  };
   return (
-    <FormContainer>
+    <FormContainer
+      form={form}
+      onFinish={HandleOnSubmit}
+      onFinishFailed={HandleOnFinishFailed}
+      autoComplete="off"
+    >
       <InputContainer>
         <Campo
-          textPlaceholder={"Título"}
+          name={"nombre"}
+          textPlaceholder={"Nombre"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <AreaTexto
+          name="descripcion"
           textPlaceholder={
             "Todos los video de la área de Front End colocar en esta categoría para organizar los estudios que vengo haciendo actualmente"
           }
           size={"large"}
           showCount={true}
           maxLength={"100"}
-          onChange={onChange}
+          // onChange={onChange}
         ></AreaTexto>
-        <Campo tipo={"color"} tamanio={"large"} clase={"custom-campo"}></Campo>
+        <Campo
+          name={"color"}
+          tipo={"color"}
+          tamanio={"large"}
+          clase={"custom-campo"}
+        ></Campo>
         <Campo
           textPlaceholder={"Código de seguridad"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <ContainerBtn>
-          <Boton size={"large"} text={"Guardar"} type={"primary"}></Boton>
-          <Boton size={"large"} text={"Limpiar"} type={"default"}></Boton>
+          <Boton
+            size={"large"}
+            text={"Guardar"}
+            type={"primary"}
+            htmlTipo={"submit"}
+          ></Boton>
+          <Boton
+            size={"large"}
+            text={"Limpiar"}
+            type={"default"}
+            onClick={HandleOnReset}
+          ></Boton>
         </ContainerBtn>
       </InputContainer>
       <Tabla></Tabla>
