@@ -35,3 +35,23 @@ export const CampoSeguridad = [
     message: "Por favor ingresa un código de seguridad",
   },
 ];
+
+/* NUEVA CATEGORIA*/
+export const CampoFormacion = [
+  {
+    required: true,
+    message: "Por favor ingresa una formación",
+  },
+];
+export const CampoDescripcion = [
+  {
+    required: true,
+    message: "Por favor ingresa una descripción",
+  },
+];
+export const CampoColor = [
+  {
+    required: true,
+    message: "Por favor ingresa un color",
+  },
+];
