@@ -1,9 +1,15 @@
 import styled from "styled-components";
-import { Form, Input } from "antd";
+import { Form, Input, message } from "antd";
 import { Boton } from "../../../components/Boton";
 import { Campo } from "../../../components/Campo";
 import { AreaTexto } from "../../../components/AreaTexto";
 import { Tabla } from "../../../components/Tabla";
+import {
+  CampoColor,
+  CampoDescripcion,
+  CampoFormacion,
+} from "../../../components/Validations";
+import { createNuevaCategoria } from "../../../Api/Apicito";
 //import "./Formulario.css" // css ya importado en NewVideo
 
 const FormContainer = styled(Form)`
@@ -44,8 +50,20 @@ export const Formulario = () => {
     form.resetFields();
   };
 
-  const HandleOnSubmit = (e) => {
-    console.log(e);
+  const HandleOnSubmit = async (values) => {
+    let datosAEnviar = {
+      id: ("C"+Date.now()),
+      formacion: values.formacion,
+      color: values.color,
+      videos: [],
+    };
+    if (datosAEnviar) {
+      const respuesta = await createNuevaCategoria(datosAEnviar);
+      message.success("Categoría subido correctamente");
+      console.log(respuesta);
+    } else {
+      message.error("Categoría no pudo ser subida correctamente");
+    }
   };
   return (
     <FormContainer
@@ -56,12 +74,14 @@ export const Formulario = () => {
     >
       <InputContainer>
         <Campo
-          name={"nombre"}
-          textPlaceholder={"Nombre"}
+          rules={CampoFormacion}
+          name={"formacion"}
+          textPlaceholder={"Nombre de formacion"}
           tamanio={"large"}
           clase={"custom-campo"}
         ></Campo>
         <AreaTexto
+          rules={CampoDescripcion}
           name="descripcion"
           textPlaceholder={
             "Todos los video de la área de Front End colocar en esta categoría para organizar los estudios que vengo haciendo actualmente"
@@ -72,6 +92,7 @@ export const Formulario = () => {
           // onChange={onChange}
         ></AreaTexto>
         <Campo
+          rules={CampoColor}
           name={"color"}
           tipo={"color"}
           tamanio={"large"}
