@@ -72,33 +72,39 @@ export const Formulario = () => {
       titulo: values.titulo,
       urlVideos: values.linkVideo,
       urlImagen: values.linkImg,
-      categoria: values.formacion,
+      categoria: values.formacion, //1696394174106
       descripcion: values.descripcion,
-      id: Date.now(),
+      id: ("V"+Date.now()),
     };
+    console.log(datosAEnviar);
     const category = dataCarrusel.find(
       (data) => data.id === datosAEnviar.categoria
     );
     console.log(category);
-    let isDuplicate = false;
-    // Utiliza Array.some() para verificar si hay algún duplicado, devuelve true or false
-    isDuplicate = category.videos.some((video) => {
-      return (
-        datosAEnviar.urlImagen === video.urlImagen.trim() ||
-        datosAEnviar.urlVideos === video.urlVideos.trim() ||
-        datosAEnviar.titulo === video.titulo.trim()
-      );
-    });
-    console.log("Es duplicado, ", isDuplicate);
-    if (!isDuplicate) {
-      category.videos.push(datosAEnviar);
-      console.log(category.videos);
+    if (category) {
+      let isDuplicate = false;
+      // Utiliza Array.some() para verificar si hay algún duplicado, devuelve true or false
+      isDuplicate = category.videos.some((video) => {
+        return (
+          datosAEnviar.urlImagen === video.urlImagen.trim() ||
+          datosAEnviar.urlVideos === video.urlVideos.trim() ||
+          datosAEnviar.titulo === video.titulo.trim()
+        );
+      });
+      console.log("Es duplicado, ", isDuplicate);
+      if (!isDuplicate) {
+        category.videos.push(datosAEnviar);
+        console.log(category.videos);
 
-      const response = await createNuevoVideo(category);
-      console.log(response); // Aquí puedes ver la respuesta de tu solicitud POST
-      message.success("Video subido correctamente");
+        const response = await createNuevoVideo(category);
+        console.log(response); // Aquí puedes ver la respuesta de tu solicitud POST
+        message.success("Video subido correctamente");
+      } else {
+        message.error("Formulario con datos duplicados");
+      }
     } else {
-      message.error("Formulario con datos duplicados");
+      // Maneja el caso en el que no se encuentra la categoría
+      message.error("Categoría no encontrada en dataCarrusel");
     }
   };
 
